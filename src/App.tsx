@@ -7,6 +7,7 @@ import Compare from './pages/Compare'
 import PackageDetail from './pages/PackageDetail'
 import Favorites from './pages/Favorites'
 import SearchHistory from './pages/SearchHistory'
+import SearchEmptyState from './pages/SearchEmptyState'
 import UserProfile from './pages/UserProfile'
 import MyBookings from './pages/MyBookings'
 import WriteReview from './pages/WriteReview'
@@ -23,10 +24,12 @@ import BookingLeads from './pages/BookingLeads'
 import AgencyFinancials from './pages/AgencyFinancials'
 import MarketAnalytics from './pages/MarketAnalytics'
 import ReputationManagement from './pages/ReputationManagement'
+import ReviewsDashboard from './pages/ReviewsDashboard'
 import AIBrochureScanner from './pages/AIBrochureScanner'
 import AIScanResults from './pages/AIScanResults'
 import VerifiedPartnerDirectory from './pages/VerifiedPartnerDirectory'
 import ClaimsQueue from './pages/ClaimsQueue'
+import CertificateView from './pages/CertificateView'
 import PassportUpload from './pages/PassportUpload'
 import DocumentVerified from './pages/DocumentVerified'
 import SavedComparisons from './pages/SavedComparisons'
@@ -40,6 +43,7 @@ function App() {
           {/* Consumer Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/search-empty" element={<SearchEmptyState />} />
           <Route path="/compare" element={<Compare />} />
           <Route path="/package/:id" element={<PackageDetail />} />
           <Route path="/favorites" element={<Favorites />} />
@@ -66,6 +70,7 @@ function App() {
           <Route path="/partner/financials" element={<AgencyFinancials />} />
           <Route path="/partner/analytics" element={<MarketAnalytics />} />
           <Route path="/partner/reputation" element={<ReputationManagement />} />
+          <Route path="/partner/reviews" element={<ReviewsDashboard />} />
           <Route path="/partner/scanner" element={<AIBrochureScanner />} />
           <Route path="/partner/scanner/results" element={<AIScanResults />} />
           <Route path="/agency/:id" element={<AgencyProfile />} />
@@ -73,6 +78,7 @@ function App() {
           {/* Operational */}
           <Route path="/verified-partners" element={<VerifiedPartnerDirectory />} />
           <Route path="/admin/claims" element={<ClaimsQueue />} />
+          <Route path="/admin/certificates" element={<CertificateView />} />
           
           {/* Other */}
           <Route path="/verification" element={<div className="container mx-auto py-20 text-center text-slate-500">Travel Verification (Coming Soon)</div>} />
