@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jemaah.id Partner Portal - Package Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; }
+        .material-symbols-outlined { font-size: 24px; vertical-align: middle; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="flex min-h-screen">
+<!-- Sidebar -->
+<aside class="w-64 border-r border-primary/10 bg-white dark:bg-background-dark flex flex-col fixed h-full">
+<div class="p-6 flex flex-col gap-8 h-full">
+<div class="flex items-center gap-3">
+<div class="bg-primary/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">mosque</span>
+</div>
+<div>
+<h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-none">Jemaah.id</h1>
+<p class="text-primary text-xs font-medium uppercase tracking-wider">Partner Portal</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1 grow">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary text-slate-900 font-semibold shadow-sm shadow-primary/20" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-sm">Package Management</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">event_available</span>
+<span class="text-sm font-medium">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-sm font-medium">Financials</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">Market Analytics</span>
+</a>
+<div class="my-4 border-t border-slate-100 dark:border-slate-800"></div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Agency Settings</span>
+</a>
+</nav>
+<div class="mt-auto">
+<div class="bg-primary/10 p-4 rounded-xl mb-4">
+<p class="text-xs font-bold text-slate-900 mb-1">Premium Partner</p>
+<p class="text-[10px] text-slate-600 mb-3">Your Kemenag license is active until Dec 2025.</p>
+<button class="w-full py-2 bg-primary text-slate-900 text-xs font-bold rounded-lg">Upgrade Plan</button>
+</div>
+<div class="flex items-center gap-3 px-2">
+<div class="w-8 h-8 rounded-full bg-slate-200" data-alt="User profile avatar circle placeholder"></div>
+<div class="overflow-hidden">
+<p class="text-xs font-bold truncate">Travel Al-Haramain</p>
+<p class="text-[10px] text-slate-500">Admin Account</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-64 flex-1 p-8">
+<!-- Header -->
+<header class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-3xl font-black text-slate-900 dark:text-slate-100 tracking-tight">Package Management</h2>
+<p class="text-slate-500 text-sm mt-1 flex items-center gap-2">
+                    Manage your Umroh and Haji packages with Anti-Ngawur verification.
+                    <span class="inline-flex items-center gap-1 text-[10px] font-bold bg-primary/20 text-slate-800 px-2 py-0.5 rounded uppercase">
+<span class="material-symbols-outlined !text-xs">verified</span> Kemenag API Linked
+                    </span>
+</p>
+</div>
+<button class="flex items-center gap-2 bg-primary text-slate-900 px-6 py-2.5 rounded-lg font-bold text-sm shadow-lg shadow-primary/20 hover:brightness-105 transition-all">
+<span class="material-symbols-outlined">add_circle</span>
+                Add New Package
+            </button>
+</header>
+<!-- Search & Filter Bar -->
+<div class="grid grid-cols-12 gap-4 mb-6">
+<div class="col-span-6 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-white border-slate-200 rounded-xl focus:ring-primary focus:border-primary text-sm transition-all shadow-sm" placeholder="Search by package name or ID..." type="text"/>
+</div>
+<div class="col-span-2">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 !text-lg">calendar_month</span>
+<select class="w-full pl-9 pr-4 py-3 bg-white border-slate-200 rounded-xl focus:ring-primary focus:border-primary text-sm appearance-none shadow-sm">
+<option>Departure Date</option>
+<option>Next 30 Days</option>
+<option>Q4 2024</option>
+</select>
+</div>
+</div>
+<div class="col-span-2">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 !text-lg">filter_list</span>
+<select class="w-full pl-9 pr-4 py-3 bg-white border-slate-200 rounded-xl focus:ring-primary focus:border-primary text-sm appearance-none shadow-sm">
+<option>All Status</option>
+<option>Active</option>
+<option>Draft</option>
+<option>Sold Out</option>
+</select>
+</div>
+</div>
+<div class="col-span-2 flex gap-2">
+<button class="flex-1 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-600 hover:bg-slate-50 shadow-sm">
+<span class="material-symbols-outlined">sort</span>
+</button>
+<button class="flex-1 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-600 hover:bg-slate-50 shadow-sm">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<!-- Table -->
+<div class="bg-white border border-primary/10 rounded-xl shadow-sm overflow-hidden">
+<table class="w-full text-left">
+<thead class="bg-primary/5 border-b border-primary/10">
+<tr>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Package &amp; Category</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Departure &amp; Duration</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Price (IDR)</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Seats Availability</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Market Rank</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Status</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<!-- Row 1 -->
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900">Umroh Promo Akhir Tahun</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[10px] font-bold rounded">ECONOMY</span>
+<span class="material-symbols-outlined !text-[14px] text-primary" title="Kemenag Verified">verified_user</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-700">24 Dec 2024</span>
+<span class="text-xs text-slate-500">9 Days • Saudi Airlines</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-bold text-slate-900">28.500.000</td>
+<td class="px-6 py-5">
+<div class="w-full max-w-[120px]">
+<div class="flex justify-between items-end mb-1">
+<span class="text-[10px] font-bold text-slate-900">25/45 left</span>
+</div>
+<div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 55%"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 text-amber-700 rounded-full border border-amber-100">
+<span class="material-symbols-outlined !text-sm">trending_up</span>
+<span class="text-[10px] font-bold">Top 3 Compared</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2 py-1 bg-primary/20 text-slate-800 text-[10px] font-bold rounded uppercase tracking-wide">Active</span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 hover:bg-white rounded-lg text-slate-400 hover:text-primary transition-colors" title="Edit">
+<span class="material-symbols-outlined !text-lg">edit</span>
+</button>
+<button class="p-1.5 hover:bg-white rounded-lg text-slate-400 hover:text-primary transition-colors" title="Duplicate">
+<span class="material-symbols-outlined !text-lg">content_copy</span>
+</button>
+<button class="p-1.5 hover:bg-white rounded-lg text-slate-400 hover:text-red-500 transition-colors" title="Archive">
+<span class="material-symbols-outlined !text-lg">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900">Haji Furoda Luxury</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[10px] font-bold rounded">VIP</span>
+<span class="material-symbols-outlined !text-[14px] text-primary" title="Kemenag Verified">verified_user</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-700">12 Jun 2025</span>
+<span class="text-xs text-slate-500">25 Days • Emirates</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-bold text-slate-900">245.000.000</td>
+<td class="px-6 py-5">
+<div class="w-full max-w-[120px]">
+<div class="flex justify-between items-end mb-1">
+<span class="text-[10px] font-bold text-slate-900">2/10 left</span>
+</div>
+<div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="bg-red-400 h-full" style="width: 80%"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-50 text-slate-500 rounded-full border border-slate-100">
+<span class="material-symbols-outlined !text-sm">bar_chart</span>
+<span class="text-[10px] font-bold">New Listing</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2 py-1 bg-primary/20 text-slate-800 text-[10px] font-bold rounded uppercase tracking-wide">Active</span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 hover:bg-white rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined !text-lg">edit</span>
+</button>
+<button class="p-1.5 hover:bg-white rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined !text-lg">content_copy</span>
+</button>
+<button class="p-1.5 hover:bg-white rounded-lg text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined !text-lg">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 (Draft) -->
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex flex-col opacity-60">
+<span class="text-sm font-bold text-slate-900 italic">Ramadhan Berkah 2025</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[10px] font-bold rounded">PREMIUM</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 opacity-60">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-700">TBA</span>
+<span class="text-xs text-slate-500">12 Days • Garuda</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-bold text-slate-900 opacity-60">35.000.000</td>
+<td class="px-6 py-5 opacity-60">
+<div class="w-full max-w-[120px]">
+<div class="flex justify-between items-end mb-1">
+<span class="text-[10px] font-bold text-slate-900">Draft Status</span>
+</div>
+<div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="bg-slate-300 h-full" style="width: 0%"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="text-[10px] font-bold text-slate-400">N/A</span>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2 py-1 bg-slate-100 text-slate-400 text-[10px] font-bold rounded uppercase tracking-wide">Draft</span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 hover:bg-white rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined !text-lg">edit</span>
+</button>
+<button class="p-1.5 hover:bg-white rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined !text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 (Sold Out) -->
+<tr class="hover:bg-primary/5 transition-colors bg-slate-50/50">
+<td class="px-6 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900">Maulid Special Package</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[10px] font-bold rounded">STANDARD</span>
+<span class="material-symbols-outlined !text-[14px] text-primary">verified_user</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col text-slate-400">
+<span class="text-sm font-medium">15 Sep 2024</span>
+<span class="text-xs">9 Days • Saudi Airlines</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-bold text-slate-400">26.000.000</td>
+<td class="px-6 py-5">
+<div class="w-full max-w-[120px]">
+<div class="flex justify-between items-end mb-1">
+<span class="text-[10px] font-bold text-red-500">SOLD OUT</span>
+</div>
+<div class="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
+<div class="bg-red-500 h-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-50 text-green-700 rounded-full border border-green-100">
+<span class="material-symbols-outlined !text-sm">workspace_premium</span>
+<span class="text-[10px] font-bold">Top 1 Booked</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2 py-1 bg-slate-800 text-white text-[10px] font-bold rounded uppercase tracking-wide">Archived</span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 hover:bg-white rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined !text-lg">visibility</span>
+</button>
+<button class="p-1.5 hover:bg-white rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined !text-lg">content_copy</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination -->
+<div class="px-6 py-4 bg-slate-50/50 border-t border-slate-100 flex items-center justify-between">
+<span class="text-xs text-slate-500 font-medium">Showing 1 to 4 of 24 packages</span>
+<div class="flex gap-1">
+<button class="p-2 border border-slate-200 rounded-lg hover:bg-white disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined !text-sm">chevron_left</span>
+</button>
+<button class="px-3 py-1 bg-primary text-slate-900 rounded-lg text-xs font-bold">1</button>
+<button class="px-3 py-1 border border-slate-200 rounded-lg text-xs font-bold hover:bg-white">2</button>
+<button class="px-3 py-1 border border-slate-200 rounded-lg text-xs font-bold hover:bg-white">3</button>
+<button class="p-2 border border-slate-200 rounded-lg hover:bg-white">
+<span class="material-symbols-outlined !text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Verification Reinforcement Banner -->
+<div class="mt-8 grid grid-cols-3 gap-6">
+<div class="flex items-start gap-3 p-4 bg-white border border-primary/5 rounded-xl">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">api</span>
+</div>
+<div>
+<h4 class="text-xs font-bold text-slate-900 mb-1">Kemenag Integration</h4>
+<p class="text-[10px] text-slate-500 leading-relaxed">All SISKOPATUH data is synced in real-time for compliance and trust.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-4 bg-white border border-primary/5 rounded-xl">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">map</span>
+</div>
+<div>
+<h4 class="text-xs font-bold text-slate-900 mb-1">Google Maps Engine</h4>
+<p class="text-[10px] text-slate-500 leading-relaxed">Hotel distances verified via API to ensure 'Anti-Ngawur' distance claims.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-4 bg-white border border-primary/5 rounded-xl">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">flight</span>
+</div>
+<div>
+<h4 class="text-xs font-bold text-slate-900 mb-1">IATA Flight API</h4>
+<p class="text-[10px] text-slate-500 leading-relaxed">Flight numbers and schedules are cross-referenced with global databases.</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

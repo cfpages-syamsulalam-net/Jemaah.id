@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Competitor Comparison Deep-Dive | Partner Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "tertiary-container": "#ffdad6",
+                "on-tertiary-fixed-variant": "#733335",
+                "primary-fixed": "#adf2c6",
+                "on-primary": "#ffffff",
+                "inverse-surface": "#1e293b",
+                "secondary-container": "#cde9d4",
+                "error": "#ba1a1a",
+                "primary": "#075232",
+                "on-primary-container": "#075232",
+                "tertiary": "#ba1a1a",
+                "primary-container": "#0752321a",
+                "on-surface-variant": "#475569",
+                "on-primary-fixed": "#002111",
+                "outline-variant": "#0752320d",
+                "on-secondary-container": "#344c3d",
+                "surface-tint": "#075232",
+                "primary-fixed-dim": "#92d5ab",
+                "tertiary-fixed": "#ffdad9",
+                "on-primary-fixed-variant": "#065232",
+                "on-error-container": "#93000a",
+                "surface-container-high": "#ebedec",
+                "secondary-fixed-dim": "#b2cdb9",
+                "error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#ffb3b3",
+                "secondary": "#4b6454",
+                "on-secondary-fixed-variant": "#344c3d",
+                "outline": "#0752321a",
+                "surface-dim": "#f6f8f7",
+                "on-surface": "#0f172a",
+                "on-tertiary": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "on-background": "#0f172a",
+                "background": "#f6f8f7",
+                "surface-container-low": "#f6f8f7",
+                "inverse-primary": "#92d5ab",
+                "on-error": "#ffffff",
+                "surface-container": "#f1f3f2",
+                "on-secondary": "#ffffff",
+                "on-tertiary-fixed": "#3b080d",
+                "surface-container-highest": "#e5e7e6",
+                "on-tertiary-container": "#410002",
+                "secondary-fixed": "#cde9d4",
+                "inverse-on-surface": "#f8fafc",
+                "surface-variant": "#f1f3f2",
+                "surface-bright": "#ffffff",
+                "surface": "#ffffff",
+                "on-secondary-fixed": "#082013"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Work Sans"],
+                "label": ["Work Sans"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full flex flex-col bg-white border-r border-emerald-900/10 w-64 z-50 shadow-sm font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-tight">
+<div class="p-6">
+<div class="text-xl font-bold text-emerald-900">Emerald Canopy</div>
+<div class="text-[10px] uppercase tracking-widest text-slate-400 mt-1">Partner Portal</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 hover:bg-emerald-50/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-emerald-800">dashboard</span>
+<span>Dashboard</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-emerald-50 text-emerald-900 font-semibold border-r-4 border-emerald-800 cursor-pointer">
+<span class="material-symbols-outlined">analytics</span>
+<span>Analytics</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 hover:bg-emerald-50/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-emerald-800">mosque</span>
+<span>Pilgrimage Packages</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 hover:bg-emerald-50/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-emerald-800">handshake</span>
+<span>Partner Bookings</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 hover:bg-emerald-50/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-emerald-800">payments</span>
+<span>Financials</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 hover:bg-emerald-50/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-emerald-800">support_agent</span>
+<span>Support</span>
+</div>
+</nav>
+<div class="p-4 mt-auto mb-6">
+<button class="w-full bg-primary text-white py-3 rounded-xl font-bold shadow-lg shadow-primary/20 flex items-center justify-center gap-2 hover:opacity-90 transition-all active:scale-95">
+<span class="material-symbols-outlined text-sm">add</span>
+                New Package
+            </button>
+</div>
+<div class="px-4 py-4 border-t border-emerald-900/5">
+<div class="flex items-center gap-3 px-3 py-2 text-slate-500 hover:text-emerald-800 cursor-pointer transition-colors">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-500 hover:text-emerald-800 cursor-pointer transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span>Logout</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar Shell -->
+<header class="sticky top-0 z-40 h-16 w-full flex justify-between items-center px-8 bg-white/80 backdrop-blur-md border-b border-emerald-900/5">
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400 text-lg">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container border-none rounded-xl text-sm focus:ring-1 focus:ring-emerald-500/20 w-64 transition-all" placeholder="Search competitors..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-slate-500 hover:text-emerald-700">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-tertiary rounded-full"></span>
+</button>
+<button class="text-slate-500 hover:text-emerald-700">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="flex items-center gap-2 pl-4 border-l border-slate-200">
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface leading-tight">Emerald Agency</p>
+<p class="text-[10px] text-slate-400">Premium Partner</p>
+</div>
+<span class="material-symbols-outlined text-3xl text-slate-300">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-8 max-w-7xl mx-auto space-y-8">
+<!-- Header Section -->
+<div class="flex justify-between items-end">
+<div>
+<nav class="flex items-center gap-2 text-xs text-slate-400 mb-2 font-medium tracking-wide">
+<span>ANALYTICS</span>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<span class="text-emerald-900">COMPETITOR DEEP-DIVE</span>
+</nav>
+<h1 class="text-3xl font-extrabold text-emerald-900 tracking-tight">Apple-to-Apple Comparison</h1>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-white border border-emerald-900/10 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-50">
+<span class="material-symbols-outlined text-sm">download</span>
+                        Export Report
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white border border-emerald-900/10 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-50">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                        Last 6 Months
+                    </button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- 1. Top Compared Competitor Profile (Large Card) -->
+<div class="col-span-12 lg:col-span-4 bg-white p-6 rounded-xl shadow-sm border border-emerald-900/5 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center border border-emerald-900/10">
+<span class="material-symbols-outlined text-emerald-900">travel_explore</span>
+</div>
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary text-[10px] font-bold tracking-wider rounded-full uppercase">Primary Rival</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900">Al-Safa Global Travels</h3>
+<p class="text-sm text-slate-500 mt-1">Direct competitor in High-End Hajj Packages</p>
+</div>
+<div class="mt-8 space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Market Share</p>
+<p class="text-2xl font-extrabold text-emerald-900">24.8%</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Win Rate</p>
+<p class="text-2xl font-extrabold text-slate-900">42%</p>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 58%"></div>
+<div class="bg-slate-300 h-full" style="width: 42%"></div>
+</div>
+<div class="flex justify-between text-[10px] font-medium text-slate-400">
+<span>YOU (58%)</span>
+<span>RIVAL (42%)</span>
+</div>
+</div>
+</div>
+<!-- 5. Historical Win Rate (Wider Card) -->
+<div class="col-span-12 lg:col-span-8 bg-white p-6 rounded-xl shadow-sm border border-emerald-900/5">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="text-lg font-bold text-slate-900">Historical Win Rate</h3>
+<p class="text-sm text-slate-500">6-month progression against Al-Safa</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-xs text-slate-500">Direct Win</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-slate-200"></span>
+<span class="text-xs text-slate-500">Industry Avg</span>
+</div>
+</div>
+</div>
+<!-- SVG Chart Mockup -->
+<div class="relative h-48 w-full mt-4">
+<svg class="w-full h-full overflow-visible" viewbox="0 0 800 200">
+<!-- Grid Lines -->
+<line class="text-slate-100" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="0" y2="0"></line>
+<line class="text-slate-100" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="50" y2="50"></line>
+<line class="text-slate-100" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="100" y2="100"></line>
+<line class="text-slate-100" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="150" y2="150"></line>
+<line class="text-slate-100" stroke="currentColor" stroke-width="1" x1="0" x2="800" y1="200" y2="200"></line>
+<!-- Primary Line -->
+<path d="M0 160 Q 150 120, 300 140 T 450 80 T 600 60 T 800 40" fill="none" stroke="#075232" stroke-width="3"></path>
+<path d="M0 160 Q 150 120, 300 140 T 450 80 T 600 60 T 800 40 L 800 200 L 0 200 Z" fill="url(#grad1)" opacity="0.1"></path>
+<!-- Points -->
+<circle cx="0" cy="160" fill="#075232" r="4"></circle>
+<circle cx="300" cy="140" fill="#075232" r="4"></circle>
+<circle cx="450" cy="80" fill="#075232" r="4"></circle>
+<circle cx="600" cy="60" fill="#075232" r="4"></circle>
+<circle cx="800" cy="40" fill="#075232" r="4"></circle>
+<defs>
+<lineargradient id="grad1" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#075232;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#075232;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest px-2">
+<span>Jan</span>
+<span>Feb</span>
+<span>Mar</span>
+<span>Apr</span>
+<span>May</span>
+<span>Jun</span>
+</div>
+</div>
+</div>
+<!-- 2. Comparison Matrix (Full Width) -->
+<div class="col-span-12 bg-white rounded-xl shadow-sm border border-emerald-900/5 overflow-hidden">
+<div class="p-6 border-b border-slate-50 flex justify-between items-center">
+<div>
+<h3 class="text-lg font-bold text-slate-900">Side-by-Side: Best Seller vs Rival Equivalent</h3>
+<p class="text-sm text-slate-500">Comparing 'Majestic Hajj 2024' with 'Safa Elite Platinum'</p>
+</div>
+<div class="flex gap-2">
+<span class="flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[12px]">add_circle</span> ADVANTAGE
+                            </span>
+<span class="flex items-center gap-1 text-[10px] font-bold text-tertiary bg-tertiary/5 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[12px]">do_not_disturb_on</span> DISADVANTAGE
+                            </span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Comparison Metric</th>
+<th class="px-6 py-4 text-sm font-bold text-emerald-900">Majestic Hajj (YOU)</th>
+<th class="px-6 py-4 text-sm font-bold text-slate-700">Safa Elite (RIVAL)</th>
+<th class="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">Outcome</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-50">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-5 font-medium text-slate-900 text-sm">Base Price (Per Pax)</td>
+<td class="px-6 py-5 text-sm">$8,250</td>
+<td class="px-6 py-5 text-sm">$7,990</td>
+<td class="px-6 py-5 text-center">
+<span class="material-symbols-outlined text-tertiary">do_not_disturb_on</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-5 font-medium text-slate-900 text-sm">Hotel Distance (Makkah)</td>
+<td class="px-6 py-5 text-sm">150m (Clock Tower)</td>
+<td class="px-6 py-5 text-sm">450m (Shaza)</td>
+<td class="px-6 py-5 text-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-5 font-medium text-slate-900 text-sm">Flight Type</td>
+<td class="px-6 py-5 text-sm">Direct (Saudia)</td>
+<td class="px-6 py-5 text-sm">Transit (Qatar Airways)</td>
+<td class="px-6 py-5 text-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-5 font-medium text-slate-900 text-sm">Airline Rating</td>
+<td class="px-6 py-5 text-sm">4.5/5</td>
+<td class="px-6 py-5 text-sm">4.8/5</td>
+<td class="px-6 py-5 text-center">
+<span class="material-symbols-outlined text-tertiary">do_not_disturb_on</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-5 font-medium text-slate-900 text-sm">User Rating</td>
+<td class="px-6 py-5 text-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.6</span>
+</div>
+</td>
+<td class="px-6 py-5 text-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- 3. Win/Loss Drivers (Left Bottom) -->
+<div class="col-span-12 lg:col-span-6 bg-white p-6 rounded-xl shadow-sm border border-emerald-900/5">
+<div class="mb-6">
+<h3 class="text-lg font-bold text-slate-900">Win/Loss Drivers</h3>
+<p class="text-sm text-slate-500">Key factors influencing customer choice</p>
+</div>
+<div class="space-y-6">
+<!-- Driver Item -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-medium text-slate-700">Hotel Proximity</span>
+<span class="text-xs font-bold text-primary">+82% Win Factor</span>
+</div>
+<div class="w-full bg-slate-50 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Driver Item -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-medium text-slate-700">Price Sensitivity</span>
+<span class="text-xs font-bold text-tertiary">-64% Loss Factor</span>
+</div>
+<div class="w-full bg-slate-50 h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 64%"></div>
+</div>
+</div>
+<!-- Driver Item -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-medium text-slate-700">Flight Experience</span>
+<span class="text-xs font-bold text-primary">+55% Win Factor</span>
+</div>
+<div class="w-full bg-slate-50 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 55%"></div>
+</div>
+</div>
+<!-- Driver Item -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-medium text-slate-700">Meal Plans</span>
+<span class="text-xs font-bold text-slate-400">Neutral</span>
+</div>
+<div class="w-full bg-slate-50 h-2 rounded-full overflow-hidden">
+<div class="bg-slate-200 h-full rounded-full" style="width: 20%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Actionable Strategy (Right Bottom) -->
+<div class="col-span-12 lg:col-span-6 bg-primary text-white p-8 rounded-xl shadow-lg shadow-primary/10 relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-xl font-bold mb-2">Actionable Strategy</h3>
+<p class="text-primary-fixed/80 text-sm mb-8">Data-driven recommendations to outperform Al-Safa</p>
+<div class="space-y-4">
+<div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-400/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-300">payments</span>
+</div>
+<div>
+<p class="text-sm font-bold">Price Adjustment</p>
+<p class="text-xs text-white/70 mt-1">Implement a "Early Bird" discount of 4% ($330) to bridge the gap with rival pricing.</p>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-400/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-300">workspace_premium</span>
+</div>
+<div>
+<p class="text-sm font-bold">Marketing Focus</p>
+<p class="text-xs text-white/70 mt-1">Highlight "3-minute walk to Haram" in all campaigns. This is your primary winning differentiator.</p>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10 flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-400/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-300">loyalty</span>
+</div>
+<div>
+<p class="text-sm font-bold">Bundle Upgrade</p>
+<p class="text-xs text-white/70 mt-1">Add a "Premium VIP Lounge" access at Jeddah airport to offset the transit flight disadvantage.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -right-12 -bottom-12 w-48 h-48 bg-emerald-400/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+<!-- Footer Meta -->
+<div class="flex justify-between items-center pt-8 border-t border-emerald-900/5 text-slate-400 text-[10px] font-bold tracking-widest uppercase">
+<span>Refreshed: Oct 24, 2023, 09:42 AM</span>
+<div class="flex gap-4">
+<a class="hover:text-emerald-900" href="#">Privacy Policy</a>
+<a class="hover:text-emerald-900" href="#">Portal Terms</a>
+<span class="text-slate-300">© 2024 Emerald Canopy</span>
+</div>
+</div>
+</div>
+</main>
+</body></html>

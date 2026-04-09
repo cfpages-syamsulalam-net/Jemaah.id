@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>B2B Partner Portal - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#075232",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221a",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white dark:bg-background-dark px-6 md:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">B2B Partner Portal</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-primary/5">
+<div class="text-primary/60 flex items-center justify-center pl-4 rounded-l-lg" data-icon="MagnifyingGlass">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-0 border-none bg-transparent placeholder:text-primary/40 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search packages..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-primary text-sm font-semibold leading-normal border-b-2 border-primary" href="#">Dashboard</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Inventory</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Claims</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Reports</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex size-10 items-center justify-center overflow-hidden rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary/20">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex size-10 items-center justify-center overflow-hidden rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary/20">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar of a male professional" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOySgapLQNnzxCGnq85Lcu-BuHVL-AmfQk9EgJMnEuDaP8O5HYj-E84nY5YhIgB-cs6wH3RoluuQF6aE3VSSwqHbU_CAn2iLECAPD455wV8h0iWc1830Y0SJIxeMMtgoguURx3aYgrg46O8joJ1pS0RB9wlkdfHQ2ry6rZeFIsmGd2dJh0EznCDd3XuM4Zlc3428n9zukS1aNjbEGHCs2VqvBHUkyQPd6n0T4DCuvJNz8YMDnvQbRQtiX4O0JSzKmv2tHLNU27Vc0");'></div>
+</div>
+</header>
+<main class="flex flex-1 flex-col md:flex-row">
+<!-- Sidebar Nav -->
+<aside class="w-full md:w-64 bg-white dark:bg-background-dark border-r border-primary/5 p-4 flex flex-col gap-4">
+<div class="flex flex-col p-2 mb-2">
+<h1 class="text-slate-900 dark:text-slate-100 text-base font-bold leading-normal">Welcome, Al-Fatih Travel</h1>
+<p class="text-primary text-xs font-semibold uppercase tracking-wider leading-normal">Verified Agent ID: 88291</p>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Overview</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined">inventory_2</span>
+<p class="text-sm font-medium">My Inventory</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+<p class="text-sm font-medium">Claimed Packages</p>
+<span class="ml-auto bg-primary/10 text-primary text-[10px] px-1.5 py-0.5 rounded-full">3</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined">verified_user</span>
+<p class="text-sm font-medium">Kemenag Verification</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 rounded-lg transition-colors cursor-pointer">
+<span class="material-symbols-outlined">support_agent</span>
+<p class="text-sm font-medium">Help Center</p>
+</div>
+</div>
+</aside>
+<!-- Dashboard Content -->
+<div class="flex-1 p-6 md:p-10 bg-background-light dark:bg-background-dark overflow-y-auto">
+<!-- Dashboard Greeting -->
+<div class="flex flex-wrap justify-between items-end gap-3 mb-8">
+<div class="flex flex-col gap-1">
+<p class="text-slate-900 dark:text-slate-100 text-3xl font-black leading-tight tracking-[-0.033em]">Portal Dashboard</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal">Monitor your travel packages and agent performance.</p>
+</div>
+<div class="text-slate-500 text-sm font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                            October 24, 2023
+                        </div>
+</div>
+<!-- Stats Section -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-background-dark border border-primary/10 shadow-sm">
+<div class="flex justify-between items-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Active Packages</p>
+<span class="material-symbols-outlined text-primary">package_2</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">24</p>
+<p class="text-emerald-600 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12% vs last month
+                            </p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-background-dark border border-primary/10 shadow-sm">
+<div class="flex justify-between items-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Pending Claims</p>
+<span class="material-symbols-outlined text-amber-500">pending_actions</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">3</p>
+<p class="text-emerald-600 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +2% vs last week
+                            </p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-background-dark border border-primary/10 shadow-sm">
+<div class="flex justify-between items-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Revenue (Monthly)</p>
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">$12,450</p>
+<p class="text-emerald-600 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +5.4% growth
+                            </p>
+</div>
+</div>
+<!-- Action Required Section -->
+<div class="mb-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-amber-500 fill-1">warning</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight tracking-[-0.015em]">Action Required: Packages Found with Your Name</h2>
+</div>
+<!-- Unclaimed Package Card -->
+<div class="bg-white dark:bg-background-dark rounded-xl border-2 border-primary/20 overflow-hidden shadow-lg">
+<div class="flex flex-col lg:flex-row">
+<div class="lg:w-1/3 h-64 lg:h-auto relative">
+<img alt="Brochure preview" class="w-full h-full object-cover" data-alt="A scan of a luxury travel brochure for Umrah package" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXRZjLuPXp_0Pd6m60iNyGMYPrgYQYnCZj2dvxI6BolQmixIZkQ14DWkqstO1R_lVbq7l1TUqo1i7CKaKZ0qgJfytr5Vkxb8QkfjZrKZWbwv5AaKb_ZqQEn9B_Wv5rDSM1BuF6Kvqyb0BcNISpFMoR3FNv8YmQtalIP7dSqp7X4FDLIYB-VFmdaKxIyUdbWudB4QWj-nNZHK30DBqkLxeLaovagcLVoEyWYVsSftseCaj5YJpjtlCNvcWu88VMpVO1eSVUzgpXRZ0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-6">
+<div class="flex items-center gap-2 text-white bg-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">image</span> Brochure Scan
+                                        </div>
+</div>
+</div>
+<div class="flex-1 p-6 lg:p-8 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">Umrah Executive Package - Ramadan 2024</h3>
+<p class="text-primary font-semibold">Organized by: <span class="underline">Al-Fatih Travel</span> (Extracted from brochure)</p>
+</div>
+<span class="bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">Unclaimed</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                            A user recently uploaded a brochure photo containing your agency's name. We've automatically processed the details including pricing ($3,500), 5-star hotel accommodations in Makkah, and airline details. Claim this package to manage bookings and appearing in official search results.
+                                        </p>
+<!-- License Warning -->
+<div class="bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-900/30 rounded-lg p-4 mb-6 flex gap-3">
+<span class="material-symbols-outlined text-amber-600">gpp_maybe</span>
+<div>
+<p class="text-amber-800 dark:text-amber-400 text-sm font-bold">Important Security Notice</p>
+<p class="text-amber-700 dark:text-amber-500 text-xs">Claiming this package requires a valid Kemenag license verification. You must upload your PPIU/PIHK license before the claim is finalized. Fraudulent claims will result in immediate account suspension.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 items-center">
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-bold transition-all shadow-md flex items-center gap-2">
+<span class="material-symbols-outlined">how_to_reg</span> Claim This Package
+                                        </button>
+<button class="border-2 border-primary/20 text-primary hover:bg-primary/5 px-6 py-3 rounded-lg font-bold transition-all">
+                                            Not my package
+                                        </button>
+<span class="text-slate-400 text-xs ml-auto">Detected 2 days ago via Mobile App</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity Section -->
+<div class="bg-white dark:bg-background-dark rounded-xl border border-primary/10 p-6">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-slate-100">Recent Platform Activity</h3>
+<button class="text-primary text-sm font-bold hover:underline">View All</button>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-3 hover:bg-primary/5 rounded-lg transition-colors cursor-pointer border-l-4 border-emerald-500">
+<div class="size-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Verification Approved</p>
+<p class="text-xs text-slate-500">Your Umrah 2023 License has been verified by Kemenag API.</p>
+</div>
+<span class="text-xs text-slate-400">2h ago</span>
+</div>
+<div class="flex items-center gap-4 p-3 hover:bg-primary/5 rounded-lg transition-colors cursor-pointer border-l-4 border-primary">
+<div class="size-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">person_add</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">New Sub-agent Request</p>
+<p class="text-xs text-slate-500">Global Hajj Services wants to partner with your agency.</p>
+</div>
+<span class="text-xs text-slate-400">5h ago</span>
+</div>
+<div class="flex items-center gap-4 p-3 hover:bg-primary/5 rounded-lg transition-colors cursor-pointer border-l-4 border-slate-200">
+<div class="size-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Monthly Report Ready</p>
+<p class="text-xs text-slate-500">September performance and revenue report is available for download.</p>
+</div>
+<span class="text-xs text-slate-400">Yesterday</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

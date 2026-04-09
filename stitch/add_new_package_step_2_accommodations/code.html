@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<title>Jemaah.id - Create New Package</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-primary/10 bg-white dark:bg-background-dark/50 sticky top-0 h-screen hidden lg:flex flex-col">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-8">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">corporate_fare</span>
+</div>
+<div>
+<h1 class="text-sm font-bold leading-tight">Jemaah.id B2B</h1>
+<p class="text-xs text-primary font-medium">Partner Portal</p>
+</div>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-sm font-medium">Packages</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500">event_available</span>
+<span class="text-sm font-medium">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500">account_balance_wallet</span>
+<span class="text-sm font-medium">Finance</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-slate-500">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 border-t border-primary/10">
+<div class="bg-primary/5 rounded-xl p-4">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-sm">info</span>
+<span class="text-xs font-bold uppercase tracking-wider">Help &amp; Rules</span>
+</div>
+<ul class="text-xs space-y-2 text-slate-500 dark:text-slate-400">
+<li>• Minimum 3-star hotel required.</li>
+<li>• Distance is auto-calculated from the main mosque gates.</li>
+<li>• Room availability is subject to real-time verification.</li>
+</ul>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 min-w-0 h-screen overflow-y-auto">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-8 py-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">add_box</span>
+<h2 class="text-lg font-bold">Create New Package</h2>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-lg bg-primary/10 text-slate-700 dark:text-slate-300 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="flex items-center gap-2 pl-3 border-l border-primary/10">
+<div class="size-8 rounded-full bg-slate-200" data-alt="User profile placeholder profile picture"></div>
+<span class="text-sm font-medium hidden sm:block">Admin Partner</span>
+</div>
+</div>
+</header>
+<div class="max-w-4xl mx-auto p-8">
+<!-- Progress Stepper -->
+<div class="mb-10">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm font-bold text-primary uppercase tracking-widest">Step 2: Accommodations</span>
+<span class="text-sm font-bold text-slate-400">40% Complete</span>
+</div>
+<div class="h-2 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary transition-all duration-500" style="width: 40%;"></div>
+</div>
+<p class="text-xs text-slate-400 mt-2">Next: Package Itinerary &amp; Schedule</p>
+</div>
+<div class="flex flex-col gap-8">
+<!-- Makkah Section -->
+<section class="bg-white dark:bg-background-dark/30 rounded-xl border border-primary/10 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-primary/10 bg-primary/5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<h3 class="text-lg font-bold">Makkah Accommodation</h3>
+</div>
+<span class="text-xs font-medium text-primary bg-white px-3 py-1 rounded-full border border-primary/20">Active Selection</span>
+</div>
+<div class="p-6 space-y-6">
+<!-- Hotel Search -->
+<div class="relative">
+<label class="block text-sm font-semibold mb-2">Hotel Name (Makkah)</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary">search</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-primary/20 bg-background-light dark:bg-background-dark/50 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Search for hotel in Makkah..." type="text" value="Fairmont Makkah Clock Royal"/>
+<!-- Google Auto-suggest Dropdown -->
+<div class="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-background-dark border border-primary/20 rounded-lg shadow-xl z-20 overflow-hidden">
+<div class="p-3 hover:bg-primary/10 cursor-pointer border-b border-primary/5 flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-sm">location_on</span>
+<span class="text-sm font-medium">Fairmont Makkah Clock Royal Tower</span>
+</div>
+<div class="p-3 hover:bg-primary/10 cursor-pointer border-b border-primary/5 flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-sm">location_on</span>
+<span class="text-sm font-medium">Swissôtel Makkah</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Auto-calculated Distance -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-semibold mb-2">Distance to Masjidil Haram</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-lg bg-primary/5 border border-primary/20 font-bold text-primary cursor-not-allowed" readonly="" type="text" value="50 Meters"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5 px-2 py-1 bg-primary/20 rounded-full">
+<span class="material-symbols-outlined text-xs">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Verified by Maps</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">Stay Duration</label>
+<div class="flex items-center border border-primary/20 rounded-lg overflow-hidden">
+<button class="p-3 bg-primary/5 hover:bg-primary/10"><span class="material-symbols-outlined text-sm">remove</span></button>
+<input class="w-full text-center border-none focus:ring-0 bg-transparent font-medium" type="text" value="5 Nights"/>
+<button class="p-3 bg-primary/5 hover:bg-primary/10"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+</div>
+<!-- Room Types -->
+<div>
+<label class="block text-sm font-semibold mb-3">Room Type Selection</label>
+<div class="grid grid-cols-3 gap-4">
+<label class="cursor-pointer">
+<input checked="" class="hidden peer" type="checkbox"/>
+<div class="p-4 rounded-xl border-2 border-primary/10 peer-checked:border-primary peer-checked:bg-primary/5 flex flex-col items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-slate-400 peer-checked:text-primary">group</span>
+<span class="text-sm font-bold">Quad</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input checked="" class="hidden peer" type="checkbox"/>
+<div class="p-4 rounded-xl border-2 border-primary/10 peer-checked:border-primary peer-checked:bg-primary/5 flex flex-col items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-slate-400 peer-checked:text-primary">groups</span>
+<span class="text-sm font-bold">Triple</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" type="checkbox"/>
+<div class="p-4 rounded-xl border-2 border-primary/10 peer-checked:border-primary peer-checked:bg-primary/5 flex flex-col items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-slate-400 peer-checked:text-primary">person_add</span>
+<span class="text-sm font-bold">Double</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Madinah Section -->
+<section class="bg-white dark:bg-background-dark/30 rounded-xl border border-primary/10 shadow-sm overflow-hidden opacity-80 hover:opacity-100 transition-opacity">
+<div class="p-6 border-b border-primary/10 bg-slate-50 dark:bg-background-dark/50 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">mosque</span>
+<h3 class="text-lg font-bold">Madinah Accommodation</h3>
+</div>
+</div>
+<div class="p-6 space-y-6">
+<!-- Hotel Search -->
+<div class="relative">
+<label class="block text-sm font-semibold mb-2 text-slate-500">Hotel Name (Madinah)</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-primary/10 bg-background-light dark:bg-background-dark/50 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Search for hotel in Madinah..." type="text"/>
+</div>
+</div>
+<!-- Auto-calculated Distance -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-semibold mb-2 text-slate-500">Distance to Masjid Nabawi</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-lg bg-slate-100 dark:bg-background-dark/30 border border-primary/5 italic text-slate-400 cursor-not-allowed" placeholder="Calculated automatically" readonly="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2 text-slate-500">Stay Duration</label>
+<div class="flex items-center border border-primary/10 rounded-lg overflow-hidden opacity-50">
+<button class="p-3 bg-slate-50"><span class="material-symbols-outlined text-sm">remove</span></button>
+<input class="w-full text-center border-none focus:ring-0 bg-transparent font-medium" type="text" value="0 Nights"/>
+<button class="p-3 bg-slate-50"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Navigation Controls -->
+<div class="flex items-center justify-between mt-6 pb-12">
+<button class="flex items-center gap-2 px-6 py-3 rounded-lg border border-primary/20 font-bold hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+<span>Back</span>
+</button>
+<button class="flex items-center gap-2 px-10 py-3 rounded-lg bg-primary text-white font-bold hover:brightness-110 transition-all shadow-lg shadow-primary/20">
+<span>Next: Itinerary</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Right Side Stats/Help (Optional desktop view) -->
+<aside class="w-80 border-l border-primary/10 bg-white dark:bg-background-dark/50 p-8 hidden xl:block h-screen overflow-y-auto">
+<h4 class="text-sm font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">assessment</span>
+                Package Estimates
+            </h4>
+<div class="space-y-4">
+<div class="p-4 rounded-xl bg-primary/5 border border-primary/10">
+<p class="text-xs text-slate-500 mb-1">Estimated Accommodation Cost</p>
+<p class="text-xl font-bold">$1,250.00 <span class="text-xs font-normal">/person</span></p>
+</div>
+<div class="p-4 rounded-xl border border-primary/10">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-bold text-slate-400 uppercase">Selected Hotels</span>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+<div>
+<p class="text-xs font-bold">Fairmont Makkah</p>
+<p class="text-[10px] text-slate-400">Luxury 5-star</p>
+</div>
+</li>
+<li class="flex items-start gap-2 text-slate-300">
+<span class="material-symbols-outlined text-sm mt-0.5">circle</span>
+<div>
+<p class="text-xs font-bold">Madinah Hotel</p>
+<p class="text-[10px]">Not yet selected</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="mt-8">
+<h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Location Preview</h4>
+<div class="w-full h-48 rounded-xl bg-slate-200 overflow-hidden relative" data-location="Makkah" style="">
+<img class="w-full h-full object-cover" data-alt="Satellite map view of Makkah Masjidil Haram area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1jW64XO5iaFVzM7SaPpOYwYqQ_V792G0hQ6MvEwyMLOlhmals5EmoKZ9N7Vr5HMq3TzE9gglcwShJWMHbkS8A1sHCBfhO0H2iUPQrY3-a3bnb4O5pA2pee3GIeX-DqvqjGoG07m1vgzBU1gTRxAmXPtor4nN0oUxdIhwnemc_Pavwd2dYhKdntP13TMe9VNxSexdDb6Vcw7IJDdNJUaHEMU24lPuBtK2r4WoGgegzbSfVqRJP_XTj8vKv5aZo7f4dlK_q4X76wlo"/>
+<div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+<div class="bg-white p-2 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</body></html>

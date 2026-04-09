@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#075232",
+              "background-light": "#f6f8f7",
+              "background-dark": "#10221a",
+            },
+            fontFamily: {
+              "display": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Verified Travel Partners - Jemaah.id</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-md mx-auto bg-background-light dark:bg-background-dark min-h-screen flex flex-col relative shadow-xl">
+<!-- Header Section -->
+<div class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">Verified Partners</h2>
+<div class="flex size-10 items-center justify-end">
+<button class="text-slate-900 dark:text-slate-100 flex items-center justify-center">
+<span class="material-symbols-outlined">info</span>
+</button>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-primary flex border-none bg-white dark:bg-slate-800 items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-0 border-none bg-white dark:bg-slate-800 h-full placeholder:text-slate-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search travel agencies..." value=""/>
+</div>
+</label>
+</div>
+<!-- Filters -->
+<div class="flex gap-3 px-4 pb-4 overflow-x-auto no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-4 shadow-md">
+<span class="text-sm font-medium">All Partners</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4">
+<span class="text-sm font-medium">Top Rated</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4">
+<span class="text-sm font-medium">Umroh</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4">
+<span class="text-sm font-medium">Haji</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Directory List -->
+<div class="flex-1 px-4 space-y-4 pb-24">
+<!-- Partner Card 1 -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex items-start justify-between gap-4">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Al-Amin Universal</h3>
+<span class="material-symbols-outlined text-blue-500 text-lg" title="Verified by Kemenag">verified</span>
+</div>
+<div class="flex items-center gap-1 text-amber-500 mb-1">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-sm font-bold">4.9</span>
+<span class="text-slate-400 dark:text-slate-500 text-xs font-normal">(1.2k reviews)</span>
+</div>
+<p class="text-primary dark:text-primary text-sm font-semibold mb-2">PPIU Licensed • 12 Active Packages</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Umroh Plus</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Haji Furoda</span>
+</div>
+</div>
+<div class="w-20 h-20 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 border border-slate-100 dark:border-slate-600" data-alt="Travel agency modern office building logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIEzrbNbqaL39FjsXZ5vaiX75whdjzqZb56xGr8oifYeBIZfkO36CJD3TNeR3iEznQ6CuY7qo8Pww-ssCbj4uTuwSYaSsD-8KFWdCWeOiDpcynrZC3SCRgZcbpolFRhpBF6qL1_wCtrmx8hT6DSQqFcToKdJEXFzI-PgNGSjeWI2bLMGhQG02IVKSVEVjLpc96nxmVh6S98CacbIV-Esh9jQg3E4gf6NsOs_6RVFzEhcwa3Cf8jda2DXxl6BcTtpYr5w99HIekZvU");'></div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 h-10 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light font-bold text-sm">
+                        View Profile
+                    </button>
+<button class="flex-1 h-10 rounded-lg bg-primary text-white font-bold text-sm">
+                        See Packages
+                    </button>
+</div>
+</div>
+<!-- Partner Card 2 -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex items-start justify-between gap-4">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Maktour Travel</h3>
+<span class="material-symbols-outlined text-blue-500 text-lg">verified</span>
+</div>
+<div class="flex items-center gap-1 text-amber-500 mb-1">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-sm font-bold">4.8</span>
+<span class="text-slate-400 dark:text-slate-500 text-xs font-normal">(850 reviews)</span>
+</div>
+<p class="text-primary dark:text-primary text-sm font-semibold mb-2">PPIU Licensed • 8 Active Packages</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Premium Haji</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">VIP Umroh</span>
+</div>
+</div>
+<div class="w-20 h-20 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 border border-slate-100 dark:border-slate-600" data-alt="Luxury corporate building travel agency logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxGD50QqvD1vqBBKYuoJEX-LeAspYCnFTFki3MaJ3zYpNmwrocCVtGIApfzf4ubc-C_84qog7lvG7c6jJ4wnpTzYfJU-YGTTaKjbyMUFnBbNe4E4i0fea924H0Xz0CSe-hk4c_exva6wdOfMxJsUSgiUXN2d-CAgECihiXKFoALmLY2p56QePddXeCtAt0ccrXq4EVFrpYJBL7X4G-GYo9PAuo1Ag6Ew1dFQFx4ns3nWh-aAtup4fzDLkBT14mXLuazEfcFLwWv48");'></div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 h-10 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light font-bold text-sm">
+                        View Profile
+                    </button>
+<button class="flex-1 h-10 rounded-lg bg-primary text-white font-bold text-sm">
+                        See Packages
+                    </button>
+</div>
+</div>
+<!-- Partner Card 3 -->
+<div class="flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex items-start justify-between gap-4">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight">Patuna Mekar Jaya</h3>
+<span class="material-symbols-outlined text-blue-500 text-lg">verified</span>
+</div>
+<div class="flex items-center gap-1 text-amber-500 mb-1">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-sm font-bold">4.7</span>
+<span class="text-slate-400 dark:text-slate-500 text-xs font-normal">(2.1k reviews)</span>
+</div>
+<p class="text-primary dark:text-primary text-sm font-semibold mb-2">PPIU Licensed • 24 Active Packages</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Economy Umroh</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Haji Khusus</span>
+</div>
+</div>
+<div class="w-20 h-20 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 border border-slate-100 dark:border-slate-600" data-alt="Skyscraper headquarters of travel partner" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWPh-LixKfsEBx7wMZZ1opwG_NvTOZgCu-jkrlAg6eTGe_E0Ra-Z78BNh15VTzstwA1SfrlLTXoqdjtgkXtkO96VbHcbM1P2IL8n_wMUgumuyj-OugQhv5tR8e1b1b2TfdAZG9dOLWmYrF565AsEr9q8RF1qjB-bnK9ynFAzs19X_1j1CDOsF_KBdfr-v62u0D86oCSf2yfEUuUf4Hq7xrYWnnUvGfv4IKoxoIGqNGO1IjUNkJ_jFebgYHkBijiolzq3kijMwE96w");'></div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 h-10 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light font-bold text-sm">
+                        View Profile
+                    </button>
+<button class="flex-1 h-10 rounded-lg bg-primary text-white font-bold text-sm">
+                        See Packages
+                    </button>
+</div>
+</div>
+<!-- Call to action/Support -->
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-4 border border-primary/10 border-dashed">
+<p class="text-xs text-center text-slate-500 dark:text-slate-400 italic">
+                    All partners listed above are verified against the Ministry of Religious Affairs (Kemenag) database.
+                </p>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 max-w-md w-full border-t border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg px-4 pb-4 pt-2 flex justify-around items-center z-20">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">handshake</span>
+<p class="text-[10px] font-bold leading-normal tracking-wide">Partners</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">package_2</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Packages</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Profile</p>
+</a>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>B2B Booking &amp; Leads Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex-shrink-0 border-r border-primary/10 bg-white dark:bg-background-dark/50 overflow-y-auto">
+<div class="flex flex-col h-full p-4 gap-6">
+<div class="px-3 py-4">
+<div class="flex items-center gap-2 mb-1">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="">dashboard</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100" style="">Jemaah.id</h1>
+</div>
+<p class="text-xs font-medium text-primary uppercase tracking-wider" style="">Management Dashboard</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-400" href="#" style="">
+<span class="material-symbols-outlined text-[22px]" style="">grid_view</span>
+<span class="text-sm font-semibold" style="">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-400" href="#" style="">
+<span class="material-symbols-outlined text-[22px]" style="">inventory_2</span>
+<span class="text-sm font-semibold" style="">Package Management</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary text-white shadow-lg shadow-primary/20" href="#" style="">
+<span class="material-symbols-outlined text-[22px]" style="">group</span>
+<span class="text-sm font-semibold" style="">Booking/Leads</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-400" href="#" style="">
+<span class="material-symbols-outlined text-[22px]" style="">grade</span>
+<span class="text-sm font-semibold" style="">Reviews</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-primary/10 transition-colors text-slate-600 dark:text-slate-400" href="#" style="">
+<span class="material-symbols-outlined text-[22px]" style="">account_circle</span>
+<span class="text-sm font-semibold" style="">Partner Profile</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-primary/10">
+<div class="flex items-center gap-3 px-3 py-2">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="">support_agent</span>
+</div>
+<div class="overflow-hidden">
+<p class="text-xs font-bold truncate" style="">Partner Support</p>
+<p class="text-[10px] text-slate-500 truncate" style="">24/7 Priority Line</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col min-w-0 overflow-hidden">
+<!-- Header -->
+<header class="h-16 border-b border-primary/10 bg-white dark:bg-background-dark/80 flex items-center justify-between px-8 z-10">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-bold" style="">Booking &amp; Leads</h2>
+<div class="h-4 w-[1px] bg-primary/20"></div>
+<div class="flex items-center gap-2 text-xs text-slate-500 font-medium">
+<span class="" style="">Overview</span>
+<span class="material-symbols-outlined text-[14px]" style="">chevron_right</span>
+<span class="text-primary" style="">Current Leads</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative max-w-md w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-[20px]" style="">search</span>
+<input class="w-full bg-primary/5 border-none focus:ring-1 focus:ring-primary rounded-lg pl-10 pr-4 py-2 text-sm" placeholder="Search ID or Customer..." type="text"/>
+</div>
+<button class="size-10 flex items-center justify-center rounded-lg hover:bg-primary/10 text-slate-600 relative" style="">
+<span class="material-symbols-outlined" style="">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white"></span>
+</button>
+<div class="size-10 rounded-full bg-slate-200 overflow-hidden border-2 border-primary/20" data-alt="User profile avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABkuBg0iVvMcaQYGvbmjX1mwAgZbJoxol92tG7qkqhnzERByv-66eyBTHM8EZtazuwLTOEC0TQudkqunOo1mW2HpgeDaBHrYYUpwTHaUDf4m0ZmlVnR3D25pUyOKd-5LnSZTTTs2LO8x13P1ZqSbtg2wIE12g-YnuJ8QFOB_oL7k2g73pXqLQQf1R3Vd_qr_SrhdXAMyC6l77Uc0TvGciZxg7IENZ2sqX_w--fXuwTutw3C3XTwOFme2H0gJJyp4w2pWSBkLcmAPo");'></div>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-8 space-y-8">
+<!-- Summary Stats -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-background-dark/30 p-6 rounded-xl border border-primary/5 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-blue-50 text-blue-600 rounded-lg">
+<span class="material-symbols-outlined" style="">person_add</span>
+</div>
+<span class="text-green-600 bg-green-50 px-2 py-1 rounded text-xs font-bold" style="">+12.5%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium" style="">New Leads</p>
+<h3 class="text-3xl font-bold mt-1" style="">42</h3>
+</div>
+<div class="bg-white dark:bg-background-dark/30 p-6 rounded-xl border border-primary/5 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 text-primary rounded-lg">
+<span class="material-symbols-outlined" style="">verified</span>
+</div>
+<span class="text-green-600 bg-green-50 px-2 py-1 rounded text-xs font-bold" style="">+5.2%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium" style="">Confirmed Bookings</p>
+<h3 class="text-3xl font-bold mt-1" style="">128</h3>
+</div>
+<div class="bg-white dark:bg-background-dark/30 p-6 rounded-xl border border-primary/5 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-orange-50 text-orange-600 rounded-lg">
+<span class="material-symbols-outlined" style="">sync</span>
+</div>
+<span class="text-slate-400 bg-slate-50 px-2 py-1 rounded text-xs font-bold" style="">Stable</span>
+</div>
+<p class="text-slate-500 text-sm font-medium" style="">In Progress</p>
+<h3 class="text-3xl font-bold mt-1" style="">15</h3>
+</div>
+<div class="bg-white dark:bg-background-dark/30 p-6 rounded-xl border border-primary/5 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-purple-50 text-purple-600 rounded-lg">
+<span class="material-symbols-outlined" style="">account_balance_wallet</span>
+</div>
+<span class="text-green-600 bg-green-50 px-2 py-1 rounded text-xs font-bold" style="">+18%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium" style="">Total Revenue</p>
+<h3 class="text-3xl font-bold mt-1" style="">$45.2k</h3>
+</div>
+</div>
+<!-- Booking Table Section -->
+<div class="bg-white dark:bg-background-dark/30 rounded-xl border border-primary/5 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-primary/5 flex flex-wrap gap-4 items-center justify-between">
+<div>
+<h4 class="text-lg font-bold" style="">Booking Management</h4>
+<p class="text-xs text-slate-500" style="">Track and manage your leads and pilgrims</p>
+</div>
+<div class="flex gap-3">
+<div class="relative">
+<select class="appearance-none bg-primary/5 border-none rounded-lg pl-4 pr-10 py-2 text-sm font-medium text-slate-700 focus:ring-1 focus:ring-primary">
+<option>All Status</option>
+<option>New</option>
+<option>In Progress</option>
+<option>Confirmed</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400" style="">expand_more</span>
+</div>
+<button class="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold shadow-md shadow-primary/20 hover:bg-primary/90" style="">
+<span class="material-symbols-outlined text-[18px]" style="">add</span>
+                            Add Manual Lead
+                        </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50/50 dark:bg-background-dark/20 text-slate-400 text-[11px] uppercase tracking-wider font-bold">
+<th class="px-6 py-4" style="">Pilgrim Name</th>
+<th class="px-6 py-4" style="">Package Type</th>
+<th class="px-6 py-4" style="">Status</th>
+<th class="px-6 py-4" style="">Request Date</th>
+<th class="px-6 py-4" style="">Quick Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5 text-sm">
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4" style="">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs" style="">AA</div>
+<div>
+<p class="font-bold" style="">Ahmed Abdullah</p>
+<p class="text-[10px] text-slate-400 tracking-tight" style="">ID: #BOK-4921</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4" style="">
+<p class="font-medium text-slate-600" style="">Economy Umrah 2024</p>
+<p class="text-[10px] text-primary" style="">Standard Suite</p>
+</td>
+<td class="px-6 py-4" style="">
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-50 text-blue-600" style="">New</span>
+</td>
+<td class="px-6 py-4 text-slate-500" style="">Oct 12, 2023</td>
+<td class="px-6 py-4" style="">
+<div class="flex gap-2">
+<button class="p-1.5 rounded bg-primary/10 text-primary hover:bg-primary/20" style="" title="Contact Customer">
+<span class="material-symbols-outlined text-[18px]" style="">call</span>
+</button>
+<button class="p-1.5 rounded bg-primary/10 text-primary hover:bg-primary/20" style="" title="Send WhatsApp">
+<span class="material-symbols-outlined text-[18px]" style="">chat</span>
+</button>
+<button class="p-1.5 rounded bg-slate-100 text-slate-600 hover:bg-slate-200" style="">
+<span class="material-symbols-outlined text-[18px]" style="">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4" style="">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-xs" style="">FK</div>
+<div>
+<p class="font-bold" style="">Fatima Khan</p>
+<p class="text-[10px] text-slate-400 tracking-tight" style="">ID: #BOK-4830</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4" style="">
+<p class="font-medium text-slate-600" style="">Premium Hajj Group</p>
+<p class="text-[10px] text-primary" style="">Luxury VIP</p>
+</td>
+<td class="px-6 py-4" style="">
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-orange-50 text-orange-600" style="">In Progress</span>
+</td>
+<td class="px-6 py-4 text-slate-500" style="">Oct 10, 2023</td>
+<td class="px-6 py-4" style="">
+<div class="flex gap-2">
+<button class="p-1.5 rounded bg-primary text-white hover:bg-primary/90" style="" title="Update Status">
+<span class="material-symbols-outlined text-[18px]" style="">edit_note</span>
+</button>
+<button class="p-1.5 rounded bg-primary/10 text-primary hover:bg-primary/20" style="" title="Send WhatsApp">
+<span class="material-symbols-outlined text-[18px]" style="">chat</span>
+</button>
+<button class="p-1.5 rounded bg-slate-100 text-slate-600 hover:bg-slate-200" style="">
+<span class="material-symbols-outlined text-[18px]" style="">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4" style="">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs" style="">JS</div>
+<div>
+<p class="font-bold" style="">Jassim Salem</p>
+<p class="text-[10px] text-slate-400 tracking-tight" style="">ID: #BOK-4712</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4" style="">
+<p class="font-medium text-slate-600" style="">Short Stay Umrah</p>
+<p class="text-[10px] text-primary" style="">Executive</p>
+</td>
+<td class="px-6 py-4" style="">
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-green-50 text-green-600" style="">Confirmed</span>
+</td>
+<td class="px-6 py-4 text-slate-500" style="">Oct 08, 2023</td>
+<td class="px-6 py-4" style="">
+<div class="flex gap-2">
+<button class="p-1.5 rounded bg-primary/10 text-primary hover:bg-primary/20" style="" title="Download Voucher">
+<span class="material-symbols-outlined text-[18px]" style="">file_download</span>
+</button>
+<button class="p-1.5 rounded bg-primary/10 text-primary hover:bg-primary/20" style="" title="Send Confirmation">
+<span class="material-symbols-outlined text-[18px]" style="">mail</span>
+</button>
+<button class="p-1.5 rounded bg-slate-100 text-slate-600 hover:bg-slate-200" style="">
+<span class="material-symbols-outlined text-[18px]" style="">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4" style="">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center font-bold text-xs" style="">MK</div>
+<div>
+<p class="font-bold" style="">Mustafa Kamal</p>
+<p class="text-[10px] text-slate-400 tracking-tight" style="">ID: #BOK-4690</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4" style="">
+<p class="font-medium text-slate-600" style="">Economy Umrah 2024</p>
+<p class="text-[10px] text-primary" style="">Standard Triple</p>
+</td>
+<td class="px-6 py-4" style="">
+<span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-green-50 text-green-600" style="">Confirmed</span>
+</td>
+<td class="px-6 py-4 text-slate-500" style="">Oct 05, 2023</td>
+<td class="px-6 py-4" style="">
+<div class="flex gap-2">
+<button class="p-1.5 rounded bg-primary/10 text-primary hover:bg-primary/20" style="" title="Download Voucher">
+<span class="material-symbols-outlined text-[18px]" style="">file_download</span>
+</button>
+<button class="p-1.5 rounded bg-primary/10 text-primary hover:bg-primary/20" style="" title="Send Confirmation">
+<span class="material-symbols-outlined text-[18px]" style="">mail</span>
+</button>
+<button class="p-1.5 rounded bg-slate-100 text-slate-600 hover:bg-slate-200" style="">
+<span class="material-symbols-outlined text-[18px]" style="">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-6 border-t border-primary/5 flex items-center justify-between">
+<p class="text-xs text-slate-500" style="">Showing 4 of 42 leads</p>
+<div class="flex gap-2">
+<button class="px-3 py-1 rounded border border-primary/20 text-slate-400 hover:bg-primary/5 text-xs font-bold transition-all" style="">Previous</button>
+<button class="px-3 py-1 rounded bg-primary text-white text-xs font-bold shadow-sm" style="">1</button>
+<button class="px-3 py-1 rounded border border-primary/20 text-slate-600 hover:bg-primary/5 text-xs font-bold transition-all" style="">2</button>
+<button class="px-3 py-1 rounded border border-primary/20 text-slate-600 hover:bg-primary/5 text-xs font-bold transition-all" style="">Next</button>
+</div>
+</div>
+</div>
+<!-- Follow-up Quick Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 bg-white dark:bg-background-dark/30 rounded-xl border border-primary/5 p-6 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h4 class="text-base font-bold" style="">Follow-up Tasks Today</h4>
+<span class="text-[10px] bg-red-50 text-red-600 px-2 py-1 rounded font-bold uppercase" style="">3 Urgent</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 rounded-lg bg-primary/5 border border-primary/10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" style="">notification_important</span>
+<div>
+<p class="text-sm font-bold" style="">Call Ahmed Abdullah</p>
+<p class="text-[10px] text-slate-500" style="">Pending payment confirmation for Umrah Package</p>
+</div>
+</div>
+<button class="bg-primary text-white px-3 py-1 rounded text-[11px] font-bold" style="">Call Now</button>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400" style="">chat_bubble</span>
+<div>
+<p class="text-sm font-bold" style="">WhatsApp Fatima Khan</p>
+<p class="text-[10px] text-slate-500" style="">Inquiry about premium transportation upgrades</p>
+</div>
+</div>
+<button class="text-primary hover:bg-primary/10 px-3 py-1 rounded text-[11px] font-bold border border-primary/30" style="">Message</button>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400" style="">schedule</span>
+<div>
+<p class="text-sm font-bold" style="">Review Custom Itinerary</p>
+<p class="text-[10px] text-slate-500" style="">Group booking #GR-2099 needs final check</p>
+</div>
+</div>
+<button class="text-primary hover:bg-primary/10 px-3 py-1 rounded text-[11px] font-bold border border-primary/30" style="">Review</button>
+</div>
+</div>
+</div>
+<div class="bg-primary/10 rounded-xl p-6 relative overflow-hidden flex flex-col justify-between">
+<!-- Decorate -->
+<div class="absolute -right-4 -top-4 size-24 bg-primary/20 rounded-full blur-2xl"></div>
+<div class="absolute -left-10 -bottom-10 size-32 bg-primary/10 rounded-full blur-3xl"></div>
+<div>
+<h4 class="text-primary text-base font-bold mb-2" style="">Partner Insights</h4>
+<p class="text-slate-600 text-xs leading-relaxed" style="">Your conversion rate increased by 8% this week compared to last month. Keep it up!</p>
+</div>
+<div class="mt-8 space-y-3">
+<div class="flex justify-between items-center text-[10px] font-bold uppercase tracking-widest text-primary/70">
+<span class="" style="">Conversion Target</span>
+<span class="" style="">85%</span>
+</div>
+<div class="w-full h-2 bg-white rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 85%"></div>
+</div>
+<p class="text-[10px] text-slate-500 italic text-center" style="">Only 5 more confirmed bookings to reach goal</p>
+</div>
+<button class="mt-6 w-full bg-white text-primary font-bold text-sm py-2 rounded-lg shadow-sm hover:shadow-md transition-all" style="">
+                        View Full Report
+                    </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<title>Saved Comparisons - Jemaah.id</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 gap-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">Saved Comparisons</h1>
+</div>
+<!-- Tabs -->
+<div class="flex px-4 border-b border-primary/10">
+<button class="flex-1 py-3 text-sm font-medium text-slate-500 dark:text-slate-400 border-b-2 border-transparent">
+                Packages
+            </button>
+<button class="flex-1 py-3 text-sm font-bold text-primary border-b-2 border-primary">
+                Comparisons
+            </button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 p-4 space-y-4 pb-24">
+<!-- Search & Filter Bar -->
+<div class="flex gap-2 mb-4">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="w-full bg-white dark:bg-slate-800/50 border border-primary/20 rounded-lg py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Search comparisons..." type="text"/>
+</div>
+<button class="p-2 border border-primary/20 rounded-lg bg-white dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">tune</span>
+</button>
+</div>
+<!-- Saved Comparison Item 1 -->
+<div class="bg-white dark:bg-slate-800/40 rounded-xl p-4 shadow-sm border border-primary/5 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg leading-tight">Premium Umrah vs Economic Plus</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+                        Saved on Oct 24, 2023
+                    </p>
+</div>
+<button class="text-primary">
+<span class="material-symbols-outlined fill-[1]">bookmark</span>
+</button>
+</div>
+<div class="grid grid-cols-3 gap-2 py-2">
+<div class="space-y-2">
+<div class="aspect-square rounded-lg bg-slate-100 dark:bg-slate-700 overflow-hidden relative">
+<img class="object-cover w-full h-full" data-alt="Grand Mosque in Mecca at dawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPx65bOkputaRKwH4PH3yR_oddGNfMg5XZWQQ7svz6BklL9k8duFXxt8vn10EW5LsEKGnrjuEPvlf5D4wekJA0hVbrNP9LDYPf7uPjX84qctg3MajriVOj58V_HFdfwhQeO4QG2JeFs33BI_Fjq6edtposm4954A9eVnEotuiynQeP-ptateypPEKXZvpHBav3h9uLLcj-laAM81VTfujZvJTZ-VaLylpM80L_vNHHlhQqvC2s8DgCCovUY4zPGKWNz3dEFYFcGQo"/>
+<div class="absolute top-1 right-1 bg-primary text-white text-[8px] px-1 rounded font-bold uppercase">Pro</div>
+</div>
+<p class="text-[10px] font-semibold truncate">Royal Safar</p>
+<p class="text-xs font-bold text-primary">$2,500</p>
+</div>
+<div class="space-y-2">
+<div class="aspect-square rounded-lg bg-slate-100 dark:bg-slate-700 overflow-hidden relative">
+<img class="object-cover w-full h-full" data-alt="Pilgrims at the Kaaba in Mecca" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb1pTqTR3Lo1XwG5ysM6EmrLhDA9JU0XtVsYGB2_2zZ5gA7-nPvCRghKx5JOtl_smGekP7SVxe4jNiDMnsfO0A7wFRm9S7XQ3SkZUW-AI-a51AmHB-Yy8NjDzccOGZYVg450wo3H8vVAj-nrgvez8D7F8usZjUIt4cj_7xAY8rGx8Cd4o6YOpbL4i4Qcfx7TQjhL_i6S4FzfAZj1QDeXletqZNwgLQP_o7MydMNMArcV9LL7oBAANNcjV9_xthveml24Z1Tf2q8DU"/>
+<div class="absolute top-1 right-1 bg-blue-500 text-white text-[8px] px-1 rounded font-bold uppercase">Eco</div>
+</div>
+<p class="text-[10px] font-semibold truncate">Economic A1</p>
+<p class="text-xs font-bold text-primary">$1,200</p>
+</div>
+<div class="space-y-2">
+<div class="aspect-square rounded-lg bg-slate-100 dark:bg-slate-700 overflow-hidden relative border-2 border-dashed border-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/40">add_circle</span>
+</div>
+<p class="text-[10px] text-slate-400 text-center">Compare more</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-primary/5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+<span class="text-[10px] font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">All Verified</span>
+</div>
+<button class="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity">
+                    View Comparison
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Saved Comparison Item 2 -->
+<div class="bg-white dark:bg-slate-800/40 rounded-xl p-4 shadow-sm border border-primary/5 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg leading-tight">Ramadan Early Bird Specials</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+                        Saved on Nov 12, 2023
+                    </p>
+</div>
+<button class="text-primary">
+<span class="material-symbols-outlined fill-[1]">bookmark</span>
+</button>
+</div>
+<div class="grid grid-cols-4 gap-2 py-2">
+<div class="aspect-square rounded-lg bg-slate-100 dark:bg-slate-700 overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="Islamic architecture detail pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRYvRBZW4yktDfixEb7kjbNVU1ATG9u5rkH4KFc7zbe37PtjkpA0CB2IfQKIByjdHILeROQIoUlAyw4DjEShQf9JDdNfc3b-uuKLLjU5xTf7Vp0JfrukxHS1aCajI1mtPj8nqXCGizigpVVXC9JqaY4hXQziKdWAR8bvPhs_858UJtNNCGMZ37dcbBY7UycHbycDvkIf2MmgZ_CDrE6iGArATftDsGKLjPUw9TiylRdGseaPSENypmIigA_xZrnJifS-LlZn4vD5Q"/>
+</div>
+<div class="aspect-square rounded-lg bg-slate-100 dark:bg-slate-700 overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="Medina Mosque at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMOlu6LENDF1yc2HSgzRHNgi5yB9hSq6sHD9ZVAe7_sG5H9Xp8vxyDcggX4otluafMqs9QWdxiVSWxJM6zM4xhYjbNsVqVN9fP6cJv3Wzb9Lr_WdSMRfUzDqYKI-lXMoh_0NrecNQ00umTwmez2gC0kUzWSgKuPQWy-gBKiZL4HIdQngBoHXZHKdDYyFOCQncY0nA1mW3bKhkiO_YHsj0wbUvWPsXY0sCs0E1m3WFzrNwgxtVDj5ntkHuTKntG7c62_jjq56TlzaA"/>
+</div>
+<div class="aspect-square rounded-lg bg-slate-100 dark:bg-slate-700 overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="Traditional Arabic lanterns glowing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEB-vwiS05St-ibaVRgo3Sz21HI1AAhh-7549GDm2u3qh3FNjbBs35m9qfS5fpbZN9nA53-nYE98UfTvdbsRyy8GSPuoOuNMHR84b1rXBkewB7uOEqP-XbRgWicuTU9osovJGUtUSUL3mJFS01xEeSAXDKqPvyEiZ-MJvZFNfRK_3U5RpWXZOL8QFwkDxublGTkoDNZxvYJMwxyRpmUlsvylOrs2rxV9LNWoPRpD-_VA7DUGZYcaTx6LjdLbxf8D9g2q3muUx_twM"/>
+</div>
+<div class="aspect-square rounded-lg bg-slate-100 dark:bg-slate-700 overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="Quran open on a wooden stand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVC0P653nnZOIBjWxEhmVaOxQIXDoVrwairVtVOP8W-M65-2a3NrxhqO29zsI-Sg-58kUpEGDUYRrCD-1DMy2X-zJF3vJH81ucbtk2QXTGs7mMDM0O7OIPaATkU5k-5QpRGB0su-NaMXslUtouLddywRxgaY_vZgGbszEVNhWSFkR4LcOIEpSwq-wk9Qr_YAFLjQUJZo5lsWYEdsCGnZY8avj6cDWNFV-fAZtjshI2CjFeF4cdkybbnGjO3igGX3gH3ZEzqJz-T14"/>
+</div>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-300">Comparing 4 packages • Prices from $1,800 to $3,200</p>
+<div class="flex items-center justify-between pt-2 border-t border-primary/5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+<span class="text-[10px] font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">KEMENAG CERTIFIED</span>
+</div>
+<button class="flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/20 transition-colors">
+                    View Comparison
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Empty State (Hidden for demo, but code exists) -->
+<div class="hidden flex flex-col items-center justify-center py-20 px-10 text-center space-y-4">
+<div class="size-24 rounded-full bg-primary/5 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-primary text-5xl">compare_arrows</span>
+</div>
+<h3 class="text-xl font-bold">No saved comparisons</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Compare up to 4 Umrah packages side-by-side and save them here for later.</p>
+<button class="bg-primary text-white font-bold py-3 px-8 rounded-xl shadow-lg shadow-primary/20 mt-4">
+                Start Comparing
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-primary/10 px-6 py-3 pb-6">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-[24px]">calendar_month</span>
+<span class="text-[10px] font-medium">Bookings</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-[1]">bookmark</span>
+<span class="text-[10px] font-bold">Saved</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

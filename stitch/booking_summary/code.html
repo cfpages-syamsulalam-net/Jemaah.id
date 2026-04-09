@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<title>Booking Summary - Jemaah.id</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-auto min-h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<!-- Top Navigation -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Booking Summary</h2>
+</div>
+<!-- Progress Steps -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-5">
+<div class="h-2 w-2 rounded-full bg-primary/30"></div>
+<div class="h-2 w-2 rounded-full bg-primary/30"></div>
+<div class="h-2 w-8 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-primary/30"></div>
+</div>
+<div class="px-4 overflow-y-auto pb-32">
+<!-- Package Header Section -->
+<h2 class="text-slate-900 dark:text-slate-100 text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-2">Package Details</h2>
+<div class="mb-6">
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-900/50 p-4 shadow-sm border border-primary/10">
+<div class="flex flex-[2_2_0px] flex-col justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">Premium Umrah Package 2024</p>
+<p class="text-primary text-sm font-medium leading-normal">12 Days | Quad Room</p>
+</div>
+<div class="flex items-center gap-1 text-slate-500 dark:text-slate-400 text-xs pt-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Departure: Oct 12, 2024</span>
+</div>
+</div>
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-lg flex-1" data-alt="Great Mosque of Mecca with Kaaba" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwY2krV0GlzZPePv2TCKsss2gvG_jqw1l9bvezMTtTMCxkNV4NyOSCQ5w_HZja4kAXwQCcMAFL2Ex4EqB4ajv4q_59hMPeEQZ2Crs5B54P5o9i4uhlBzIh82bNeQ4e03kiyX1HcpNL3b_lCOGucdwopATBcZcGpG7DPu_PG-MynC5qa4x1NUCgRph3Es4ZFil8-YI3KQ0tYg6vjuJ7hwT1OBhCQ68n9vAb5g6GfeoZfWJIx52tkvSswO1-QWp-VbkzsFI3pSsCa6c");'>
+</div>
+</div>
+</div>
+<!-- Inclusions Section -->
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] pb-3">What's Included</h3>
+<div class="grid grid-cols-4 gap-3 mb-8">
+<div class="flex flex-col items-center gap-2 p-3 bg-white dark:bg-slate-900/50 rounded-xl border border-primary/5 shadow-sm">
+<span class="material-symbols-outlined text-primary">flight_takeoff</span>
+<span class="text-[10px] font-medium">Flight</span>
+</div>
+<div class="flex flex-col items-center gap-2 p-3 bg-white dark:bg-slate-900/50 rounded-xl border border-primary/5 shadow-sm">
+<span class="material-symbols-outlined text-primary">hotel</span>
+<span class="text-[10px] font-medium">Hotel</span>
+</div>
+<div class="flex flex-col items-center gap-2 p-3 bg-white dark:bg-slate-900/50 rounded-xl border border-primary/5 shadow-sm">
+<span class="material-symbols-outlined text-primary">assignment_ind</span>
+<span class="text-[10px] font-medium">Visa</span>
+</div>
+<div class="flex flex-col items-center gap-2 p-3 bg-white dark:bg-slate-900/50 rounded-xl border border-primary/5 shadow-sm">
+<span class="material-symbols-outlined text-primary">water_drop</span>
+<span class="text-[10px] font-medium">Zam-zam</span>
+</div>
+</div>
+<!-- Passenger Summary -->
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">Passenger Details</h3>
+<span class="text-primary text-sm font-semibold">4 People</span>
+</div>
+<div class="space-y-3 mb-8">
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900/50 rounded-xl border border-primary/5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<p class="text-sm font-bold">Ahmad Fauzi</p>
+<p class="text-xs text-slate-500">Lead Passenger</p>
+</div>
+</div>
+<span class="text-xs font-medium px-2 py-1 bg-primary/10 text-primary rounded-full">Adult</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900/50 rounded-xl border border-primary/5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<p class="text-sm font-bold">Siti Aminah (+2 others)</p>
+<p class="text-xs text-slate-500">Family Members</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+</div>
+<!-- Price Breakdown -->
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] pb-3">Payment Summary</h3>
+<div class="bg-primary/5 rounded-xl p-4 border border-primary/20 space-y-3">
+<div class="flex justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400">Package Base Price (x4)</span>
+<span class="font-medium">$10,400.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400">Visa &amp; Admin Fees</span>
+<span class="font-medium">$450.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400">Add-ons (Extra Baggage)</span>
+<span class="font-medium">$120.00</span>
+</div>
+<div class="border-t border-primary/10 pt-3 flex justify-between items-center">
+<span class="text-base font-bold text-slate-900 dark:text-slate-100">Total Amount</span>
+<span class="text-xl font-bold text-primary">$10,970.00</span>
+</div>
+</div>
+</div>
+<!-- Fixed Footer Action -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-white dark:bg-slate-900 p-4 border-t border-primary/10 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<input class="rounded text-primary focus:ring-primary h-4 w-4 border-slate-300" id="terms" type="checkbox"/>
+<label class="text-[11px] text-slate-500" for="terms">I agree to the Terms &amp; Conditions and Booking Policy</label>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span>Proceed to Payment</span>
+<span class="material-symbols-outlined">payments</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

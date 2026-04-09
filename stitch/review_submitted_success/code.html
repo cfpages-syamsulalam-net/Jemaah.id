@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {},
+            fontFamily: {
+              "headline": ["Work Sans"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 antialiased min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-zinc-950 border-b border-zinc-100 dark:border-zinc-800 flex items-center justify-between px-4 h-16 w-full">
+<div class="flex items-center justify-center w-10 h-10 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-150 rounded-full cursor-pointer">
+<span class="material-symbols-outlined text-zinc-500 dark:text-zinc-400" data-icon="close">close</span>
+</div>
+<h1 class="font-['Work_Sans'] text-base font-semibold text-emerald-900 dark:text-emerald-400">Review Success</h1>
+<div class="w-10"></div> <!-- Spacer for center alignment -->
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-6 max-w-md mx-auto">
+<!-- Success Illustration & Headline -->
+<div class="flex flex-col items-center text-center mb-10">
+<div class="relative mb-6">
+<div class="absolute inset-0 bg-emerald-100 dark:bg-emerald-900/20 rounded-full scale-125 blur-xl opacity-50"></div>
+<div class="relative w-32 h-32 bg-emerald-50 dark:bg-emerald-900/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-emerald-600 dark:text-emerald-400" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<h2 class="text-2xl font-extrabold text-emerald-900 dark:text-zinc-100 leading-tight mb-2">Review Submitted Successfully!</h2>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed px-4">
+                Thank you for sharing your experience. Your detailed feedback helps the community of pilgrims make informed decisions for their sacred journey.
+            </p>
+</div>
+<!-- Badge Section (Bento Style) -->
+<div class="bg-white dark:bg-zinc-900 rounded-2xl p-5 mb-6 border border-zinc-100 dark:border-zinc-800 flex items-center gap-4 shadow-sm">
+<div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 flex items-center justify-center border border-amber-200 dark:border-amber-800">
+<span class="material-symbols-outlined text-amber-600 dark:text-amber-500 text-3xl" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-amber-700 dark:text-amber-500 uppercase tracking-widest mb-0.5">Reward Unlocked</p>
+<h3 class="font-bold text-zinc-900 dark:text-zinc-100 text-lg">Verified Trip Badge</h3>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Awarded for completing your Umrah review.</p>
+</div>
+</div>
+<!-- Rating Summary -->
+<div class="bg-emerald-900 dark:bg-zinc-900 rounded-2xl p-6 mb-8 text-white shadow-lg overflow-hidden relative">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="star_rate">star_rate</span>
+</div>
+<h4 class="text-emerald-100 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4">Your Ratings Summary</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-400" data-icon="hotel">hotel</span>
+<div>
+<p class="text-[10px] text-emerald-200">Accommodation</p>
+<p class="font-bold text-sm leading-none">4.8 / 5.0</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-400" data-icon="restaurant">restaurant</span>
+<div>
+<p class="text-[10px] text-emerald-200">Meals</p>
+<p class="font-bold text-sm leading-none">5.0 / 5.0</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-400" data-icon="person_pin">person_pin</span>
+<div>
+<p class="text-[10px] text-emerald-200">Mutawwif</p>
+<p class="font-bold text-sm leading-none">4.5 / 5.0</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-400" data-icon="map">map</span>
+<div>
+<p class="text-[10px] text-emerald-200">Itinerary</p>
+<p class="font-bold text-sm leading-none">4.9 / 5.0</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="space-y-3 mb-12">
+<button class="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold py-4 rounded-xl transition-all active:scale-95 shadow-md shadow-emerald-900/10">
+                Back to Agency Profile
+            </button>
+<button class="w-full bg-white dark:bg-zinc-800 text-emerald-800 dark:text-emerald-400 font-bold py-4 rounded-xl border border-emerald-100 dark:border-zinc-700 transition-all active:scale-95">
+                Go to My Bookings
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-2 py-3 pb-safe bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md z-50 rounded-t-2xl shadow-[0_-4px_12px_rgba(0,0,0,0.05)] border-t border-zinc-100 dark:border-zinc-800">
+<div class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-3 py-1 hover:text-emerald-700 dark:hover:text-emerald-300 active:scale-90 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="font-['Work_Sans'] text-[11px] font-medium">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-3 py-1 hover:text-emerald-700 dark:hover:text-emerald-300 active:scale-90 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="travel_explore">travel_explore</span>
+<span class="font-['Work_Sans'] text-[11px] font-medium">Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-3 py-1 hover:text-emerald-700 dark:hover:text-emerald-300 active:scale-90 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="favorite">favorite</span>
+<span class="font-['Work_Sans'] text-[11px] font-medium">Saved</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-emerald-50 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-300 rounded-xl px-3 py-1 active:scale-90 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Work_Sans'] text-[11px] font-medium">Profile</span>
+</div>
+</nav>
+</body></html>

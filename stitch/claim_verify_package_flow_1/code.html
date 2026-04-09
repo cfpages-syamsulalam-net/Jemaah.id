@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Claim Package | Emerald Canopy Partner Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-error": "#ffffff",
+                "on-surface": "#0f172a",
+                "tertiary-container": "#ffdad6",
+                "surface-container-lowest": "#ffffff",
+                "secondary-container": "#cde9d4",
+                "inverse-primary": "#92d5ab",
+                "primary-fixed": "#adf2c6",
+                "on-tertiary": "#ffffff",
+                "error": "#ba1a1a",
+                "on-secondary-fixed-variant": "#344c3d",
+                "on-tertiary-fixed": "#3b080d",
+                "background": "#f6f8f7",
+                "inverse-surface": "#1e293b",
+                "surface-container-high": "#ebedec",
+                "on-secondary-fixed": "#082013",
+                "primary-fixed-dim": "#92d5ab",
+                "inverse-on-surface": "#f8fafc",
+                "secondary-fixed-dim": "#b2cdb9",
+                "surface-dim": "#f6f8f7",
+                "outline-variant": "#0752320d",
+                "on-secondary": "#ffffff",
+                "outline": "#0752321a",
+                "on-background": "#0f172a",
+                "surface-bright": "#ffffff",
+                "secondary-fixed": "#cde9d4",
+                "primary-container": "#0752321a",
+                "on-primary-fixed": "#002111",
+                "on-primary": "#ffffff",
+                "surface-tint": "#075232",
+                "surface-variant": "#f1f3f2",
+                "on-tertiary-container": "#410002",
+                "on-primary-container": "#075232",
+                "error-container": "#ffdad6",
+                "tertiary": "#ba1a1a",
+                "primary": "#075232",
+                "on-primary-fixed-variant": "#065232",
+                "on-secondary-container": "#344c3d",
+                "surface-container-highest": "#e5e7e6",
+                "surface-container": "#f1f3f2",
+                "secondary": "#4b6454",
+                "on-error-container": "#93000a",
+                "on-surface-variant": "#475569",
+                "surface-container-low": "#f6f8f7",
+                "surface": "#ffffff",
+                "tertiary-fixed-dim": "#ffb3b3",
+                "tertiary-fixed": "#ffdad9",
+                "on-tertiary-fixed-variant": "#733335"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Work Sans"],
+                "label": ["Work Sans"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- App Shell Wrapper -->
+<div class="flex min-h-screen overflow-hidden">
+<!-- SideNavBar - Shared Component -->
+<aside class="hidden md:flex flex-col h-screen w-64 border-r bg-[#f6f8f7] dark:bg-emerald-950 border-emerald-900/5 dark:border-emerald-100/5 font-['Work_Sans'] text-sm font-medium p-4 gap-2">
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" data-icon="mosque">mosque</span>
+</div>
+<div>
+<h1 class="text-lg font-bold text-emerald-900 dark:text-emerald-50 leading-tight">Partner Portal</h1>
+<p class="text-[10px] tracking-widest text-on-surface-variant uppercase">Verified Curator</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 bg-emerald-900/10 dark:bg-emerald-400/10 text-emerald-900 dark:text-emerald-50 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="assignment_late">assignment_late</span>
+<span>Claims Queue</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+<span>Partner Directory</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>Settlements</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-4">
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-semibold shadow-sm hover:opacity-90 active:scale-95 transition-all text-xs uppercase tracking-widest">
+                    Verify Package
+                </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto relative no-scrollbar">
+<!-- TopNavBar - Shared Component -->
+<header class="sticky top-0 z-30 bg-white dark:bg-emerald-950 border-b border-emerald-900/10 dark:border-emerald-100/10 shadow-sm dark:shadow-none flex justify-between items-center w-full px-6 py-3 max-w-full mx-auto">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold text-emerald-900 dark:text-emerald-50 tracking-tight">Emerald Canopy</span>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Dashboard</a>
+<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-emerald-900 dark:text-emerald-400 border-b-2 border-emerald-900 dark:border-emerald-400 pb-1" href="#">Packages</a>
+<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Verifications</a>
+<a class="font-['Plus_Jakarta_Sans'] font-medium text-sm tracking-tight text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 transition-colors" href="#">Analytics</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-emerald-50 dark:hover:bg-emerald-900/30 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-emerald-50 dark:hover:bg-emerald-900/30 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden border border-outline">
+<img alt="Partner Profile" class="w-full h-full object-cover" data-alt="Professional headshot of a travel agency partner manager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCmsmKAR0vkXLniHGSyOru-1DZSG26_aP7udqmS5a4lgI5RQ6FmPL5tf6YbUyeC4oD9h1t1r0wdVuiK_i6GEnoO2sQXTnbsUMpSev6TP5eQNelVAKcmh9em9MbFGhMj3kx1YiCzyBpwb3VfHyb1JgBeQBYK8d7SYXzDYVN6OTMXEJCgiTMli90KDCz_CLsbkAX7De6x-clXw-4V5npMZDEgzqAcXCXwzdcWUtvCpvM0MHnOcDFreZt8psaiZALA-Ovqrlsm63EvXA"/>
+</div>
+</div>
+</header>
+<div class="p-6 lg:p-10 max-w-7xl mx-auto space-y-8">
+<!-- Page Header & Stepper -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-1">
+<span class="text-[10px] font-bold tracking-[0.2em] text-primary uppercase">Package Acquisition</span>
+<h2 class="text-3xl font-extrabold text-on-surface tracking-tight">Claim Unclaimed Package</h2>
+<p class="text-on-surface-variant text-sm max-w-md">Our AI detected a package brochure potentially belonging to your agency. Please verify the data to claim ownership.</p>
+</div>
+<!-- Stepper -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs font-bold">1</div>
+<span class="text-xs font-semibold text-primary">Review Data</span>
+</div>
+<div class="w-8 h-px bg-outline"></div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full border-2 border-outline text-on-surface-variant flex items-center justify-center text-xs font-bold">2</div>
+<span class="text-xs font-medium text-on-surface-variant">Kemenag Verification</span>
+</div>
+<div class="w-8 h-px bg-outline"></div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full border-2 border-outline text-on-surface-variant flex items-center justify-center text-xs font-bold">3</div>
+<span class="text-xs font-medium text-on-surface-variant">Confirmation</span>
+</div>
+</div>
+</div>
+<!-- Main Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: AI Detection -->
+<div class="lg:col-span-5 space-y-6">
+<div class="bg-surface rounded-xl shadow-sm border border-primary/10 overflow-hidden">
+<div class="bg-primary-container px-6 py-4 border-b border-primary/10 flex items-center justify-between">
+<h3 class="text-sm font-bold text-on-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+                                    AI DETECTED DATA
+                                </h3>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tighter">98% Confidence</span>
+</div>
+<div class="p-0">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img alt="Brochure Scan" class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A scanned travel brochure for a luxury Hajj package" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiUqk92AzYlokK8xNyvwpHccOHbEgYF7RBCF93nL9mzy-VW_kqdwr7ooM7SswmX2T98pL4F_ni7AE7ymSnIW5wZingwaLewYRv331uVthrgFMaNIrff9kMgKD1G0INBp_TbeVSXfZlroPJwZ_s-jPUTYqpBnAb9EiDwmaMPR9ivzbifWoe0HIUO5slKr-Pm32hztfckr0DHKgq1Sl9mrrTtybU8JYIsAXNx8WtOHVeijYIMBQK8FAZsYV6qHrPhulwLeIhZ7C3Fzk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+<!-- AI Detection Overlays -->
+<div class="absolute top-1/4 left-1/4 w-32 h-12 border-2 border-primary/60 rounded flex items-center justify-center bg-primary/10 backdrop-blur-sm">
+<span class="text-[10px] font-bold text-primary">PRICE: IDR 45M</span>
+</div>
+<div class="absolute bottom-1/3 right-1/4 w-40 h-10 border-2 border-primary/60 rounded flex items-center justify-center bg-primary/10 backdrop-blur-sm">
+<span class="text-[10px] font-bold text-primary">HOTEL: Hilton Makkah</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between py-2 border-b border-outline">
+<span class="text-xs font-medium text-on-surface-variant">Detected Provider</span>
+<span class="text-sm font-bold text-primary italic">"An-Noor Travel Group"</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-outline">
+<span class="text-xs font-medium text-on-surface-variant">Package Name</span>
+<span class="text-sm font-bold">Ramadan Umrah Special</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-outline">
+<span class="text-xs font-medium text-on-surface-variant">Base Price</span>
+<span class="text-sm font-bold text-primary">IDR 45,500,000</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-outline">
+<span class="text-xs font-medium text-on-surface-variant">Flights</span>
+<span class="text-sm font-bold">Saudia Airlines (Direct)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Badges -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-wrap gap-6 justify-center">
+<div class="flex flex-col items-center text-center gap-2 max-w-[120px]">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified_user">verified_user</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest leading-tight">Data Integrity Guard</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2 max-w-[120px]">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="gavel">gavel</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest leading-tight">Kemenag Compliant</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2 max-w-[120px]">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="cloud_done">cloud_done</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest leading-tight">Cloud Verified Sync</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Verification Form -->
+<div class="lg:col-span-7 space-y-8">
+<section class="bg-surface rounded-xl shadow-sm border border-primary/10 p-8 space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface tracking-tight">Verify &amp; Correct Details</h3>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2 space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Official Package Title</label>
+<input class="w-full bg-surface-container border-outline rounded-lg px-4 py-3 text-sm focus:ring-primary focus:border-primary" type="text" value="Ramadan Umrah Special 2024 - Executive"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Corrected Price (IDR)</label>
+<input class="w-full bg-surface-container border-outline rounded-lg px-4 py-3 text-sm focus:ring-primary focus:border-primary" type="number" value="45500000"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Departure City</label>
+<select class="w-full bg-surface-container border-outline rounded-lg px-4 py-3 text-sm focus:ring-primary focus:border-primary">
+<option>Jakarta (CGK)</option>
+<option>Surabaya (SUB)</option>
+<option>Medan (KNO)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Hotel (Makkah)</label>
+<input class="w-full bg-surface-container border-outline rounded-lg px-4 py-3 text-sm focus:ring-primary focus:border-primary" type="text" value="Hilton Suites Makkah"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Hotel (Madinah)</label>
+<input class="w-full bg-surface-container border-outline rounded-lg px-4 py-3 text-sm focus:ring-primary focus:border-primary" type="text" value="Anwar Al Madinah Movenpick"/>
+</div>
+</form>
+</section>
+<!-- Kemenag Credentials Section -->
+<section class="bg-surface rounded-xl shadow-sm border border-primary/10 p-8 space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-700">
+<span class="material-symbols-outlined" data-icon="policy">policy</span>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-on-surface tracking-tight">Kemenag Credentials</h3>
+<p class="text-xs text-on-surface-variant">Ownership proof required by Ministry of Religious Affairs</p>
+</div>
+<img alt="Kemenag Logo Placeholder" class="h-10 opacity-60 grayscale hover:grayscale-0 transition-all" data-alt="Emblem of the Indonesian Ministry of Religious Affairs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7qi9v56QA6R72zk2aSDGsOTKBmzsN8T3xkD3vg7J_aZw2AqJNWJFhEmCBpvLVh-Q0JAZSFj5RI6ul2JnsGE91gpZcuxi9_GMIBsX-8U1eMy-JST-_SjUsYCHof1n3vTOyydzxgJ4QbNZMgYLavSb8ZY7bAP4r6YDXyxy70hPYgjgj5Pd5GLzXC1Wd1MQXITlpC3F7eNMWnrYQgt9CE5GY9We5D_A_X78WGa-MBMebi4aZU8ARMaL3idxYajBCsMI1AYepfYY7f4Y"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">PPIU / PIHK License No.</label>
+<div class="relative">
+<input class="w-full bg-surface-container border-outline rounded-lg pl-10 pr-4 py-3 text-sm focus:ring-primary focus:border-primary" placeholder="e.g. 123/2023" type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg" data-icon="fingerprint">fingerprint</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Legal Agency Name</label>
+<input class="w-full bg-surface-container border-outline rounded-lg px-4 py-3 text-sm focus:ring-primary focus:border-primary" placeholder="As registered in SISKOPATUH" type="text"/>
+</div>
+<div class="md:col-span-2">
+<label class="flex items-start gap-3 p-4 bg-emerald-50/50 rounded-lg cursor-pointer border border-primary/5">
+<input class="mt-1 rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-xs text-slate-600 leading-relaxed">
+                                            I hereby certify that "An-Noor Travel Group" is my legal entity and I am authorized to claim and manage the digital assets for this package on Emerald Canopy.
+                                        </span>
+</label>
+</div>
+</div>
+</section>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-end gap-4 pt-4">
+<button class="w-full sm:w-auto px-8 py-3 text-sm font-semibold text-on-surface-variant hover:bg-surface-container transition-colors rounded-lg">
+                                Save as Draft
+                            </button>
+<button class="w-full sm:w-auto px-10 py-4 bg-primary text-on-primary rounded-xl font-bold text-sm tracking-wide shadow-xl shadow-primary/20 hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+                                Claim &amp; Verify Package
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Contextual Footer -->
+<footer class="mt-12 p-8 border-t border-outline flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<img alt="Certification Logo" class="h-12 opacity-40" data-alt="Official certification seal for digital travel assets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKhWikNNthRMTuoiKOYcF6gsSfvVzLS4QZ5uSHabob3lBW5SJu0-58T_qYKd--F86QBNIejQ-i7WDIkiDf1hFuEQkm9QKc4zuM1CgQHPd3Z-RHMHivRFyMpWq4Qb0E1BqtEeAzQ654WdX1LXtYmEoXUTGjBvxJPbPvJbrRNXGjPXnby9gfn4PSMrb8QfAg8Vfnx4XYYgJUDLLSCoikvi0859Ids-O1rj-LNiqbOktcWGScxOasD1aM3XpbSQi59iq8eJTVb7s3JkM"/>
+<p class="text-[10px] text-on-surface-variant max-w-xs uppercase tracking-widest font-medium">
+                        Emerald Canopy uses AES-256 encryption for all Kemenag-linked credentials.
+                    </p>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<a class="text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<span class="text-outline">•</span>
+<a class="text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Support Center</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

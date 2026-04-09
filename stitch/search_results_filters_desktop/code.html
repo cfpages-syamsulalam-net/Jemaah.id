@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#075232",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221a",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-primary/10 px-4 lg:px-20">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl font-bold">mosque</span>
+<h2 class="text-xl font-bold tracking-tight">Jemaah.id</h2>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Paket Umroh</a>
+<a class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Haji</a>
+<a class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Wisata Halal</a>
+<a class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Panduan</a>
+</div>
+</div>
+<div class="flex items-center gap-4 flex-1 justify-end max-w-2xl">
+<div class="relative w-full max-w-md hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg pl-10 pr-4 h-10 focus:ring-2 focus:ring-primary/20" placeholder="Cari travel atau paket..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 text-sm font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">Masuk</button>
+<button class="px-5 py-2 text-sm font-bold bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">Daftar</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Layout Container -->
+<main class="max-w-[1440px] mx-auto flex gap-8 px-4 lg:px-20 py-8">
+<!-- Persistent Left Sidebar Filters -->
+<aside class="w-72 shrink-0 hidden lg:block">
+<div class="sticky top-24 space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="font-bold text-lg">Filter Pencarian</h3>
+<button class="text-xs font-bold text-primary uppercase tracking-wider">Reset</button>
+</div>
+<!-- Price Range -->
+<div class="space-y-3">
+<div class="flex items-center gap-2 font-semibold text-sm">
+<span class="material-symbols-outlined text-primary text-xl">payments</span>
+                        Rentang Harga
+                    </div>
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm cursor-pointer group">
+<input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Rp 25jt - 30jt</span>
+</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer group">
+<input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Rp 30jt - 35jt</span>
+</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer group">
+<input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Rp 35jt - 45jt</span>
+</label>
+</div>
+</div>
+<!-- Duration -->
+<div class="space-y-3">
+<div class="flex items-center gap-2 font-semibold text-sm">
+<span class="material-symbols-outlined text-primary text-xl">schedule</span>
+                        Durasi Perjalanan
+                    </div>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1.5 text-xs font-medium border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary hover:text-primary">9 Hari</button>
+<button class="px-3 py-1.5 text-xs font-medium bg-primary/10 border border-primary text-primary rounded-lg">12 Hari</button>
+<button class="px-3 py-1.5 text-xs font-medium border border-slate-200 dark:border-slate-700 rounded-lg hover:border-primary hover:text-primary">15 Hari</button>
+</div>
+</div>
+<!-- Airlines -->
+<div class="space-y-3">
+<div class="flex items-center gap-2 font-semibold text-sm">
+<span class="material-symbols-outlined text-primary text-xl">flight</span>
+                        Maskapai
+                    </div>
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm cursor-pointer group">
+<input checked="" class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Garuda Indonesia</span>
+</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer group">
+<input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Saudi Arabian Airlines</span>
+</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer group">
+<input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Qatar Airways</span>
+</label>
+</div>
+</div>
+<!-- Star Rating -->
+<div class="space-y-3">
+<div class="flex items-center gap-2 font-semibold text-sm">
+<span class="material-symbols-outlined text-primary text-xl">star</span>
+                        Rating Hotel
+                    </div>
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm cursor-pointer group">
+<input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="flex items-center gap-0.5 text-amber-500">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</span>
+</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer group">
+<input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="flex items-center gap-0.5 text-amber-500">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-slate-400 dark:text-slate-500 ml-1">atau lebih</span>
+</span>
+</label>
+</div>
+</div>
+<!-- Distance -->
+<div class="space-y-3">
+<div class="flex items-center gap-2 font-semibold text-sm">
+<span class="material-symbols-outlined text-primary text-xl">distance</span>
+                        Jarak ke Masjidil Haram
+                    </div>
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm cursor-pointer group">
+<input class="rounded-full border-slate-300 text-primary focus:ring-primary" name="distance" type="radio"/>
+<span class="group-hover:text-primary transition-colors">&lt; 300 Meter</span>
+</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer group">
+<input class="rounded-full border-slate-300 text-primary focus:ring-primary" name="distance" type="radio"/>
+<span class="group-hover:text-primary transition-colors">&lt; 500 Meter</span>
+</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer group">
+<input class="rounded-full border-slate-300 text-primary focus:ring-primary" name="distance" type="radio"/>
+<span class="group-hover:text-primary transition-colors">&lt; 1 Kilometer</span>
+</label>
+</div>
+</div>
+<!-- Embarkation -->
+<div class="space-y-3">
+<div class="flex items-center gap-2 font-semibold text-sm">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+                        Keberangkatan
+                    </div>
+<select class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-primary/20 h-10">
+<option>Jakarta (CGK)</option>
+<option>Surabaya (SUB)</option>
+<option>Medan (KNO)</option>
+<option>Makassar (UPG)</option>
+</select>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-1 space-y-6">
+<!-- Breadcrumbs & Search Header -->
+<div class="space-y-4">
+<nav class="flex items-center gap-2 text-xs font-medium text-slate-500">
+<a class="hover:text-primary" href="#">Beranda</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="#">Hasil Pencarian</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-bold">Umroh - Okt 2024</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-3xl font-extrabold tracking-tight">Paket Umroh Jakarta</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Ditemukan 64 paket terverifikasi untuk bulan Oktober 2024</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-medium text-slate-500">Urutkan:</span>
+<select class="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:ring-primary/20 h-9">
+<option>Harga Terendah</option>
+<option>Rekomendasi Terbaik</option>
+<option>Keberangkatan Terdekat</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Active Filters Tags -->
+<div class="flex flex-wrap gap-2">
+<div class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full flex items-center gap-2">
+                    Bintang 5 <span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</div>
+<div class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full flex items-center gap-2">
+                    Garuda Indonesia <span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</div>
+<div class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full flex items-center gap-2">
+                    &lt; 500m <span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</div>
+</div>
+<!-- Package List View -->
+<div class="space-y-4">
+<!-- Package Card 1 -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row group">
+<!-- Image and Checkbox -->
+<div class="relative w-full md:w-72 h-56 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Grand Mosque of Makkah with pilgrims" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe5FQ-f2zxbqOI-gUxIDMAh1Wrxt_YqxgeSGvlsbThkrUu2X_6k01wmk3CC-M4NIVhtb4359qeWMShtt_vUIeKIxds2o47Gnws17_wgTnAf5nccd9KpNKQjcF10nenGeINw_Wm66Qj2JsjVQ2_dk0anh8tY37d9fx8NhuVhYcHcm_eqgOPRZJww83xDciVg_h3nRcNCM4qBgL8DsYuI-zazu5aMcBjPbePTLFLpC5KY9r6HdghB9zBAJGMNsOzntKoyvV3Jd6nAbA"/>
+<label class="absolute top-3 left-3 flex items-center gap-2 bg-black/40 backdrop-blur-md px-2 py-1.5 rounded-lg text-white text-[10px] font-bold uppercase tracking-wider cursor-pointer hover:bg-black/60 transition-colors">
+<input class="rounded bg-transparent border-white/50 text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+                            Pilih Bandingkan
+                        </label>
+<div class="absolute bottom-3 left-3 flex flex-wrap gap-1">
+<span class="bg-primary text-white text-[10px] px-2 py-1 rounded font-bold uppercase">9 Hari</span>
+<span class="bg-amber-500 text-white text-[10px] px-2 py-1 rounded font-bold uppercase">Sisa 4 Kursi</span>
+</div>
+</div>
+<!-- Details -->
+<div class="flex-1 p-6 flex flex-col justify-between gap-4">
+<div class="space-y-3">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2 text-xs font-bold text-primary tracking-wide uppercase">
+<span>Khazzanah Tour &amp; Travel</span>
+<span class="material-symbols-outlined text-sm">verified</span>
+</div>
+<h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">Paket Umroh Reguler Awal Musim Bintang 5</h3>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-slate-400 line-through">Rp 32.500.000</p>
+<p class="text-2xl font-black text-primary">Rp 28.900.000</p>
+<p class="text-[10px] font-bold text-slate-500">PER JEMAAH</p>
+</div>
+</div>
+<!-- Verification Badges - "Anti-Ngawur" -->
+<div class="flex flex-wrap gap-3 py-2 border-y border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-base">verified_user</span>
+                                    Verified by Kemenag
+                                </div>
+<div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-base">flight_takeoff</span>
+                                    Verified Flight
+                                </div>
+<div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-base">straighten</span>
+                                    Verified Hotel Distance
+                                </div>
+</div>
+<!-- Itinerary & Facilities Summary -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-2">
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Pesawat</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">flight_land</span>
+<span class="text-xs font-semibold">Garuda Indonesia</span>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Hotel Makkah</p>
+<div class="flex items-center gap-1 text-xs font-semibold">
+<span class="material-symbols-outlined text-lg text-amber-500">star</span>
+<span>Hilton Suites</span>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Jarak</p>
+<div class="flex items-center gap-1 text-xs font-semibold">
+<span class="material-symbols-outlined text-lg">directions_walk</span>
+<span>150m ke Masjidil Haram</span>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Tanggal</p>
+<div class="flex items-center gap-1 text-xs font-semibold">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>15 Okt 2024</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<span class="bg-primary/10 text-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-base">support_agent</span>
+</span>
+<span class="text-xs font-medium text-slate-500">Gratis Konsultasi &amp; Perlengkapan</span>
+</div>
+<div class="flex gap-2">
+<button class="px-6 py-2 text-sm font-bold border border-primary text-primary rounded-lg hover:bg-primary/5 transition-colors">Detail Paket</button>
+<button class="px-6 py-2 text-sm font-bold bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">Pesan Sekarang</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Package Card 2 (Variations) -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row group">
+<div class="relative w-full md:w-72 h-56 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Hotel room overlooking Kaaba" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZlJBwX9PC8h-F95-ndd5lh2eKenIxHbsU5w_LVCxuGL8kJdgM-VidIbHU0WYxIXK0aRs1Kl4eGshhf9ObB4GgYuCJEpwcK9kfv2cm67LtTN-WUawjcPNmbungvps6gUZcTN01HsnRcvxc5PkUmt4loHfhHZgFOdXhAnDfyNsxbDoA6JkpuZU_gC49fgSDra8BIabR1DUAHcA-hS5b5KYgjeVDpkJpaX-ODM4mQhnft8-Ge4GPT4PRYT_lA6OONNBIYR2-oUsIL2o"/>
+<label class="absolute top-3 left-3 flex items-center gap-2 bg-black/40 backdrop-blur-md px-2 py-1.5 rounded-lg text-white text-[10px] font-bold uppercase tracking-wider cursor-pointer hover:bg-black/60 transition-colors">
+<input class="rounded bg-transparent border-white/50 text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+                            Pilih Bandingkan
+                        </label>
+<div class="absolute bottom-3 left-3 flex flex-wrap gap-1">
+<span class="bg-primary text-white text-[10px] px-2 py-1 rounded font-bold uppercase">12 Hari</span>
+<span class="bg-slate-500 text-white text-[10px] px-2 py-1 rounded font-bold uppercase">Tersisa 12 Kursi</span>
+</div>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-between gap-4">
+<div class="space-y-3">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-2 text-xs font-bold text-primary tracking-wide uppercase">
+<span>Azza Tour Services</span>
+<span class="material-symbols-outlined text-sm">verified</span>
+</div>
+<h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">Umroh Itikaf Akhir Ramadhan &amp; Idul Fitri</h3>
+</div>
+<div class="text-right">
+<p class="text-2xl font-black text-primary">Rp 42.500.000</p>
+<p class="text-[10px] font-bold text-slate-500">PER JEMAAH</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-3 py-2 border-y border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-base">verified_user</span>
+                                    Verified by Kemenag
+                                </div>
+<div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-base">flight_takeoff</span>
+                                    Verified Flight
+                                </div>
+<div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-base">straighten</span>
+                                    Verified Hotel Distance
+                                </div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-2">
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Pesawat</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">flight_land</span>
+<span class="text-xs font-semibold">Saudi Arabian</span>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Hotel Makkah</p>
+<div class="flex items-center gap-1 text-xs font-semibold">
+<span class="material-symbols-outlined text-lg text-amber-500">star</span>
+<span>Movenpick Hajar</span>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Jarak</p>
+<div class="flex items-center gap-1 text-xs font-semibold">
+<span class="material-symbols-outlined text-lg">directions_walk</span>
+<span>50m ke Masjidil Haram</span>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Tanggal</p>
+<div class="flex items-center gap-1 text-xs font-semibold">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>22 Okt 2024</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<span class="bg-primary/10 text-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-base">restaurant</span>
+</span>
+<span class="text-xs font-medium text-slate-500">Fullboard Catering (Indonesian Food)</span>
+</div>
+<div class="flex gap-2">
+<button class="px-6 py-2 text-sm font-bold border border-primary text-primary rounded-lg hover:bg-primary/5 transition-colors">Detail Paket</button>
+<button class="px-6 py-2 text-sm font-bold bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">Pesan Sekarang</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More / Pagination -->
+<div class="flex justify-center pt-8 pb-12">
+<button class="flex items-center gap-2 px-8 py-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm font-bold rounded-xl hover:bg-slate-50 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-primary">expand_more</span>
+                        Tampilkan Lebih Banyak Paket
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Comparison Notification -->
+<div class="fixed bottom-6 right-6 z-40 bg-slate-900 text-white p-4 rounded-xl shadow-2xl flex items-center gap-4 border border-white/10 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<span class="bg-primary w-8 h-8 rounded-lg flex items-center justify-center font-bold">2</span>
+<span class="text-sm font-medium">Paket dipilih untuk dibanding</span>
+</div>
+<div class="h-8 w-[1px] bg-white/20"></div>
+<button class="bg-primary hover:bg-primary/90 px-4 py-2 rounded-lg text-sm font-bold transition-all">Bandingkan Sekarang</button>
+</div>
+</body></html>

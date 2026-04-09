@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-20">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light dark:bg-background-dark border-b border-primary/10 px-4 py-3 flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="text-sm font-bold leading-tight">Umroh - Okt 2024 - Jakarta</h1>
+<p class="text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wider">2 Dewasa • Reguler</p>
+</div>
+</div>
+<button class="flex items-center gap-2 px-3 py-2 bg-primary/10 hover:bg-primary/20 rounded-lg text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">tune</span>
+<span class="text-sm font-bold">Filter</span>
+</button>
+</header>
+<!-- Sort Bar -->
+<div class="flex gap-3 p-4 overflow-x-auto no-scrollbar bg-background-light dark:bg-background-dark sticky top-[61px] z-40">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-4 text-slate-900 text-sm font-semibold">
+<span class="material-symbols-outlined text-lg">payments</span>
+                Termurah
+            </button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 px-4 text-slate-900 dark:text-slate-100 text-sm font-medium hover:bg-primary/20">
+<span class="material-symbols-outlined text-lg">mosque</span>
+                Terdekat ke Masjid
+            </button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 px-4 text-slate-900 dark:text-slate-100 text-sm font-medium hover:bg-primary/20">
+<span class="material-symbols-outlined text-lg">trending_up</span>
+                Terpopuler
+            </button>
+</div>
+<!-- Package List -->
+<main class="p-4 space-y-6">
+<!-- Card 1 -->
+<div class="flex flex-col bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-primary/5 overflow-hidden">
+<div class="relative w-full aspect-[16/9] bg-slate-200" data-alt="Masjidil Haram landscape at night" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDtqYaMXT_e5D9D75moNPJPFsSJoVtBPh1hQAtP0ipNv-Sq_ihXst-CxeRUYh5g8XIySBXm3dvfmf1kxX6J_9tVvngy-TcXHbjKLmcxHRBmnYRoTmk_oTU1vQerIVnSYQYOFnSiC_YDETRbLeD157YWpD1S5Hr7q1zgwnjIV8C-aIu0LWJ73xLkD0nE5aP3RcP5lqyjbkIK3r3xUh5bDh_Tx9BewzKjyeZ9l8XxyamxAk6AEp8IoHyqWbdsNXQRxmRI0cfGjMUNQu4"); background-size: cover; background-position: center;'>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm filled-icon">verified</span>
+<span class="text-[10px] font-bold text-slate-900 uppercase">Al-Amin Universal • Verified</span>
+</div>
+</div>
+<div class="p-4 space-y-4">
+<div class="flex justify-between items-start gap-4">
+<div>
+<h3 class="text-lg font-bold leading-tight">Paket Umroh Reguler 9 Hari</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-sm text-slate-400">flight_takeoff</span>
+<p class="text-sm text-slate-500 dark:text-slate-400">Garuda Indonesia • Direct</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-slate-400 font-medium uppercase">Mulai dari</p>
+<p class="text-lg font-bold text-primary">Rp 28.500.000</p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-3 border-y border-primary/5 py-3">
+<div class="flex items-center gap-3">
+<div class="size-10 flex items-center justify-center bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">hotel</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Makkah: Hotel Anjum (5★)</p>
+<p class="text-xs text-slate-500">350m ke Masjidil Haram</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-10 flex items-center justify-center bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">hotel</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Madinah: Frontel Al Harithia (5★)</p>
+<p class="text-xs text-slate-500">150m ke Masjid Nabawi</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-5 h-5 rounded border-primary/30 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Pilih untuk Bandingkan</span>
+</label>
+<button class="bg-primary text-slate-900 px-6 py-2 rounded-lg font-bold text-sm hover:brightness-95 transition-all">Detail</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-primary/5 overflow-hidden opacity-95">
+<div class="relative w-full aspect-[16/9] bg-slate-200" data-alt="Kaaba pilgrims walking in circles" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgDj3_Gi06R4o7usCVdnykpLzwGXEi1VTxxyBEjXkXusaXXuyG9X3_bPyNCr9_EsbaPPWLjK7OSpsJbV5Eu2HNaD59CmP7aAeWRqWGHWcBNLBTiyxi0fMr2QHA7rEpAVPj1obsb8QqYhZA7FJh7b50T6pb8Oo-FRxxIeA2T0CfxEKjt9ohy-8Xy_sRx8igB0oNQtfaGd3VIOZExfpVAKrH77yBqi1cFgGX3BBxjw-0GbKxLpk8sAe-Yl2_2ZpN_v_JmL1NHkPIPz4"); background-size: cover; background-position: center;'>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm filled-icon">verified</span>
+<span class="text-[10px] font-bold text-slate-900 uppercase">Khazzanah Tour • Verified</span>
+</div>
+</div>
+<div class="p-4 space-y-4">
+<div class="flex justify-between items-start gap-4">
+<div>
+<h3 class="text-lg font-bold leading-tight">Umroh Super Hemat 12 Hari</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-sm text-slate-400">flight_takeoff</span>
+<p class="text-sm text-slate-500 dark:text-slate-400">Saudi Airlines • Transit AUH</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-slate-400 font-medium uppercase">Mulai dari</p>
+<p class="text-lg font-bold text-primary">Rp 24.900.000</p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-3 border-y border-primary/5 py-3">
+<div class="flex items-center gap-3">
+<div class="size-10 flex items-center justify-center bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">hotel</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Makkah: Le Meridien (4★)</p>
+<p class="text-xs text-slate-500">600m ke Masjidil Haram</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-10 flex items-center justify-center bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">hotel</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Madinah: Al Mukhtara (4★)</p>
+<p class="text-xs text-slate-500">250m ke Masjid Nabawi</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="w-5 h-5 rounded border-primary/30 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Pilih untuk Bandingkan</span>
+</label>
+<button class="bg-primary text-slate-900 px-6 py-2 rounded-lg font-bold text-sm hover:brightness-95 transition-all">Detail</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex items-center border-t border-primary/10 bg-background-light dark:bg-background-dark px-4 pb-4 pt-3">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl filled-icon">home</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Beranda</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">search</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Cari</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">receipt_long</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Pesanan</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Profil</p>
+</a>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        .material-symbols-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative mx-auto flex min-h-screen max-w-md flex-col overflow-x-hidden bg-background-light dark:bg-background-dark">
+<!-- Header -->
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-primary/10 bg-background-light/80 p-4 backdrop-blur-md dark:bg-background-dark/80">
+<div class="flex items-center gap-3">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold">Booking Details</h1>
+</div>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10">
+<span class="material-symbols-outlined text-primary">share</span>
+</button>
+</header>
+<main class="flex-1 pb-24">
+<!-- Status Banner -->
+<div class="p-4">
+<div class="flex items-center justify-between gap-4 rounded-xl border border-primary/20 bg-primary/10 p-5">
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold text-slate-900 dark:text-slate-100">Booking Confirmed</p>
+<p class="text-sm font-normal text-slate-600 dark:text-slate-400 leading-tight">Your reservation is secured and ready for travel.</p>
+</div>
+<div class="flex size-10 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined">check</span>
+</div>
+</div>
+</div>
+<!-- Reference Number -->
+<div class="mx-4 flex items-center justify-between rounded-xl bg-white p-4 shadow-sm dark:bg-slate-900">
+<div class="flex items-center gap-4">
+<div class="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">tag</span>
+</div>
+<div class="flex flex-col">
+<p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Reference Number</p>
+<p class="text-base font-bold">JM-UMR-2024-8891</p>
+</div>
+</div>
+<button class="text-primary p-2">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+<!-- Package Summary -->
+<section class="mt-6 px-4">
+<h2 class="mb-3 text-lg font-bold">Package Summary</h2>
+<div class="overflow-hidden rounded-xl bg-white shadow-sm dark:bg-slate-900">
+<div class="relative h-32 w-full">
+<img class="h-full w-full object-cover" data-alt="The Holy Kaaba in Makkah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg3LdyGfCjp4jE3nhueMetUEFXqL9tRBvpS94ifB6_tFGoAUrAcEK-Dk8eMKEURuxWNQVZYWnjXDqsEmSg04bxP3QLQOjPA6qF-FEZSIWNVKtv9bRBlDqo1cUPhLveIBupTmh4JgztPzrLyE5oSaSK-ohdZ0geaQieXZYo1nOp6wMcNCZgpSZDk-An5VOhYSccsYoIg_wN-FlqV5WQouICzTBetZSoIHS1X26RQ4pQAZ1OjSuYmnCc2uXeAk74XRMLebOY6f27vGc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-3 left-4">
+<span class="rounded bg-primary px-2 py-1 text-[10px] font-bold uppercase text-white">Economy Plus</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-base font-bold">Umrah Ramadhan Ekonomi 2024</h3>
+<div class="mt-3 space-y-2">
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span>12 Mar - 24 Mar 2024 (12 Days)</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-2">
+<span class="material-symbols-outlined text-[18px]">flight</span>
+<div class="flex items-center gap-2">
+<span class="font-medium text-slate-900 dark:text-white">Saudi Arabian Airlines</span>
+<span class="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">SV-816</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Accommodations -->
+<section class="mt-6 px-4">
+<h2 class="mb-3 text-lg font-bold">Accommodations</h2>
+<div class="space-y-3">
+<!-- Makkah Hotel -->
+<div class="flex items-start gap-3 rounded-xl bg-white p-3 shadow-sm dark:bg-slate-900">
+<div class="h-20 w-20 shrink-0 overflow-hidden rounded-lg">
+<img class="h-full w-full object-cover" data-alt="Luxury hotel room interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT8AoGT5jD842PHkV0iX1LgVw5oM4QT8o4_bO8X8W3nu3wLS6hm12mYd0pPnfXjnkeu2e6_NolGAMMOG2d-KY_weIrYF2T4Pq5HTNAIzZQfiMPrJ5CLH2F1nVCALhuyLUn-T7JD4Yo2yHyA5UUebDZ6JYIxNTMVTSD8snHDE3zIqoraBIQgjuI2KSX5oZyWKZR2GRUKUuelCIgonR9O3MOIjdZiD1-f8oruN-6cQFtIIZH2Ck_mMzCcJyV3EBZALIuEv7tG-IUbAM"/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<p class="text-xs font-semibold text-primary uppercase">Makkah</p>
+<p class="text-sm font-bold leading-tight">Le Méridien Towers Makkah</p>
+</div>
+<div class="flex items-center gap-1 text-xs text-slate-500">
+<span class="material-symbols-outlined text-[14px]">distance</span>
+<span>600m from Masjidil Haram</span>
+</div>
+</div>
+</div>
+<!-- Madinah Hotel -->
+<div class="flex items-start gap-3 rounded-xl bg-white p-3 shadow-sm dark:bg-slate-900">
+<div class="h-20 w-20 shrink-0 overflow-hidden rounded-lg">
+<img class="h-full w-full object-cover" data-alt="Classic hotel building facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF2eoDNwsZZMYre681UezUGI0UfRz_6of-U-a3U8meim1AYOiuncuzB2yzV1AnsaLef97fNAp-VKCUSYQOuf3Ge7D_UUDXu9J4CRXg30Du6Ar2DZzd7f-BlVHB_UXvI7Gy25G8GpEPhLaMKnZva4bG6_Pkhbnz3ZxWAJjz9c6ABuhGGNiGijkFi2hqWSrADWukG9RRO8Q77pBCnzunCPGUQPWqYdceVXhannaP8XbMUAk2Stz1LOeWb9uu7ufYfgBo5QWeI6SJNrs"/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<p class="text-xs font-semibold text-primary uppercase">Madinah</p>
+<p class="text-sm font-bold leading-tight">Pulman Zamzam Madina</p>
+</div>
+<div class="flex items-center gap-1 text-xs text-slate-500">
+<span class="material-symbols-outlined text-[14px]">distance</span>
+<span>150m from Masjid Nabawi</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Passenger Details -->
+<section class="mt-6 px-4">
+<h2 class="mb-3 text-lg font-bold">Passenger Details</h2>
+<div class="rounded-xl bg-white shadow-sm dark:bg-slate-900 divide-y divide-slate-100 dark:divide-slate-800">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="flex size-8 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-xs font-bold">AA</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold">Ahmad Abdullah</p>
+<p class="text-xs text-slate-500">Adult • Passport: A1234567</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="flex size-8 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-xs font-bold">SA</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold">Siti Aminah</p>
+<p class="text-xs text-slate-500">Adult • Passport: B7654321</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Payment Summary -->
+<section class="mt-6 px-4">
+<div class="rounded-xl bg-white p-4 shadow-sm dark:bg-slate-900">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold">Payment Summary</h2>
+<a class="text-sm font-medium text-primary underline underline-offset-4" href="#">View Receipt</a>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Package Total</span>
+<span class="font-medium">Rp 64.000.000</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Handling Fee</span>
+<span class="font-medium">Rp 500.000</span>
+</div>
+<div class="flex justify-between border-t border-dashed border-slate-200 dark:border-slate-700 pt-2 text-base font-bold">
+<span>Amount Paid</span>
+<span class="text-primary">Rp 64.500.000</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Next Steps / Actions -->
+<section class="mt-6 px-4 space-y-3">
+<button class="flex w-full items-center justify-between rounded-xl bg-primary px-5 py-4 text-sm font-bold text-white shadow-lg shadow-primary/20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">description</span>
+<span>Download Itinerary PDF</span>
+</div>
+<span class="material-symbols-outlined">download</span>
+</button>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex flex-col items-center justify-center gap-2 rounded-xl bg-white p-4 text-center shadow-sm dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-primary">upload_file</span>
+<span class="text-xs font-bold">Upload Documents</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 rounded-xl bg-white p-4 text-center shadow-sm dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-primary">support_agent</span>
+<span class="text-xs font-bold">Contact Agency</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 z-50 flex w-full max-w-md items-center justify-between border-t border-slate-200 bg-white px-2 pb-6 pt-2 dark:border-slate-800 dark:bg-slate-900">
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined material-symbols-fill">luggage</span>
+<span class="text-[10px] font-medium">My Bookings</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-[10px] font-medium">Savings</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

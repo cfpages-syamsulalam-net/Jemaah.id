@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#075232",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221a",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<header class="sticky top-0 z-10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 justify-between">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/5">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight flex-1 text-center">Al-Safwa Travel Group</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="text-primary flex h-10 w-10 items-center justify-center rounded-full bg-primary/5">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+<div class="px-4">
+<div class="flex border-b border-primary/10 gap-6 overflow-x-auto hide-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2 whitespace-nowrap" href="#">
+<p class="text-sm font-semibold">Overview</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2 whitespace-nowrap" href="#">
+<p class="text-sm font-semibold">Packages</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2 whitespace-nowrap" href="#">
+<p class="text-sm font-bold">Reviews</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2 whitespace-nowrap" href="#">
+<p class="text-sm font-semibold">About</p>
+</a>
+</div>
+</div>
+</header>
+<main class="flex-1 pb-24">
+<section class="p-4 bg-white dark:bg-slate-900/40 mt-2 border-b border-primary/5">
+<div class="flex items-baseline justify-between mb-4">
+<h2 class="text-xl font-bold tracking-tight">Reputation Score</h2>
+<span class="text-xs font-medium bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +0.2 this month
+                    </span>
+</div>
+<div class="flex gap-6 items-center">
+<div class="flex flex-col items-center">
+<p class="text-5xl font-black text-primary leading-none">4.8</p>
+<div class="flex gap-0.5 mt-2 text-amber-400">
+<span class="material-symbols-outlined !text-[20px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[20px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[20px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[20px] fill-1">star</span>
+<span class="material-symbols-outlined !text-[20px] fill-1">star_half</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1 font-medium">1,248 verified reviews</p>
+</div>
+<div class="flex-1 space-y-2">
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold w-3">5</span>
+<div class="flex-1 h-2 bg-primary/10 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+<span class="text-[10px] text-slate-400 w-6">85%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold w-3">4</span>
+<div class="flex-1 h-2 bg-primary/10 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[10%]"></div>
+</div>
+<span class="text-[10px] text-slate-400 w-6">10%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold w-3">3</span>
+<div class="flex-1 h-2 bg-primary/10 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[3%]"></div>
+</div>
+<span class="text-[10px] text-slate-400 w-6">3%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold w-3">2</span>
+<div class="flex-1 h-2 bg-primary/10 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[1%]"></div>
+</div>
+<span class="text-[10px] text-slate-400 w-6">1%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold w-3">1</span>
+<div class="flex-1 h-2 bg-primary/10 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[1%]"></div>
+</div>
+<span class="text-[10px] text-slate-400 w-6">1%</span>
+</div>
+</div>
+</div>
+</section>
+<section class="p-4 grid grid-cols-2 gap-3">
+<div class="p-3 bg-white dark:bg-slate-900/60 rounded-xl border border-primary/5">
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Accommodation</p>
+<div class="flex items-end justify-between mt-1">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100">4.9</span>
+<div class="h-6 w-12 bg-primary/5 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">hotel</span>
+</div>
+</div>
+</div>
+<div class="p-3 bg-white dark:bg-slate-900/60 rounded-xl border border-primary/5">
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Meals &amp; Catering</p>
+<div class="flex items-end justify-between mt-1">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100">4.5</span>
+<div class="h-6 w-12 bg-primary/5 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">restaurant</span>
+</div>
+</div>
+</div>
+<div class="p-3 bg-white dark:bg-slate-900/60 rounded-xl border border-primary/5">
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Mutawwif Service</p>
+<div class="flex items-end justify-between mt-1">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100">5.0</span>
+<div class="h-6 w-12 bg-primary/5 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">support_agent</span>
+</div>
+</div>
+</div>
+<div class="p-3 bg-white dark:bg-slate-900/60 rounded-xl border border-primary/5">
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400">Itinerary Pacing</p>
+<div class="flex items-end justify-between mt-1">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100">4.2</span>
+<div class="h-6 w-12 bg-primary/5 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">route</span>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-4 px-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Reviews</h3>
+<div class="flex items-center gap-1 text-primary bg-primary/5 px-3 py-1.5 rounded-lg text-sm font-medium">
+<span class="material-symbols-outlined text-[18px]">sort</span>
+                        Most Recent
+                    </div>
+</div>
+<div class="space-y-6">
+<article class="flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div class="flex gap-3 items-center">
+<div class="size-10 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="Portrait of a smiling male pilgrim" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFnDyrxqdrgWYIVg3yXdAwUs5EhEv91lss3mpANUSI_C3rWS4EeF1lKJdnI5lfCzRWy-ziZ51wspKM1ndKYT3BPF2ZmBGyIN3Za-0mUuIQfp8l7ISD7SoQ9jQYOD7V5S3N1x9HxWGBKfg78oMu2N7zkDjy1OQsArRrjiHSEw4VyPOL4_k6i4Nr44gqI4ZeIU3sOXDCybSo9hNNRH4E4o6dF6BF-SY02SXh8MstJ7kwlxoWPULics71hgahlmKGPFeiS4Vtn4myZYk"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">Ahmad Sulaiman</h4>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="text-[10px] px-1.5 py-0.5 bg-primary/10 text-primary font-bold rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] fill-1">verified</span> Verified Trip
+                                        </span>
+<span class="text-[10px] text-slate-400">12 Oct 2023</span>
+</div>
+</div>
+</div>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+</div>
+<div class="bg-primary/5 p-2 rounded-lg inline-block self-start">
+<p class="text-[10px] font-bold text-primary">Luxury Umrah Package (Dec 2023)</p>
+</div>
+<p class="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                            MasyaAllah, an incredible experience. The hotel was literally steps away from the Haram. Our Mutawwif was very knowledgeable and patient with my elderly parents.
+                        </p>
+<div class="flex gap-2 overflow-x-auto hide-scrollbar">
+<div class="size-20 shrink-0 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden border border-primary/5">
+<img alt="Hotel room view" class="w-full h-full object-cover" data-alt="Luxurious hotel room interior with view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4bkmKVUxHn_eD-I6LbbNfdH6pMiqsuP2XrR-E3bQi-0Xu3g8EstCziXa-SSrFNN1MAdo0le3E-sPRs2Fo1yx9ZAhc4wk1v6recOrnZOT2-3a1QHt-vMJnRkNeoA2yn0nfUhjjeVWoArR-bpV2xz_fXQPgWPS4gy2H5acc8ZMV0huFG0wXMPzvvF6GmrB0ZvmFxX6lKaXKC_dw5xEVKgo3kZq-TBpSxFO7czktiqFLOkA1_tHNenBUNAY87aQ_kksx-CZad3H50Sg"/>
+</div>
+<div class="size-20 shrink-0 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden border border-primary/5">
+<img alt="Catering food" class="w-full h-full object-cover" data-alt="Traditional Arabic meal served on a plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo6QxositkOsRtT8MEVn4An0Vy1zuEWtsiS4TVrlh7LPtYv39U2qm3zWUP-v12rlWn4IMm3oA31jUSXYmkUDXYCBxcWceMsbIVe_cNsga2P6CT61jxL17eV4kmhrFCPFOQRGK-kNprA8Thcu-X5TyjG9zS0c-wvudQqLI4s2-Ojf_yfoFgwDt_D-1lAfw2O4sUmVLGoZxG9moYbtDYNclNsaGMr0wTrOTVi3dTRKsi5BI8hWteFBQyPZCE7UMHDw7RG379P2rJH-o"/>
+</div>
+</div>
+<div class="ml-4 pl-4 border-l-2 border-primary/20 mt-2 bg-slate-50 dark:bg-slate-900/20 p-3 rounded-r-xl">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[16px]">reply</span>
+<span class="text-xs font-bold text-primary">Agency Response</span>
+<span class="text-[10px] text-slate-400 ml-auto">14 Oct 2023</span>
+</div>
+<p class="text-xs italic text-slate-600 dark:text-slate-400">
+                                Jazakallah Khair, Brother Ahmad. We are delighted to hear your parents had a comfortable journey. Looking forward to serving your family again.
+                            </p>
+</div>
+</article>
+<hr class="border-primary/5"/>
+<article class="flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div class="flex gap-3 items-center">
+<div class="size-10 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="Portrait of a female traveler" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYb5-FTNnctS4EepcM8C-ibp9DATF3COAu5ym0Kj-Em8qi47OCwpo-YLNJ7sAhSY728PmKh2qf1D1W6gZKVh58NvSTsXNBqjRO-nC3ScqaZV52_zIi_kLYRN1tL3KLABTyfUZ33jt_FeMsAgxR_bqb9QT-11zZbQw-7D9Xb4TrqZ2WXB3cAoB8TAnSUjaTl_F-fZtl3Yhq5QWMpVwHVOQQscYDfsxi242JOPcNLj3V2nkAAjl82K0rpX7LcbQQ2_QO5iSjCEoeWJs"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">Siti Aminah</h4>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="text-[10px] px-1.5 py-0.5 bg-primary/10 text-primary font-bold rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] fill-1">verified</span> Verified Trip
+                                        </span>
+<span class="text-[10px] text-slate-400">05 Sep 2023</span>
+</div>
+</div>
+</div>
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+</div>
+<div class="bg-primary/5 p-2 rounded-lg inline-block self-start">
+<p class="text-[10px] font-bold text-primary">Standard Umrah Saver Package</p>
+</div>
+<p class="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                            Overall good service. The transport was slightly delayed in Madinah, but the team handled it well. Food quality was excellent for the price point.
+                        </p>
+<div class="ml-4 pl-4 border-l-2 border-primary/20 mt-2 bg-slate-50 dark:bg-slate-900/20 p-3 rounded-r-xl">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[16px]">reply</span>
+<span class="text-xs font-bold text-primary">Agency Response</span>
+<span class="text-[10px] text-slate-400 ml-auto">07 Sep 2023</span>
+</div>
+<p class="text-xs italic text-slate-600 dark:text-slate-400">
+                                Thank you for your feedback, Sister Siti. We apologize for the minor delay and have addressed it with our transport partner.
+                            </p>
+</div>
+</article>
+</div>
+<button class="w-full mt-8 py-3 border-2 border-primary/20 text-primary font-bold rounded-xl hover:bg-primary/5 transition-colors">
+                    Load More Reviews
+                </button>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto z-20 flex gap-2 border-t border-primary/10 bg-white dark:bg-background-dark px-4 pb-4 pt-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">search</span>
+<p class="text-[10px] font-medium leading-normal">Search</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">luggage</span>
+<p class="text-[10px] font-medium leading-normal">Trips</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<p class="text-[10px] font-medium leading-normal">Inbox</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">person</span>
+<p class="text-[10px] font-bold leading-normal">Profile</p>
+</a>
+</nav>
+</div>
+</body></html>

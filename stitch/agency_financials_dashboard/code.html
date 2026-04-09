@@ -1,0 +1,370 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>TravelPartner Portal - Agency Financials</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+                emerald: {
+                    50: '#ecfdf5',
+                    100: '#d1fae5',
+                    200: '#a7f3d0',
+                    300: '#6ee7b7',
+                    400: '#34d399',
+                    50: '#10b981',
+                    600: '#059669',
+                    700: '#047857',
+                    800: '#065f46',
+                    900: '#064e3b',
+                    950: '#022c22',
+                }
+            },
+            fontFamily: {
+              "headline": ["Work Sans", "sans-serif"],
+              "body": ["Work Sans", "sans-serif"],
+              "label": ["Work Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 font-sans antialiased text-slate-900 dark:text-slate-100">
+<!-- SideNavBar (Shared Component) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-slate-50 dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 z-50">
+<div class="flex flex-col p-4 space-y-2 h-full">
+<div class="px-4 py-6 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="">corporate_fare</span>
+</div>
+<div>
+<h1 class="text-lg font-black tracking-tight text-emerald-900 dark:text-emerald-100" style="">Jemaah.id</h1>
+<p class="text-xs text-slate-500 font-medium" style="">Partner ID: 98231</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg hover:translate-x-1 transition-transform duration-150 font-sans font-medium text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" href="#" style="">
+<span class="material-symbols-outlined" data-icon="dashboard" style="">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-100 rounded-lg hover:translate-x-1 transition-transform duration-150 font-sans font-medium text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" href="#" style="">
+<span class="material-symbols-outlined" data-icon="payments" style="">payments</span>
+                    Revenue
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg hover:translate-x-1 transition-transform duration-150 font-sans font-medium text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" href="#" style="">
+<span class="material-symbols-outlined" data-icon="receipt_long" style="">receipt_long</span>
+                    Commissions
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg hover:translate-x-1 transition-transform duration-150 font-sans font-medium text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" href="#" style="">
+<span class="material-symbols-outlined" data-icon="history" style="">history</span>
+                    Payouts
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg hover:translate-x-1 transition-transform duration-150 font-sans font-medium text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" href="#" style="">
+<span class="material-symbols-outlined" data-icon="settings" style="">settings</span>
+                    Settings
+                </a>
+</nav>
+<div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg hover:translate-x-1 transition-transform duration-150 font-sans font-medium text-sm" href="#" style="">
+<span class="material-symbols-outlined" data-icon="logout" style="">logout</span>
+                    Logout
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<div class="ml-64 min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<header class="w-full sticky top-0 z-40 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-6">
+<span class="text-xl font-bold text-emerald-900 dark:text-emerald-200" style="">TravelPartner Portal</span>
+<div class="relative hidden lg:block">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+<span class="material-symbols-outlined text-sm" style="">search</span>
+</span>
+<input class="bg-slate-100 dark:bg-slate-800 border-none rounded-full py-1.5 pl-10 pr-4 text-sm w-64 focus:ring-2 focus:ring-emerald-500 transition-all" placeholder="Search transactions..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors duration-200 cursor-pointer relative" style="">
+<span class="material-symbols-outlined" data-icon="notifications" style="">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-emerald-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+<button class="text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-300 transition-colors duration-200 cursor-pointer" style="">
+<span class="material-symbols-outlined" data-icon="help" style="">help</span>
+</button>
+<div class="h-8 w-px bg-slate-200 dark:border-slate-700 mx-2"></div>
+<div class="flex items-center gap-3 cursor-pointer">
+<div class="text-right hidden sm:block">
+<p class="text-xs font-bold text-slate-900 dark:text-slate-100" style="">Global Travel Ltd.</p>
+<p class="text-[10px] text-slate-500" style="">Premium Partner</p>
+</div>
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover border-2 border-slate-100 dark:border-slate-800" data-alt="Professional male avatar in business attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV-QTJBXkqPNcEDDHdC36j9eL5Qb4mP0usWRE_l-IgHnTJjIqTNVN-pBIYxNO6VPAKTav3cFXFZ9lfvI2cak2yrMZnaIwxm5gWC9yyPR7LeHOiAsREidetPoabYiq8jEv2sRAAprC7F9i7KHHZecd442ylOyMtBiOj7ymTDqLh1qt2ZVHqWEUkh7VFmNqDFQiZ3CBFxBsqpFOzACfddIgQVVJRm-33SW_v5gfPfX-boptpF4sNiZTp30SwVATdwuI3Y7-NB1dkiv8" style="">
+</div>
+</div>
+</div>
+</header>
+<main class="p-8 max-w-7xl mx-auto">
+<!-- Summary Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<!-- Total Revenue -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-emerald-600" style="">payments</span>
+</div>
+<p class="text-slate-500 text-sm font-medium mb-1" style="">Total Revenue</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white" style="">$142,850.00</h3>
+<div class="mt-4 flex items-center text-xs font-bold text-emerald-600" style="">
+<span class="material-symbols-outlined text-xs mr-1" style="">trending_up</span>
+                        +12.5% from last month
+                    </div>
+</div>
+<!-- Pending Commissions -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-emerald-600" style="">pending_actions</span>
+</div>
+<p class="text-slate-500 text-sm font-medium mb-1" style="">Pending Commissions</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white" style="">$8,420.50</h3>
+<div class="mt-4 flex items-center text-xs font-bold text-slate-400" style="">
+<span class="material-symbols-outlined text-xs mr-1" style="">schedule</span>
+                        Estimated payout: May 15
+                    </div>
+</div>
+<!-- Available Balance -->
+<div class="bg-emerald-800 p-6 rounded-xl shadow-md border border-emerald-900 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-20">
+<span class="material-symbols-outlined text-4xl text-white" style="">account_balance_wallet</span>
+</div>
+<p class="text-emerald-100 text-sm font-medium mb-1" style="">Available Balance</p>
+<h3 class="text-2xl font-bold text-white" style="">$24,190.25</h3>
+<button class="mt-4 w-full bg-white text-emerald-800 text-xs font-bold py-2 rounded-lg hover:bg-emerald-50 transition-colors" style="">Withdraw Funds</button>
+</div>
+<!-- Next Payout Date -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-emerald-600" style="">event</span>
+</div>
+<p class="text-slate-500 text-sm font-medium mb-1" style="">Next Payout Date</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white" style="">May 01, 2024</h3>
+<div class="mt-4 flex items-center text-xs font-bold text-slate-400" style="">
+<span class="material-symbols-outlined text-xs mr-1" style="">check_circle</span>
+                        Verified: Direct Deposit
+                    </div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Revenue Chart Placeholder -->
+<div class="lg:col-span-2 bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h2 class="text-lg font-bold text-slate-900 dark:text-white" style="">Revenue Growth</h2>
+<p class="text-sm text-slate-500" style="">Monthly agency earnings overview</p>
+</div>
+<select class="bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-xs font-bold rounded-lg px-3 py-1 focus:ring-emerald-500">
+<option>Last 6 Months</option>
+<option>Last 12 Months</option>
+</select>
+</div>
+<div class="h-64 flex items-end justify-between gap-4 px-2">
+<!-- Simulated Chart Bars -->
+<div class="flex-1 flex flex-col items-center group">
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-t-lg h-32 group-hover:bg-emerald-200 dark:group-hover:bg-emerald-900 transition-colors relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity" style="">$18k</div>
+</div>
+<span class="text-[10px] mt-2 font-bold text-slate-400" style="">NOV</span>
+</div>
+<div class="flex-1 flex flex-col items-center group">
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-t-lg h-40 group-hover:bg-emerald-200 dark:group-hover:bg-emerald-900 transition-colors relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity" style="">$22k</div>
+</div>
+<span class="text-[10px] mt-2 font-bold text-slate-400" style="">DEC</span>
+</div>
+<div class="flex-1 flex flex-col items-center group">
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-t-lg h-28 group-hover:bg-emerald-200 dark:group-hover:bg-emerald-900 transition-colors relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity" style="">$15k</div>
+</div>
+<span class="text-[10px] mt-2 font-bold text-slate-400" style="">JAN</span>
+</div>
+<div class="flex-1 flex flex-col items-center group">
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-t-lg h-48 group-hover:bg-emerald-200 dark:group-hover:bg-emerald-900 transition-colors relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity" style="">$26k</div>
+</div>
+<span class="text-[10px] mt-2 font-bold text-slate-400" style="">FEB</span>
+</div>
+<div class="flex-1 flex flex-col items-center group">
+<div class="w-full bg-slate-100 dark:bg-slate-800 rounded-t-lg h-56 group-hover:bg-emerald-200 dark:group-hover:bg-emerald-900 transition-colors relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity" style="">$31k</div>
+</div>
+<span class="text-[10px] mt-2 font-bold text-slate-400" style="">MAR</span>
+</div>
+<div class="flex-1 flex flex-col items-center group">
+<div class="w-full bg-emerald-600 rounded-t-lg h-60 relative shadow-lg shadow-emerald-200 dark:shadow-none">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] py-1 px-2 rounded" style="">$35k</div>
+</div>
+<span class="text-[10px] mt-2 font-bold text-emerald-600" style="">APR</span>
+</div>
+</div>
+</div>
+<!-- Payout History -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white mb-6" style="">Recent Payouts</h2>
+<div class="space-y-6 flex-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-600" style="">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white" style="">$12,450.00</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider font-bold" style="">April 01, 2024</p>
+</div>
+</div>
+<span class="text-[10px] bg-emerald-100 text-emerald-700 px-2 py-1 rounded font-black uppercase" style="">Completed</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-600" style="">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white" style="">$9,820.00</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider font-bold" style="">March 01, 2024</p>
+</div>
+</div>
+<span class="text-[10px] bg-emerald-100 text-emerald-700 px-2 py-1 rounded font-black uppercase" style="">Completed</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-amber-500" style="">autorenew</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white" style="">$14,190.25</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider font-bold" style="">Pending Withdrawal</p>
+</div>
+</div>
+<span class="text-[10px] bg-amber-100 text-amber-700 px-2 py-1 rounded font-black uppercase" style="">Processing</span>
+</div>
+</div>
+<button class="mt-6 text-xs font-bold text-emerald-600 hover:text-emerald-700 flex items-center gap-1 justify-center border border-emerald-100 rounded-lg py-2 hover:bg-emerald-50 transition-colors" style="">
+                        View Statement History <span class="material-symbols-outlined text-sm" style="">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Commission Table -->
+<div class="mt-8 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white" style="">Recent Booking Commissions</h2>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded text-xs font-bold hover:bg-slate-200 transition-colors" style="">
+<span class="material-symbols-outlined text-sm" style="">filter_list</span> Filter
+                        </button>
+<button class="flex items-center gap-2 px-3 py-1.5 bg-slate-900 dark:bg-emerald-600 text-white rounded text-xs font-bold hover:opacity-90 transition-opacity" style="">
+<span class="material-symbols-outlined text-sm" style="">download</span> Export CSV
+                        </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50/50 dark:bg-slate-800/50 text-[10px] font-black text-slate-500 uppercase tracking-widest">
+<th class="px-6 py-4" style="">Booking ID</th>
+<th class="px-6 py-4" style="">Date</th>
+<th class="px-6 py-4" style="">Package Name</th>
+<th class="px-6 py-4" style="">Booking Value</th>
+<th class="px-6 py-4" style="">Commission (%)</th>
+<th class="px-6 py-4 text-right" style="">Net Earning</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-xs font-bold text-emerald-700 dark:text-emerald-400" style="">#BK-92841</td>
+<td class="px-6 py-4 text-xs text-slate-600 dark:text-slate-400" style="">Apr 12, 2024</td>
+<td class="px-6 py-4" style="">
+<p class="text-xs font-bold text-slate-900 dark:text-white" style="">Luxury Maldives Escape</p>
+<p class="text-[10px] text-slate-500" style="">7 Nights • All Inclusive</p>
+</td>
+<td class="px-6 py-4 text-xs font-bold text-slate-700 dark:text-slate-300" style="">$5,400.00</td>
+<td class="px-6 py-4" style="">
+<span class="text-xs font-bold px-2 py-0.5 bg-emerald-100 text-emerald-700 rounded-full" style="">12%</span>
+</td>
+<td class="px-6 py-4 text-right text-xs font-black text-slate-900 dark:text-white" style="">$648.00</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-xs font-bold text-emerald-700 dark:text-emerald-400" style="">#BK-92838</td>
+<td class="px-6 py-4 text-xs text-slate-600 dark:text-slate-400" style="">Apr 11, 2024</td>
+<td class="px-6 py-4" style="">
+<p class="text-xs font-bold text-slate-900 dark:text-white" style="">Swiss Alps Hiking Tour</p>
+<p class="text-[10px] text-slate-500" style="">5 Nights • Guided</p>
+</td>
+<td class="px-6 py-4 text-xs font-bold text-slate-700 dark:text-slate-300" style="">$3,200.00</td>
+<td class="px-6 py-4" style="">
+<span class="text-xs font-bold px-2 py-0.5 bg-emerald-100 text-emerald-700 rounded-full" style="">10%</span>
+</td>
+<td class="px-6 py-4 text-right text-xs font-black text-slate-900 dark:text-white" style="">$320.00</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-xs font-bold text-emerald-700 dark:text-emerald-400" style="">#BK-92822</td>
+<td class="px-6 py-4 text-xs text-slate-600 dark:text-slate-400" style="">Apr 09, 2024</td>
+<td class="px-6 py-4" style="">
+<p class="text-xs font-bold text-slate-900 dark:text-white" style="">Tokyo City Exploration</p>
+<p class="text-[10px] text-slate-500" style="">10 Nights • Multi-city</p>
+</td>
+<td class="px-6 py-4 text-xs font-bold text-slate-700 dark:text-slate-300" style="">$7,850.00</td>
+<td class="px-6 py-4" style="">
+<span class="text-xs font-bold px-2 py-0.5 bg-emerald-100 text-emerald-700 rounded-full" style="">15%</span>
+</td>
+<td class="px-6 py-4 text-right text-xs font-black text-slate-900 dark:text-white" style="">$1,177.50</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4 text-xs font-bold text-emerald-700 dark:text-emerald-400" style="">#BK-92790</td>
+<td class="px-6 py-4 text-xs text-slate-600 dark:text-slate-400" style="">Apr 08, 2024</td>
+<td class="px-6 py-4" style="">
+<p class="text-xs font-bold text-slate-900 dark:text-white" style="">Santorini Sunset Retreat</p>
+<p class="text-[10px] text-slate-500" style="">4 Nights • Honeymoon Spec.</p>
+</td>
+<td class="px-6 py-4 text-xs font-bold text-slate-700 dark:text-slate-300" style="">$2,900.00</td>
+<td class="px-6 py-4" style="">
+<span class="text-xs font-bold px-2 py-0.5 bg-emerald-100 text-emerald-700 rounded-full" style="">12%</span>
+</td>
+<td class="px-6 py-4 text-right text-xs font-black text-slate-900 dark:text-white" style="">$348.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50/30 dark:bg-slate-900">
+<p class="text-xs text-slate-500 font-medium" style="">Showing 1 to 4 of 128 bookings</p>
+<div class="flex gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded border border-slate-200 dark:border-slate-700 text-slate-400 hover:bg-white transition-colors cursor-pointer" style="">
+<span class="material-symbols-outlined text-sm" style="">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-emerald-600 text-white text-xs font-bold" style="">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 text-xs font-bold hover:bg-white transition-colors cursor-pointer" style="">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 text-xs font-bold hover:bg-white transition-colors cursor-pointer" style="">3</button>
+<button class="w-8 h-8 flex items-center justify-center rounded border border-slate-200 dark:border-slate-700 text-slate-400 hover:bg-white transition-colors cursor-pointer" style="">
+<span class="material-symbols-outlined text-sm" style="">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

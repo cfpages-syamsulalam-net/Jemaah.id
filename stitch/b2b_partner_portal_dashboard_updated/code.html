@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partner Portal | Emerald Canopy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#cde9d4",
+            "primary-fixed-dim": "#92d5ab",
+            "on-tertiary-container": "#410002",
+            "outline": "#0752321a",
+            "inverse-surface": "#1e293b",
+            "background": "#f6f8f7",
+            "primary-fixed": "#adf2c6",
+            "primary": "#075232",
+            "on-error-container": "#93000a",
+            "on-primary-fixed-variant": "#065232",
+            "on-secondary-container": "#344c3d",
+            "on-background": "#0f172a",
+            "tertiary-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#ffb3b3",
+            "surface-dim": "#f6f8f7",
+            "secondary": "#4b6454",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "surface-container-high": "#ebedec",
+            "surface": "#ffffff",
+            "secondary-container": "#cde9d4",
+            "on-tertiary-fixed-variant": "#733335",
+            "on-primary-container": "#075232",
+            "secondary-fixed-dim": "#b2cdb9",
+            "on-surface-variant": "#475569",
+            "primary-container": "#0752321a",
+            "surface-bright": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed": "#002111",
+            "inverse-on-surface": "#f8fafc",
+            "surface-container": "#f1f3f2",
+            "on-tertiary-fixed": "#3b080d",
+            "on-secondary-fixed": "#082013",
+            "tertiary-fixed": "#ffdad9",
+            "inverse-primary": "#92d5ab",
+            "surface-tint": "#075232",
+            "error-container": "#ffdad6",
+            "surface-variant": "#f1f3f2",
+            "surface-container-low": "#f6f8f7",
+            "surface-container-highest": "#e5e7e6",
+            "outline-variant": "#0752320d",
+            "on-surface": "#0f172a",
+            "tertiary": "#ba1a1a",
+            "on-primary": "#ffffff",
+            "on-secondary-fixed-variant": "#344c3d"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Work Sans"],
+            "label": ["Work Sans"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .scale-98-active:active { transform: scale(0.98); }
+  </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="flex flex-col h-full sticky top-0 left-0 h-screen w-64 border-r border-emerald-900/10 dark:border-emerald-100/10 bg-white dark:bg-slate-900 shadow-sm font-['Plus_Jakarta_Sans'] text-sm tracking-tight z-50">
+<div class="p-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mosque</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-emerald-900 dark:text-emerald-100 leading-none">Emerald Canopy</h1>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 mt-1">Partner Portal</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 mt-4">
+<!-- Active Tab: Dashboard -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-400 font-semibold border-r-4 border-emerald-800 transition-colors scale-98-active duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/20 transition-colors scale-98-active duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span>Packages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/20 transition-colors scale-98-active duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+<span>Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/20 transition-colors scale-98-active duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span>Reviews</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/20 transition-colors scale-98-active duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>Financials</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/20 transition-colors scale-98-active duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="insert_chart">insert_chart</span>
+<span>Analytics</span>
+</a>
+</nav>
+<div class="p-4 border-t border-emerald-900/5 mt-auto">
+<button class="w-full py-3 px-4 bg-primary text-white rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:opacity-90 transition-all scale-98-active">
+<span class="material-symbols-outlined text-sm">add</span>
+          Add Package
+        </button>
+<div class="mt-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-emerald-800 transition-colors text-xs" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-emerald-800 transition-colors text-xs" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="contact_support">contact_support</span>
+<span>Support</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col min-w-0">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center h-16 px-8 sticky top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-40 border-b border-emerald-900/5 dark:border-emerald-100/5">
+<div class="flex items-center flex-1 max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-1 focus:ring-primary/20 transition-all" placeholder="Search insights, packages, or leads..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6 ml-8">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-emerald-50 rounded-full border border-primary/10">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[11px] font-bold text-primary tracking-tight">KEMENAG LIC: 482/2023</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</button>
+<button class="text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-px bg-slate-200"></div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-xs font-bold leading-tight">Jemaah.id</p>
+<p class="text-[10px] text-slate-500">Premium Partner</p>
+</div>
+<img alt="Partner Profile" class="w-10 h-10 rounded-full object-cover border-2 border-primary/10" data-alt="Professional male portrait in business attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtvvoWw98-2YBb-yH4zxBrlajBOh0Kf8k28qLsMNzVMPwqp1fXd6XAMHLuAa-hCKXYXIzR5Ih1c7-Koo4Qjsx9e1XHKpvbd58tWjRztbC6Tr1FGl72IOsWdBL0047F0hj3ZBkzoVur_Yik-fmkSWV4fNJd_5DDHi1_amgCW1rU7xwMu-PRZN6x4J13cXhtT6c6Ujfj46GFX8QlEJEV4_xe_pzow76kc56XoWMHu0p_cIsqtM9R-tFIVCjkwWK9KmB_Gv9UiSOW-IE"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Canvas -->
+<div class="p-8 space-y-8 overflow-y-auto">
+<!-- Welcome & AI Alert Section -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 relative overflow-hidden bg-primary rounded-xl p-8 flex flex-col justify-between text-white shadow-xl">
+<div class="z-10">
+<h2 class="text-3xl font-headline font-extrabold tracking-tight">Salam, Jemaah.id!</h2>
+<p class="text-emerald-100/80 mt-2 max-w-md">Your operational efficiency is up 12% this month. We've detected new market trends for Umrah 1445H.</p>
+</div>
+<div class="mt-8 flex gap-4 z-10">
+<button class="px-6 py-2.5 bg-white text-primary rounded-xl font-bold text-sm hover:bg-emerald-50 transition-colors">View Analytics</button>
+<button class="px-6 py-2.5 bg-emerald-800/50 text-white border border-emerald-400/30 rounded-xl font-bold text-sm hover:bg-emerald-800 transition-colors">Manage Staff</button>
+</div>
+<div class="absolute -right-8 -bottom-8 opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-[240px]" style="font-variation-settings: 'FILL' 1;">mosque</span>
+</div>
+</div>
+<!-- AI Brochure Alert Card -->
+<div class="bg-white border border-primary/10 rounded-xl p-6 shadow-sm flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2 py-1 bg-amber-50 text-amber-700 text-[10px] font-bold tracking-widest uppercase rounded">AI Engine Update</span>
+<span class="material-symbols-outlined text-amber-500 animate-pulse">emergency_home</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900 leading-tight">New Unclaimed Package Detected via AI Scan</h3>
+<p class="text-xs text-slate-500 mt-2 font-body">Our crawler identified a high-conversion brochure matching your profile in the Greater Jakarta area.</p>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-slate-50">
+<button class="w-full py-3 bg-surface-container-low hover:bg-primary hover:text-white text-primary rounded-xl font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2">
+<span>Claim &amp; Verify</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bento Stats Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Inventory Stats -->
+<div class="bg-white p-6 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex items-center gap-3 text-slate-500 mb-4">
+<span class="material-symbols-outlined text-primary text-xl">inventory_2</span>
+<span class="text-[10px] font-bold tracking-widest uppercase">Active Packages</span>
+</div>
+<p class="text-4xl font-headline font-extrabold text-slate-900">12</p>
+<div class="mt-4 flex items-center gap-1 text-[11px] text-emerald-600 font-bold">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span>+2 from last month</span>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex items-center gap-3 text-slate-500 mb-4">
+<span class="material-symbols-outlined text-primary text-xl">person_add</span>
+<span class="text-[10px] font-bold tracking-widest uppercase">Seats Sold</span>
+</div>
+<p class="text-4xl font-headline font-extrabold text-slate-900">840</p>
+<div class="mt-4 w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 84%"></div>
+</div>
+<p class="mt-2 text-[10px] text-slate-500 font-medium">84% of total seasonal capacity</p>
+</div>
+<div class="bg-white p-6 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex items-center gap-3 text-slate-500 mb-4">
+<span class="material-symbols-outlined text-primary text-xl">event_seat</span>
+<span class="text-[10px] font-bold tracking-widest uppercase">Available Seats</span>
+</div>
+<p class="text-4xl font-headline font-extrabold text-slate-900">160</p>
+<div class="mt-4 flex items-center gap-2">
+<span class="px-2 py-0.5 bg-error/10 text-error text-[10px] font-bold rounded">LOW STOCK</span>
+<span class="text-[10px] text-slate-400">Next flight in 8 days</span>
+</div>
+</div>
+<!-- Reputation Snapshot -->
+<div class="bg-emerald-900 p-6 rounded-xl shadow-lg text-white">
+<div class="flex items-center gap-3 text-emerald-300 mb-4">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-[10px] font-bold tracking-widest uppercase">Reputation Score</span>
+</div>
+<div class="flex items-baseline gap-2">
+<p class="text-4xl font-headline font-extrabold">4.8</p>
+<span class="text-emerald-400 text-sm">/ 5.0</span>
+</div>
+<div class="mt-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-sm" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<p class="mt-2 text-[10px] text-emerald-200/70 font-medium italic">"Exceptional handling of elderly pilgrims"</p>
+</div>
+</section>
+<!-- Insights & Inquiries -->
+<section class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+<!-- Recent Leads -->
+<div class="lg:col-span-3 bg-white rounded-xl border border-primary/10 shadow-sm overflow-hidden flex flex-col">
+<div class="p-6 border-b border-slate-50 flex justify-between items-center">
+<h3 class="text-lg font-bold text-slate-900">Recent Pilgrim Leads</h3>
+<button class="text-primary text-xs font-bold hover:underline">View All CRM</button>
+</div>
+<div class="flex-1 overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-3 text-[10px] font-bold tracking-widest text-slate-400 uppercase">Pilgrim</th>
+<th class="px-6 py-3 text-[10px] font-bold tracking-widest text-slate-400 uppercase">Package Interest</th>
+<th class="px-6 py-3 text-[10px] font-bold tracking-widest text-slate-400 uppercase">Status</th>
+<th class="px-6 py-3 text-[10px] font-bold tracking-widest text-slate-400 uppercase">Time</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-50">
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500 text-xs">AS</div>
+<span class="text-xs font-bold text-slate-900">Ahmad Subagjo</span>
+</div>
+</td>
+<td class="px-6 py-4 text-xs text-slate-600">Umrah Executive Oct</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded">NEW</span>
+</td>
+<td class="px-6 py-4 text-xs text-slate-400">2 mins ago</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500 text-xs">SM</div>
+<span class="text-xs font-bold text-slate-900">Siti Maryam</span>
+</div>
+</td>
+<td class="px-6 py-4 text-xs text-slate-600">Plus Turkey Tour</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded">CONTACTED</span>
+</td>
+<td class="px-6 py-4 text-xs text-slate-400">1 hour ago</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500 text-xs">BK</div>
+<span class="text-xs font-bold text-slate-900">Bambang Kusuma</span>
+</div>
+</td>
+<td class="px-6 py-4 text-xs text-slate-600">Umrah Ramadhan</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded">NEW</span>
+</td>
+<td class="px-6 py-4 text-xs text-slate-400">4 hours ago</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Competitive Analytics -->
+<div class="lg:col-span-2 bg-white rounded-xl border border-primary/10 shadow-sm p-6 flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="text-lg font-bold text-slate-900">Competitive Analytics</h3>
+<p class="text-xs text-slate-500">Benchmark against regional partners</p>
+</div>
+<span class="material-symbols-outlined text-primary bg-primary/5 p-2 rounded-lg">insights</span>
+</div>
+<div class="flex-1 flex flex-col justify-center space-y-8">
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<span class="text-[10px] font-bold text-slate-400 uppercase">Market Share</span>
+<span class="text-sm font-bold text-primary">24.5%</span>
+</div>
+<div class="relative h-2 bg-slate-100 rounded-full">
+<div class="absolute inset-y-0 left-0 bg-primary rounded-full" style="width: 24.5%"></div>
+<div class="absolute inset-y-0 left-0 bg-primary/20 rounded-full w-[45%] border-r-2 border-white"></div>
+</div>
+<div class="flex justify-between">
+<span class="text-[9px] text-slate-400">Your Reach</span>
+<span class="text-[9px] text-slate-400 italic">Regional Leader (45%)</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<span class="text-[10px] font-bold text-slate-400 uppercase">Lead Win Rate</span>
+<span class="text-sm font-bold text-emerald-600">72.1%</span>
+</div>
+<div class="grid grid-cols-7 gap-1 h-8">
+<div class="bg-primary-fixed-dim rounded-sm"></div>
+<div class="bg-primary-fixed-dim rounded-sm"></div>
+<div class="bg-primary-fixed-dim rounded-sm"></div>
+<div class="bg-primary-fixed-dim rounded-sm"></div>
+<div class="bg-primary-fixed-dim rounded-sm"></div>
+<div class="bg-primary-fixed-dim rounded-sm"></div>
+<div class="bg-slate-100 rounded-sm"></div>
+</div>
+<p class="text-[9px] text-slate-500 leading-tight">Your conversion rate is <strong>14% higher</strong> than peers offering similar executive packages.</p>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-50">
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<img alt="Avatar 1" class="w-6 h-6 rounded-full border-2 border-white" data-alt="Male headshot icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnWa8Xb93TakfVBmOtqwk0KiVQ5yCE5Pa_bXD4h1rlRa0chx8_XG4bWQRIMNpJabqIouam4sK1AkCjANrrytsGaTUTQsGAciZnjSayw7HZEYVTLX5ww8Q6IGeyrhGOJnC3rdk9s4rTROy3cB1T3RGGMma9_-v2SYP9MMCZF9LuYdE78cw8P9KpaBYIwDPAWrWiLI7EUzrVJVurMUMU_jv479InQGktVHRNsKbU8RQ5LbNu8x2Sz8cARkmRgIcmUVxSaVp-wDVFXFI"/>
+<img alt="Avatar 2" class="w-6 h-6 rounded-full border-2 border-white" data-alt="Female headshot icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC53AadN0fhFK2W7HnugZIK1iSYYLxJdqn13cUrX7JHxmIFm2_d_sxHqYqu7FiJNz9Ki2wurFYnqrJ31MwxXeBuH_WmI-lO3oKThh1qPcjoWI0BFRQ2j1XBdVG1wmwDgbttZ0nvX8NX4y5MqtkipDrWEutXpWT_QjlnOs9zpK0NmDMes42_rYVx3qeovfKMxCrnlti3jBoioM-Ac_-nz1iJijwdv0CO9gKgDEuqSIUyBA08sn6WyQRsDJTqn6aEt_PK8NJFpY-j-w0"/>
+<div class="w-6 h-6 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[8px] font-bold">+12</div>
+</div>
+<p class="text-[10px] text-slate-500">Comparing with 14 local agents</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<!-- FAB - Contextual for Dashboard -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform z-50 group">
+<span class="material-symbols-outlined transition-transform group-hover:rotate-90">add</span>
+<div class="absolute right-16 px-4 py-2 bg-slate-900 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+      Create New Package
+    </div>
+</button>
+</body></html>

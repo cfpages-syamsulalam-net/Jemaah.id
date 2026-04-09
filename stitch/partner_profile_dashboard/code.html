@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>B2B Portal - Partner Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a", "slate-900": "#0a1510", "slate-700": "#152a20", "slate-600": "#204030", "slate-500": "#2b5540", "slate-400": "#366a50", "slate-300": "#4c9a79", "slate-200": "#cfe7dd", "slate-100": "#e7f3ee", "slate-50": "#f8fcfa"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<div class="w-64 flex-shrink-0 border-r border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-background-dark flex flex-col h-full">
+<div class="p-4 flex items-center gap-3 border-b border-slate-200 dark:border-slate-700">
+<div class="bg-primary/20 rounded-full w-10 h-10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="">hub</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-slate-100 text-base font-medium leading-normal" style="">Jemaah.id</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal" style="">Partner Management</p>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto p-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors" href="#" style="">
+<span class="material-symbols-outlined" style="">dashboard</span>
+<span class="text-sm font-medium" style="">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary" href="#" style="">
+<span class="material-symbols-outlined" style="">group</span>
+<span class="text-sm font-medium" style="">Partner Profile</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors" href="#" style="">
+<span class="material-symbols-outlined" style="">work</span>
+<span class="text-sm font-medium" style="">Services</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors" href="#" style="">
+<span class="material-symbols-outlined" style="">description</span>
+<span class="text-sm font-medium" style="">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors" href="#" style="">
+<span class="material-symbols-outlined" style="">settings</span>
+<span class="text-sm font-medium" style="">Settings</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-700">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-300 bg-cover bg-center" data-alt="User Avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBww4yPuidZm_RVQS3rOO0bWJB3rNCk6vcoq7scF69PyAj9hGzRzd1CkWl50x71IPMtscoeah_fT9Z_G-GebtC2ExatBXZtqSceaylQPnW9YXxU0N43rcxyDsr5brmXuG0DK_LU7ewogQOLvK1YUOyuo-nAO9EaskbNEC18N9f1YyV0jx8ULVnTVp9wNCNdclX8obsUt4LbL6gPjAnTbvSxv6Vp3sgNv3FfUs1hbDwxwT_xcBlsqyKAN5KLxbQG-R_JwlIpAC2l0tE");'></div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-slate-900 dark:text-slate-100 truncate" style="">Jane Doe</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 truncate" style="">Admin</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-full overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- Header -->
+<header class="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 px-8 py-4 flex justify-between items-center sticky top-0 z-10">
+<div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100" style="">Partner Profile</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400" style="">Manage your business details, contacts, and legal status.</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" style="">Cancel</button>
+<button class="px-4 py-2 bg-primary text-slate-900 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors" style="">Save Changes</button>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-8">
+<div class="max-w-4xl mx-auto space-y-8">
+<!-- Status Banner -->
+<div class="bg-primary/10 border border-primary/20 rounded-xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" style="">verified</span>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100" style="">Verified Partner</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400" style="">Your business has completed verification and is currently active on the network.</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300" style="">Active</span>
+</div>
+</div>
+<!-- Company Info Section -->
+<section class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+<div class="border-b border-slate-200 dark:border-slate-700 p-6">
+<h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100" style="">Company Information</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1" style="">Basic details about your agency.</p>
+</div>
+<div class="p-6 space-y-6">
+<!-- Logo Upload -->
+<div class="flex items-start gap-6">
+<div class="w-32 h-32 rounded-xl bg-slate-100 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 flex items-center justify-center bg-cover bg-center overflow-hidden" data-alt="Company Logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6H9FHA4o5mZXjwq4p1N3YxvczH89AjQatgidGInXy1Mfn66PAB8QB6_GR6XsekFcM6TaUX74JYlbZPD4Ta0VmYpOlaMymxkXXYWL2gdZZHf2ACCluPNqJoCaVazJT1vbsc63DFH_Cgim038z1keLHoESFLkWAka_PWK1dE59rWh-vLcWMTl86bYfpN-BB49qFWZtmIJoQZZpOYhkDqHFb6jco89D8Id_b5oJOmo6g10qgqHW3Nc7KeP1jp004OiSr3oiWpP0aGLY");'>
+</div>
+<div class="flex-1 space-y-3">
+<h4 class="text-sm font-medium text-slate-900 dark:text-slate-100" style="">Company Logo</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400" style="">Upload a high-resolution square image. Recommended size: 512x512px. Max file size 5MB.</p>
+<div class="flex gap-3">
+<button class="px-4 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2" style="">
+<span class="material-symbols-outlined text-sm" style="">upload</span>
+                                            Upload New
+                                        </button>
+<button class="px-4 py-2 border border-slate-200 dark:border-slate-600 rounded-lg text-sm font-medium text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors" style="">
+                                            Remove
+                                        </button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">Agency Name <span class="text-red-500" style="">*</span></label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2" type="text" value="Acme Digital Agency"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">Trading Name</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2" type="text" value="Acme Corp"/>
+</div>
+<div class="space-y-2 md:col-span-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">Tagline</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2" type="text" value="Innovating the digital landscape."/>
+</div>
+<div class="space-y-2 md:col-span-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">Description</label>
+<textarea class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2 resize-none" rows="4">We are a full-service digital agency specializing in modern web applications, cloud infrastructure, and data-driven marketing strategies for enterprise clients.</textarea>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">Industry</label>
+<select class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2">
+<option>Technology &amp; Software</option>
+<option>Marketing &amp; Advertising</option>
+<option>Consulting</option>
+<option>Design Services</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">Website</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2" type="url" value="https://acme.agency"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Legal Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Contact Persons -->
+<section class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+<div class="border-b border-slate-200 dark:border-slate-700 p-6 flex justify-between items-center">
+<div>
+<h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100" style="">Key Contacts</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1" style="">Primary personnel for communication.</p>
+</div>
+<button class="p-2 rounded-lg text-primary hover:bg-primary/10 transition-colors" style="">
+<span class="material-symbols-outlined" style="">add</span>
+</button>
+</div>
+<div class="p-0">
+<ul class="divide-y divide-slate-200 dark:divide-slate-700">
+<li class="p-6 flex items-start justify-between" style="">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-600 flex items-center justify-center text-slate-500 dark:text-slate-300 font-medium" style="">
+                                                JD
+                                            </div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-slate-100" style="">John Doe <span class="ml-2 text-xs bg-primary/20 text-primary px-2 py-0.5 rounded-full" style="">Primary</span></p>
+<p class="text-sm text-slate-500 dark:text-slate-400" style="">CEO &amp; Founder</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1" style="">john@acme.agency • (555) 123-4567</p>
+</div>
+</div>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200" style="">
+<span class="material-symbols-outlined text-sm" style="">edit</span>
+</button>
+</li>
+<li class="p-6 flex items-start justify-between" style="">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-600 flex items-center justify-center text-slate-500 dark:text-slate-300 font-medium" style="">
+                                                SA
+                                            </div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-slate-100" style="">Sarah Adams</p>
+<p class="text-sm text-slate-500 dark:text-slate-400" style="">Partnership Manager</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1" style="">sarah@acme.agency • (555) 987-6543</p>
+</div>
+</div>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200" style="">
+<span class="material-symbols-outlined text-sm" style="">edit</span>
+</button>
+</li>
+</ul>
+</div>
+</section>
+<!-- Legal Status -->
+<section class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+<div class="border-b border-slate-200 dark:border-slate-700 p-6">
+<h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100" style="">Legal Details</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1" style="">Registration and tax information.</p>
+</div>
+<div class="p-6 space-y-4">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">Legal Entity Type</label>
+<select class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2">
+<option>Limited Liability Company (LLC)</option>
+<option>Corporation (Inc)</option>
+<option>Sole Proprietorship</option>
+<option>Partnership</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">Registration Number</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2" type="text" value="REG-987654321"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">Tax ID / VAT Number</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2" type="text" value="US123456789"/>
+</div>
+<div class="pt-2">
+<div class="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-600">
+<span class="material-symbols-outlined text-slate-400" style="">description</span>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-slate-900 dark:text-slate-100 truncate" style="">Certificate_of_Incorporation.pdf</p>
+<p class="text-xs text-slate-500 dark:text-slate-400" style="">Uploaded on Oct 12, 2023</p>
+</div>
+<button class="text-primary hover:text-primary/80 text-sm font-medium" style="">Replace</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Location Section -->
+<section class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+<div class="border-b border-slate-200 dark:border-slate-700 p-6 flex justify-between items-center">
+<div>
+<h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100" style="">Office Location</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1" style="">Primary business address.</p>
+</div>
+</div>
+<div class="p-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="space-y-4">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">Street Address</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2" type="text" value="123 Innovation Drive, Suite 400"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">City</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2" type="text" value="San Francisco"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">State / Province</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2" type="text" value="CA"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">ZIP / Postal Code</label>
+<input class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2" type="text" value="94105"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300" style="">Country</label>
+<select class="w-full rounded-lg border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary px-4 py-2">
+<option>United States</option>
+<option>Canada</option>
+<option>United Kingdom</option>
+</select>
+</div>
+</div>
+</div>
+<div class="h-full min-h-[250px] rounded-xl overflow-hidden border border-slate-200 dark:border-slate-600 relative">
+<div class="absolute inset-0 bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+<div class="text-center text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-4xl mb-2" style="">map</span>
+<p class="text-sm font-medium" data-location="San Francisco, CA" style="">Map view of San Francisco, CA</p>
+</div>
+</div>
+<!-- A real implementation would have an iframe or map component here -->
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</body></html>

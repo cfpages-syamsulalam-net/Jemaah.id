@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Claim &amp; Verify Package | Emerald Canopy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#adf2c6",
+                        "surface-dim": "#f6f8f7",
+                        "tertiary-container": "#ffdad6",
+                        "background": "#f6f8f7",
+                        "on-background": "#0f172a",
+                        "on-primary-fixed-variant": "#065232",
+                        "on-secondary-fixed-variant": "#344c3d",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#92d5ab",
+                        "secondary-fixed": "#cde9d4",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#0752320d",
+                        "outline": "#0752321a",
+                        "on-tertiary-fixed-variant": "#733335",
+                        "primary": "#075232",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#ba1a1a",
+                        "on-surface": "#0f172a",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e5e7e6",
+                        "on-tertiary-container": "#410002",
+                        "surface": "#ffffff",
+                        "on-primary-container": "#075232",
+                        "surface-variant": "#f1f3f2",
+                        "on-tertiary-fixed": "#3b080d",
+                        "on-primary-fixed": "#002111",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f8fafc",
+                        "tertiary-fixed-dim": "#ffb3b3",
+                        "surface-container-low": "#f6f8f7",
+                        "primary-container": "#0752321a",
+                        "surface-container": "#f1f3f2",
+                        "on-secondary-fixed": "#082013",
+                        "tertiary-fixed": "#ffdad9",
+                        "surface-bright": "#ffffff",
+                        "secondary": "#4b6454",
+                        "inverse-surface": "#1e293b",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#ebedec",
+                        "primary-fixed-dim": "#92d5ab",
+                        "on-secondary-container": "#344c3d",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#075232",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#b2cdb9",
+                        "secondary-container": "#cde9d4",
+                        "on-surface-variant": "#475569"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased">
+<!-- SideNavBar -->
+<aside class="flex flex-col fixed left-0 top-0 h-screen z-40 bg-white dark:bg-emerald-950 border-r border-emerald-900/10 dark:border-emerald-100/10 w-64 shadow-sm">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-emerald-900 dark:text-emerald-100 tracking-tight">Emerald Canopy</h1>
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Partner Portal</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-slate-500 dark:text-slate-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/30" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-tight">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-emerald-900 dark:text-emerald-100 font-bold border-r-4 border-emerald-900 dark:border-emerald-400 bg-emerald-50/50 dark:bg-emerald-900/20" href="#">
+<span class="material-symbols-outlined">assignment_late</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-tight">Claims Queue</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-slate-500 dark:text-slate-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/30" href="#">
+<span class="material-symbols-outlined">package_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-tight">Packages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-slate-500 dark:text-slate-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/30" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-tight">Verifications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-slate-500 dark:text-slate-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/30" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-tight">Analytics</span>
+</a>
+</nav>
+<div class="px-4 py-6 border-t border-emerald-900/5 mt-auto">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-slate-500 hover:bg-emerald-50" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-slate-500 hover:bg-emerald-50" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm font-medium">Support</span>
+</a>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="flex justify-between items-center h-16 px-8 ml-64 w-[calc(100%-16rem)] sticky top-0 z-30 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-md border-b border-emerald-900/5 dark:border-emerald-100/5">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20" placeholder="Global Search" type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-all text-slate-500">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-all text-slate-500">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-all text-slate-500">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+<div class="h-8 w-px bg-emerald-900/10"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-xs font-bold text-emerald-900">Al-Falah Travel</p>
+<p class="text-[10px] text-slate-500 font-medium">Admin Portal</p>
+</div>
+<img class="w-8 h-8 rounded-full border border-emerald-900/10 object-cover" data-alt="Partner Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwsxzWH-YIa9GGfMliwRVVku9xbI-mT2K31_acYKNO-O5MyF2aUzvp0f_h7TgQjcaN5yu8jWcbEEvJniw6yE9JNkg8wQQwM-58wxjBcv7i0q9zNfXhjTpi3I2_JyiFwnUwFH8L3ocuR6FVCI5-THMtsjxQ5LMQqV4jKU5K0iBZB8qUYh9NmsqP7jr53xNo663YL1XIBgdbQlVlEQAHR1VqAnIF6vjNJI4zGo7J6uNbX9Cwaw4ZcthMEqQYxmAC4AjaEwRoxgeWepU"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 p-8 max-w-7xl mx-auto">
+<!-- Breadcrumbs & Header -->
+<div class="mb-8">
+<nav class="flex items-center gap-2 text-xs font-medium text-slate-400 mb-2 uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Queue</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary">Claim Package</span>
+</nav>
+<h2 class="text-3xl font-extrabold text-emerald-900 tracking-tight">Claim &amp; Verify Package</h2>
+</div>
+<!-- Stepper -->
+<div class="relative flex justify-between items-center mb-12 max-w-3xl mx-auto">
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-surface-container-high -translate-y-1/2 -z-10"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-xl">edit_note</span>
+</div>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">1. Review Data</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-slate-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+<span class="text-xs font-bold text-slate-400 uppercase tracking-wider">2. Kemenag Verification</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-slate-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">task_alt</span>
+</div>
+<span class="text-xs font-bold text-slate-400 uppercase tracking-wider">3. Confirmation</span>
+</div>
+</div>
+<!-- Flow Content -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left: Document Preview -->
+<div class="lg:col-span-5 space-y-6">
+<div class="bg-surface rounded-xl shadow-sm border border-emerald-900/10 overflow-hidden">
+<div class="p-4 border-b border-emerald-900/5 bg-surface-container-low flex justify-between items-center">
+<h3 class="text-sm font-bold text-emerald-900 uppercase tracking-tight">Document Preview</h3>
+<span class="px-2 py-1 rounded bg-emerald-900/10 text-emerald-900 text-[10px] font-bold">OCR DETECTED</span>
+</div>
+<div class="relative aspect-[3/4] bg-slate-100 group">
+<img class="w-full h-full object-cover opacity-80" data-alt="Scanned Umrah brochure with digital OCR overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3cULzQlsLWpMRMHHmlpVxT0pvVf46x1X7glHYgytqTO8VoRMgHCzqnTnluilRh2ZzUg6hYmy7jaTfjMNwxW--IWimpTHUpk7yah-RKdrZUz6UkkYw_DzQ3hwPKVZVhkyv5qsrqiGIp7L5WfL6bp5AFChq6bjreL9-tpYHxpmt1a7GjAZ1QcOGxtEPlNd4M5C6Z2iS2EC3tC2iCVT9MIlLnSGMMHeM0hOQIY89kr5mEI3a50cJEpSf8mJK0JdNCgoKTIozNNgJLnI"/>
+<!-- AI Overlays -->
+<div class="absolute top-[15%] left-[10%] px-2 py-1 bg-primary/20 backdrop-blur-sm border border-primary/40 rounded text-[10px] text-primary font-bold shadow-sm">
+                            [TITLE] Umrah Ramadhan 1445H
+                        </div>
+<div class="absolute top-[40%] right-[15%] px-2 py-1 bg-primary/20 backdrop-blur-sm border border-primary/40 rounded text-[10px] text-primary font-bold shadow-sm">
+                            [PRICE] 32.500.000
+                        </div>
+<div class="absolute bottom-[20%] left-[20%] px-2 py-1 bg-primary/20 backdrop-blur-sm border border-primary/40 rounded text-[10px] text-primary font-bold shadow-sm">
+                            [HOTEL] Pullman ZamZam Makkah
+                        </div>
+<div class="absolute inset-0 border-[16px] border-emerald-900/5 pointer-events-none"></div>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-primary-container border border-primary/10">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">info</span>
+<div>
+<h4 class="text-sm font-bold text-emerald-900 mb-1">AI Detection Confidence: 94%</h4>
+<p class="text-xs text-secondary leading-relaxed">Our AI has extracted the key details from the brochure. Please review and correct any discrepancies in the form to your right.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Form Details -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Package Details Card -->
+<div class="bg-surface rounded-xl shadow-sm border border-emerald-900/10 p-8">
+<div class="mb-6">
+<p class="text-[10px] font-bold text-primary uppercase tracking-[0.15em] mb-1">Step 1 of 3</p>
+<h3 class="text-xl font-bold text-emerald-900">Review &amp; Correct Details</h3>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2">
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Package Title</label>
+<input class="w-full border-emerald-900/10 rounded-lg bg-surface-container-low text-sm p-3 focus:ring-primary/20 focus:border-primary" type="text" value="Umrah Ramadhan Full Month 1445H"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Corrected Price (IDR)</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm font-medium">Rp</span>
+<input class="w-full border-emerald-900/10 rounded-lg bg-surface-container-low text-sm p-3 pl-10 focus:ring-primary/20 focus:border-primary" type="text" value="32.500.000"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Departure City</label>
+<select class="w-full border-emerald-900/10 rounded-lg bg-surface-container-low text-sm p-3 focus:ring-primary/20 focus:border-primary appearance-none">
+<option>Jakarta (CGK)</option>
+<option>Surabaya (SUB)</option>
+<option>Medan (KNO)</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Hotel (Makkah)</label>
+<input class="w-full border-emerald-900/10 rounded-lg bg-surface-container-low text-sm p-3 focus:ring-primary/20 focus:border-primary" type="text" value="Pullman ZamZam Makkah"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Hotel (Madinah)</label>
+<input class="w-full border-emerald-900/10 rounded-lg bg-surface-container-low text-sm p-3 focus:ring-primary/20 focus:border-primary" type="text" value="Anwar Al Madinah Movenpick"/>
+</div>
+</div>
+<div class="h-px bg-emerald-900/5 my-8"></div>
+<div class="mb-4">
+<h4 class="text-sm font-bold text-emerald-900 uppercase tracking-tight mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+                                Kemenag Credentials
+                            </h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">PPIU / PIHK License No.</label>
+<input class="w-full border-emerald-900/10 rounded-lg bg-surface-container-low text-sm p-3 focus:ring-primary/20 focus:border-primary" placeholder="e.g. 123/2023" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Legal Agency Name</label>
+<input class="w-full border-emerald-900/10 rounded-lg bg-surface-container-low text-sm p-3 focus:ring-primary/20 focus:border-primary" type="text" value="PT. Al-Falah Berkah Wisata"/>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 p-4 bg-emerald-50/50 rounded-xl border border-emerald-900/5 mt-8">
+<input class="mt-1 rounded text-primary focus:ring-primary border-emerald-900/20" id="certify" type="checkbox"/>
+<label class="text-xs text-secondary leading-relaxed" for="certify">
+                                I hereby certify that the information provided is correct and that I am an authorized representative of the mentioned travel agency. I understand that false claims may result in license revocation.
+                            </label>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center justify-end gap-4">
+<button class="px-6 py-3 rounded-xl text-emerald-900 font-bold text-sm hover:bg-emerald-50 transition-all active:scale-95 border border-emerald-900/10">
+                        Save as Draft
+                    </button>
+<button class="px-8 py-3 rounded-xl bg-primary text-white font-bold text-sm shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-95 flex items-center gap-2">
+                        Claim &amp; Verify Package
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual Success Indicator (Floating Toast Style) -->
+<div class="fixed bottom-8 right-8 bg-emerald-900 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-4 z-50 border border-emerald-400/20">
+<div class="w-8 h-8 rounded-full bg-emerald-400/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-400 text-lg" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div>
+<p class="text-xs font-bold leading-tight">AI Assist Active</p>
+<p class="text-[10px] text-emerald-300 opacity-80">Refining data from brochure scan...</p>
+</div>
+</div>
+</body></html>

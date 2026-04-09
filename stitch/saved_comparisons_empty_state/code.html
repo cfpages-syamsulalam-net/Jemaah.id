@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saved Comparisons - Jemaah.id</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header / Top Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 gap-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">Saved Comparisons</h1>
+</div>
+<!-- Tab Bar -->
+<div class="flex px-4">
+<button class="flex-1 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+                Packages
+            </button>
+<button class="flex-1 py-3 text-sm font-bold border-b-2 border-primary text-primary">
+                Comparisons
+            </button>
+</div>
+</header>
+<!-- Main Content Area (Empty State) -->
+<main class="flex-1 flex flex-col items-center justify-center px-8 py-12 text-center max-w-md mx-auto">
+<!-- Illustration Placeholder -->
+<div class="relative mb-8 w-64 h-64 flex items-center justify-center">
+<!-- Decorative Background circles -->
+<div class="absolute inset-0 bg-primary/5 rounded-full scale-90"></div>
+<div class="absolute inset-0 bg-primary/10 rounded-full scale-75 blur-2xl"></div>
+<!-- Icon/Illustration mimicking a folder/magnifying glass concept -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="size-32 rounded-3xl bg-white dark:bg-slate-800 shadow-xl flex items-center justify-center border border-primary/20 rotate-3">
+<span class="material-symbols-outlined text-primary text-6xl">folder_open</span>
+</div>
+<div class="size-20 absolute -bottom-4 -right-4 rounded-full bg-primary shadow-lg flex items-center justify-center border-4 border-background-light dark:border-background-dark -rotate-6">
+<span class="material-symbols-outlined text-white text-4xl">search</span>
+</div>
+</div>
+</div>
+<!-- Text Content -->
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-3">No Saved Comparisons Yet</h2>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
+            Compare up to 4 packages to see the best value for your journey. Once you save a comparison, it will appear here.
+        </p>
+<!-- Primary Action Button -->
+<button class="w-full py-4 px-8 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl shadow-lg shadow-primary/25 transition-all active:scale-[0.98]">
+            Start Exploring Packages
+        </button>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-primary/10 pb-6 pt-2 px-2">
+<div class="flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Search</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">bookmark</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Saved</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">History</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

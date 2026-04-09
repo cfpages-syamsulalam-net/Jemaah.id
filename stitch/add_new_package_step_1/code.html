@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<title>Jemaah.id - Add New Package</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center justify-between border-b border-primary/10 bg-white dark:bg-background-dark px-10 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-tight">Jemaah.id B2B</h2>
+</div>
+<nav class="flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="#">Packages</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Bookings</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary w-64" placeholder="Search packages..." type="text"/>
+</div>
+<div class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-10 py-8">
+<div class="mb-8">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h1 class="text-3xl font-bold tracking-tight mb-2">Create New Package</h1>
+<p class="text-slate-500 dark:text-slate-400">Step 1: Basic Information &amp; Logistics</p>
+</div>
+<button class="bg-primary/10 text-primary hover:bg-primary/20 px-4 py-2 rounded-lg font-semibold text-sm flex items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-sm">save</span>
+                        Save Draft
+                    </button>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="flex flex-col gap-2">
+<div class="h-2 w-full rounded-full bg-primary"></div>
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider">
+<span class="material-symbols-outlined text-base">check_circle</span>
+                            1. Basic Info
+                        </div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="h-2 w-full rounded-full bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex items-center gap-2 text-slate-400 font-medium text-xs uppercase tracking-wider">
+<span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                            2. Accommodations
+                        </div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="h-2 w-full rounded-full bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex items-center gap-2 text-slate-400 font-medium text-xs uppercase tracking-wider">
+<span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                            3. Itinerary
+                        </div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="h-2 w-full rounded-full bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex items-center gap-2 text-slate-400 font-medium text-xs uppercase tracking-wider">
+<span class="material-symbols-outlined text-base">radio_button_unchecked</span>
+                            4. Review &amp; Publish
+                        </div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-8 flex flex-col gap-8">
+<section class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">info</span>
+                            General Information
+                        </h3>
+<div class="grid grid-cols-2 gap-6">
+<div class="col-span-2">
+<label class="block text-sm font-semibold mb-2">Package Name</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary" placeholder="e.g., Umroh Reguler Ramadhan 1446H" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">Category</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary">
+<option>Umroh</option>
+<option>Haji Plus</option>
+<option>Umroh Plus</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">Departure Date</label>
+<div class="relative">
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary" type="date"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">Duration (Days)</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary" placeholder="9" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">Base Price (IDR)</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 font-bold text-slate-400">Rp</span>
+<input class="w-full pl-10 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary" placeholder="30.000.000" type="text"/>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">flight_takeoff</span>
+                            Flight Details
+                        </h3>
+<div class="flex gap-4 mb-8">
+<div class="flex-1">
+<label class="block text-sm font-semibold mb-2">Flight Code</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg focus:ring-primary focus:border-primary uppercase" placeholder="e.g., SV-817" type="text"/>
+</div>
+<div class="flex items-end">
+<button class="bg-primary text-slate-900 font-bold px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-colors">
+                                    Verify Flight
+                                </button>
+</div>
+</div>
+<div class="rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-800 p-10 text-center">
+<div class="mb-4">
+<div class="h-16 w-32 mx-auto bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center mb-4">
+<img alt="Saudi Arabian Airlines Logo" class="h-8" data-alt="Saudi Arabian Airlines official carrier logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNFPPIr0au7VxF0iyjPLzNqIVbcp3lwEngdJ9jLkCVHyqsyK8kZZ5Xd0LKD6yggxPUEfaYr_5ADzvX4Iw5faTWYrQLJU50lxMSBQbEXoklo_8V57KYn4nWtSlYHJq9dwVEi-p5OncIM__UnpfwUmJ6BxnAkJy5SjQHw0G1UC1Mw_GllkTsdfjkFyGdyCJ0z8WEM3KCIWbYEZgQXqa9dTZKskloCA8cI8-NqqA4LqGi98c2GIj4FaFmGgxOrZcqZKRQJbAnJi8PfUM"/>
+</div>
+<h4 class="text-lg font-bold">Saudi Arabian Airlines</h4>
+<p class="text-slate-500">SV-817 • Boeing 777-300ER</p>
+</div>
+<div class="flex items-center justify-center gap-8 mt-6">
+<div class="text-right">
+<p class="text-xs font-bold text-primary uppercase">Departure</p>
+<p class="text-xl font-bold">CGK</p>
+<p class="text-sm text-slate-500">Jakarta</p>
+</div>
+<div class="flex flex-col items-center gap-1 flex-1 max-w-[120px]">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Direct</p>
+<div class="w-full h-px bg-slate-300 dark:bg-slate-700 relative">
+<span class="material-symbols-outlined absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-slate-400 text-lg">flight_takeoff</span>
+</div>
+<p class="text-[10px] font-bold text-slate-400 uppercase">9h 40m</p>
+</div>
+<div class="text-left">
+<p class="text-xs font-bold text-primary uppercase">Arrival</p>
+<p class="text-xl font-bold">JED</p>
+<p class="text-sm text-slate-500">Jeddah</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<aside class="col-span-4 flex flex-col gap-6">
+<div class="bg-primary/10 border border-primary/20 rounded-xl p-6">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+<h4 class="text-lg font-bold text-slate-900 dark:text-slate-100">Anti-Ngawur™ Validation</h4>
+</div>
+<p class="text-sm leading-relaxed text-slate-700 dark:text-slate-300 mb-4">
+                            We use official GDS and hotel supplier APIs to verify every detail of your package. This automation ensures:
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                Real-time flight schedule accuracy
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                Authentic hotel star ratings
+                            </li>
+<li class="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+                                Reduced data entry human errors
+                            </li>
+</ul>
+<div class="mt-6 pt-4 border-t border-primary/20">
+<p class="text-xs font-medium text-slate-500 italic">"Building trust with pilgrims starts with verified data."</p>
+</div>
+</div>
+<div class="bg-slate-900 text-white rounded-xl p-6 relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-bold mb-2">Need help?</h4>
+<p class="text-sm text-slate-400 mb-4">Our partner support team is available 24/7 to assist with your package creation.</p>
+<button class="text-xs font-bold text-primary flex items-center gap-1">
+                                Chat with Support <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-white/5 text-8xl">support_agent</span>
+</div>
+</aside>
+</div>
+<footer class="mt-12 flex items-center justify-between border-t border-slate-200 dark:border-slate-800 pt-8 pb-12">
+<button class="px-8 py-3 rounded-lg border border-slate-300 dark:border-slate-700 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                    Cancel
+                </button>
+<div class="flex gap-4">
+<button class="bg-primary text-slate-900 px-10 py-3 rounded-lg font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 flex items-center gap-2">
+                        Next: Accommodations
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

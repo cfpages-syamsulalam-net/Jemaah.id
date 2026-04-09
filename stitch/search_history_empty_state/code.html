@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<title>Search History - Jemaah.id</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto shadow-xl bg-background-light dark:bg-background-dark">
+<!-- Header -->
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 border-b border-primary/10">
+<button aria-label="Go back" class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</button>
+<h1 class="ml-2 text-lg font-bold leading-tight tracking-tight flex-1">Search History</h1>
+<div class="size-10"></div> <!-- Spacer for balance -->
+</header>
+<!-- Main Content (Empty State) -->
+<main class="flex flex-1 flex-col items-center justify-center px-8 py-12 text-center">
+<!-- Minimalist Illustration Container -->
+<div class="relative mb-10">
+<div class="absolute inset-0 scale-150 blur-3xl opacity-20 bg-primary rounded-full"></div>
+<div class="relative flex h-48 w-48 items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-2xl shadow-primary/10 border border-primary/5">
+<!-- Custom SVG Illustration for Search/Location -->
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary !text-7xl mb-2">travel_explore</span>
+<div class="flex gap-1">
+<span class="size-2 rounded-full bg-primary/20"></span>
+<span class="size-2 rounded-full bg-primary/40"></span>
+<span class="size-2 rounded-full bg-primary/20"></span>
+</div>
+</div>
+<!-- Small Floating Pin icon -->
+<div class="absolute -top-2 -right-2 flex size-12 items-center justify-center rounded-xl bg-primary text-white shadow-lg">
+<span class="material-symbols-outlined !text-2xl">location_on</span>
+</div>
+</div>
+</div>
+<!-- Text Content -->
+<div class="flex flex-col items-center gap-4 max-w-sm">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
+                    No Search History Yet
+                </h2>
+<p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed">
+                    Your recent searches and saved filters will appear here to help you quickly find your next Umrah or Haji journey.
+                </p>
+</div>
+<!-- Primary Action -->
+<div class="mt-10 w-full max-w-[280px]">
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-14 px-6 bg-primary text-slate-900 font-bold text-base transition-transform active:scale-95 shadow-lg shadow-primary/20">
+<span class="truncate">Start Searching Packages</span>
+</button>
+</div>
+</main>
+<!-- Suggested Filters (Subtle context) -->
+<section class="px-6 pb-12">
+<p class="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4 text-center">Popular starting points</p>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">Umrah Ramadan</span>
+<span class="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">Haji Plus 2024</span>
+<span class="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">Economy Deals</span>
+</div>
+</section>
+<!-- Bottom Navigation Bar -->
+<nav class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pb-6 pt-3">
+<div class="flex items-center justify-around">
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined !fill-1">search</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Search</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Orders</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

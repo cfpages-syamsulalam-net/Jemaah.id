@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-screen w-full overflow-hidden">
+<!-- Sidebar -->
+<aside class="flex w-72 flex-col border-r border-primary/10 bg-white dark:bg-slate-900">
+<div class="flex items-center gap-3 px-6 py-8">
+<div class="flex items-center justify-center rounded-lg bg-primary p-2 text-white">
+<span class="material-symbols-outlined" style="">flight_takeoff</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight" style="">Jemaah.id</h2>
+</div>
+<div class="flex flex-1 flex-col gap-2 px-4">
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary rounded-lg cursor-pointer">
+<span class="material-symbols-outlined" style="">dashboard</span>
+<p class="text-sm font-medium" style="">Dashboard</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary rounded-lg cursor-pointer">
+<span class="material-symbols-outlined" style="">receipt_long</span>
+<p class="text-sm font-medium" style="">Bookings</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 bg-primary text-white rounded-lg cursor-pointer shadow-sm shadow-primary/20">
+<span class="material-symbols-outlined" style="">verified</span>
+<p class="text-sm font-medium" style="">Certificates</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary rounded-lg cursor-pointer">
+<span class="material-symbols-outlined" style="">group</span>
+<p class="text-sm font-medium" style="">Agents</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary rounded-lg cursor-pointer">
+<span class="material-symbols-outlined" style="">assessment</span>
+<p class="text-sm font-medium" style="">Reports</p>
+</div>
+<div class="mt-auto mb-6 flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary rounded-lg cursor-pointer">
+<span class="material-symbols-outlined" style="">settings</span>
+<p class="text-sm font-medium" style="">Settings</p>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex flex-1 flex-col overflow-hidden">
+<!-- Header -->
+<header class="flex h-16 items-center justify-between border-b border-primary/10 bg-white px-8 dark:bg-slate-900">
+<div class="flex items-center gap-4 flex-1 max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm" style="">search</span>
+<input class="w-full rounded-lg border-0 bg-background-light px-10 py-2 text-sm focus:ring-2 focus:ring-primary/50 dark:bg-background-dark" placeholder="Search certificates or licenses..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-lg bg-background-light p-2 dark:bg-background-dark" style="">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400" style="">notifications</span>
+</button>
+<div class="h-8 w-[1px] bg-primary/10"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-xs font-semibold" style="">Al-Haram Agency</p>
+<p class="text-[10px] text-slate-400" style="">ID: B2B-99210</p>
+</div>
+<div class="h-10 w-10 overflow-hidden rounded-full bg-primary/20" data-alt="User profile avatar placeholder">
+<img alt="Profile" class="h-full w-full object-cover" data-alt="Corporate travel agent profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOao5ZtMXZEYDibBjnOuQlkQbatlslWFqkR9IkDRPCUCArwm3gqO9djVSVnW0rSrGiQVLb62szwMLP2-5d88TWAtGQU5N-0AZaP7e6xeFn4T4EHX-0gTDlS0aiaW0BSuNWG0X7Y-M7ue_cUtLBjHWj8o4UozXsKZfxE5F4zltJ5N61_qgl64RAz8nLRT9yXrZ2tgsA250-BgfBN4zejQ5_DRk5U3f_aT51wIuLxtMesvDfuyhsbhxO6z9d_AaS5-PK0ekwH4lDiLI" style=""/>
+</div>
+</div>
+</div>
+</header>
+<!-- Viewer Layout -->
+<div class="flex flex-1 overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- Left Panel: Info and Metadata -->
+<div class="flex w-96 flex-col overflow-y-auto border-r border-primary/10 bg-white p-6 dark:bg-slate-900/50">
+<div class="mb-8">
+<div class="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary uppercase tracking-wider" style="">
+<span class="material-symbols-outlined text-sm" style="">verified</span>
+                        Verified Official
+                    </div>
+<h1 class="text-2xl font-black leading-tight text-slate-900 dark:text-white" style="">Kemenag Certification</h1>
+<p class="mt-2 text-sm text-slate-500" style="">Official license for specialized Umrah and Hajj travel operations within the Republic of Indonesia.</p>
+</div>
+<div class="space-y-6">
+<div class="rounded-xl border border-primary/10 bg-background-light p-4 dark:bg-background-dark/50">
+<p class="text-xs font-semibold uppercase tracking-widest text-slate-400" style="">License Number</p>
+<p class="mt-1 font-mono text-lg font-bold text-primary" style="">PPIU-882/2023</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-xl border border-primary/10 bg-background-light p-4 dark:bg-background-dark/50">
+<p class="text-xs font-semibold uppercase tracking-widest text-slate-400" style="">Issued On</p>
+<p class="mt-1 font-medium" style="">12 Jan 2023</p>
+</div>
+<div class="rounded-xl border border-primary/10 bg-background-light p-4 dark:bg-background-dark/50">
+<p class="text-xs font-semibold uppercase tracking-widest text-slate-400" style="">Expiry Date</p>
+<p class="mt-1 font-medium text-red-500" style="">12 Jan 2028</p>
+</div>
+</div>
+<div class="space-y-3 pt-4">
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-3 font-bold text-white shadow-lg shadow-primary/20 hover:brightness-105 transition-all" style="">
+<span class="material-symbols-outlined" style="">download</span>
+                            Download PDF
+                        </button>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg border border-primary/20 bg-white py-3 font-bold text-slate-700 hover:bg-slate-50 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 transition-all" style="">
+<span class="material-symbols-outlined" style="">print</span>
+                            Print Document
+                        </button>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg py-3 text-sm font-semibold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200" style="">
+<span class="material-symbols-outlined text-lg" style="">share</span>
+                            Share with Partners
+                        </button>
+</div>
+</div>
+<div class="mt-auto pt-10 border-t border-primary/5">
+<div class="flex items-center gap-4 rounded-lg bg-slate-50 p-4 dark:bg-slate-800">
+<span class="material-symbols-outlined text-primary" style="">shield</span>
+<div>
+<p class="text-xs font-bold" style="">Document Integrity</p>
+<p class="text-[10px] text-slate-400" style="">Verified by Ministry of Religious Affairs digital registry.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Document Preview -->
+<div class="flex flex-1 flex-col overflow-hidden">
+<!-- Preview Toolbar -->
+<div class="flex h-12 items-center justify-between bg-slate-200/50 px-6 dark:bg-slate-800/50">
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:text-slate-900" style=""><span class="material-symbols-outlined text-lg" style="">zoom_out</span></button>
+<span class="text-xs font-medium text-slate-600 uppercase" style="">100%</span>
+<button class="text-slate-500 hover:text-slate-900" style=""><span class="material-symbols-outlined text-lg" style="">zoom_in</span></button>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-medium text-slate-500" style="">Page 1 of 1</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-slate-500 hover:text-slate-900" style=""><span class="material-symbols-outlined text-lg" style="">fullscreen</span></button>
+</div>
+</div>
+<!-- Document Surface -->
+<div class="flex flex-1 items-start justify-center overflow-y-auto bg-slate-300 p-12 dark:bg-slate-950/50">
+<div class="relative w-full max-w-4xl shadow-2xl transition-transform hover:scale-[1.01]">
+<!-- Certificate Mockup -->
+<div class="aspect-[1/1.414] w-full rounded-sm bg-white p-12 text-slate-800 dark:bg-white relative overflow-hidden">
+<!-- Ornate Border -->
+<div class="absolute inset-4 border-[12px] border-double border-primary/20 pointer-events-none"></div>
+<div class="absolute inset-8 border-[2px] border-primary/10 pointer-events-none"></div>
+<div class="relative flex flex-col items-center h-full text-center">
+<!-- Logo and Header -->
+<div class="mb-10 w-24 h-24 bg-primary/5 rounded-full flex items-center justify-center border border-primary/20" data-alt="Government ministry official logo emblem">
+<span class="material-symbols-outlined text-primary text-5xl" style="">account_balance</span>
+</div>
+<h3 class="text-xl font-bold uppercase tracking-widest text-slate-500" style="">Kementerian Agama Republik Indonesia</h3>
+<div class="mt-2 h-1 w-48 bg-primary mx-auto"></div>
+<h4 class="mt-6 text-2xl font-serif font-black italic text-slate-800" style="">SERTIFIKAT PENYELENGGARA UMRAH</h4>
+<div class="mt-12 flex flex-col gap-6 w-full px-10">
+<div class="text-lg">
+<p class="text-slate-400 text-sm italic" style="">This is to certify that</p>
+<p class="mt-2 text-3xl font-bold text-slate-900 uppercase" style="">PT. AL-HARAM TRAVEL INDONESIA</p>
+</div>
+<div class="text-base text-slate-600 leading-relaxed" style="">
+                                        Has fulfilled all regulatory requirements and is hereby granted the official license to operate as a 
+                                        Specialized Umrah Travel Organizer (PPIU) under the Ministry's oversight.
+                                    </div>
+<div class="mt-12 grid grid-cols-2 text-left gap-y-6">
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase" style="">License ID</p>
+<p class="font-bold" style="">#PPIU-2023-882-JKT</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase" style="">Classification</p>
+<p class="font-bold" style="">Category A (Global)</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase" style="">Registered HQ</p>
+<p class="font-bold" style="">Jakarta Selatan, Indonesia</p>
+</div>
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase" style="">Valid Until</p>
+<p class="font-bold" style="">January 12, 2028</p>
+</div>
+</div>
+</div>
+<div class="mt-auto w-full flex justify-between items-end pb-8 px-10">
+<div class="text-center">
+<div class="h-20 w-20 opacity-30 grayscale mb-2" data-alt="Digital verification QR code for document">
+<img alt="QR Code" class="h-full w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjCmcjWq0GGWU8CVISMssEMBGYKvsP16Gbg0nWrqRNpffhfUnk-Rdlpq1qvzgrptGHlmZZ0XKEZPjzP8sRwsyA1ViF9OgB0KZK7s26XSNO4_Rx5DZa68e_-ogZ8Uhcmq8GZAyzGI-ttj1taMZ4cr-UsdIA-YAlbpN24Ki6vHU1i5r_UoA_cr0p-E6FxDKMM6bMcQEhoxfI1T7_-z7yUwHke0pGQQOZTY8yqK76YFuQ8F7CjHPmXhV2R9j4suye4xUTMad0mC0tGc0" style=""/>
+</div>
+<p class="text-[8px] text-slate-400 uppercase font-bold tracking-tighter" style="">Scan to verify</p>
+</div>
+<div class="text-center">
+<div class="mb-4 h-16 w-32 border-b border-slate-300 flex items-center justify-center italic text-primary font-bold opacity-60" style="">
+                                            Digital Signature
+                                        </div>
+<p class="text-xs font-bold text-slate-700" style="">Dr. KH. Yaqut Cholil Qoumas</p>
+<p class="text-[10px] text-slate-400 uppercase" style="">Menteri Agama RI</p>
+</div>
+</div>
+</div>
+<!-- Security Features Overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-[0.03] select-none flex items-center justify-center flex-wrap gap-4 -rotate-12 scale-150">
+<span class="text-4xl font-black" style="">KEMENAG RI</span>
+<span class="text-4xl font-black" style="">OFFICIAL LICENSE</span>
+<span class="text-4xl font-black" style="">PPIU 2023</span>
+<span class="text-4xl font-black" style="">KEMENAG RI</span>
+<span class="text-4xl font-black" style="">OFFICIAL LICENSE</span>
+<span class="text-4xl font-black" style="">PPIU 2023</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

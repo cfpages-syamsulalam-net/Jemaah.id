@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bandingkan Paket - Jemaah.id</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#075232",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221a",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .sticky-left {
+            position: sticky;
+            left: 0;
+            z-index: 20;
+            background-color: inherit;
+        }
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+        }
+        .comparison-table-container {
+            overflow-x: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #075232 #f0f4f3;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<header class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<svg class="size-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-xl font-black text-primary tracking-tight">Jemaah.id</span>
+</div>
+<nav class="hidden md:flex gap-6">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Paket Umrah</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Paket Haji</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Promo</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Artikel</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors">search</button>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity">Masuk</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<div class="mb-8">
+<h1 class="text-4xl font-black text-slate-900 dark:text-slate-100 mb-2">Bandingkan Pilihan Ibadah Anda</h1>
+<p class="text-slate-600 dark:text-slate-400">Analisis mendalam 4 paket terbaik untuk membantu Anda menentukan perjalanan suci yang paling tepat.</p>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="comparison-table-container">
+<table class="w-full border-collapse">
+<!-- Sticky Header -->
+<thead class="sticky-top bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<tr>
+<th class="sticky-left p-6 text-left min-w-[240px] bg-slate-50 dark:bg-slate-800/50">
+<button class="flex items-center gap-2 text-primary font-bold text-sm">
+<span class="material-symbols-outlined text-sm">add_circle</span>
+                                    Tambah Paket
+                                </button>
+</th>
+<!-- Package 1 Header -->
+<th class="p-6 min-w-[300px] border-l border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center text-center">
+<div class="size-16 rounded-lg bg-slate-100 dark:bg-slate-800 mb-4 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Travel agency logo Al-Fath" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgwHkejsQYLMPDCXDijhHvbDICdEy8BD1zXmW1nfSWPmz9en0Dpw6u_4bC8qL595QAbikEWS2Hzp_lcP1esQBf65SyqWf_CiVX0H3ihT1tLIKIqia8BzR-fc14cz0Hqk_KrgS1j8dWfIe0vWAXTiu_nhGOCbahRrgF_b22Fgh4P-885ZtGbEHd2gdaw6SCN0Ah4T214kmz_oHiivIAf4mtp2B7N2HYL3r0kiYIS23Z46Vhx66aZZ-PU88NbZbIlEtohXPkA6bMKc4"/>
+</div>
+<h3 class="font-bold text-lg leading-tight">Paket Premium Al-Fath</h3>
+<span class="text-xs text-primary bg-primary/10 px-2 py-1 rounded mt-2 uppercase font-bold tracking-wider">Terpopuler</span>
+</div>
+</th>
+<!-- Package 2 Header -->
+<th class="p-6 min-w-[300px] border-l border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center text-center">
+<div class="size-16 rounded-lg bg-slate-100 dark:bg-slate-800 mb-4 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Travel agency logo Berkah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7LDAfkrUCptr9t7gpS1zLf0hWGqGDoR8F0_i-gNIHMphjnXt8g8z7uj1aPkXNRnnjTdVGkbrCiKOy9igzVT8qW-YqmnVf3ZsQBu-B38EBNB0RoI3MHMRhl2tNTjneBsxe7-YvvvPTXGsmqee0JMWPLSyamBhQH7UkgeZb4jCA_7onVOiGfd3GMA-6BSCCs0OqpnTtb60WRQIDwcVtpTRceL4Ssi8Q80tlilG-H2Oos0uX-8lw-7DbehgfRCWDt6apllaCplIXSpw"/>
+</div>
+<h3 class="font-bold text-lg leading-tight">Paket Ekonomi Berkah</h3>
+<span class="text-xs text-orange-600 bg-orange-50 px-2 py-1 rounded mt-2 uppercase font-bold tracking-wider">Budget-Friendly</span>
+</div>
+</th>
+<!-- Package 3 Header -->
+<th class="p-6 min-w-[300px] border-l border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center text-center">
+<div class="size-16 rounded-lg bg-slate-100 dark:bg-slate-800 mb-4 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Travel agency logo Rahmah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjVmlrm17woLFKdpYlpBdYTHYYX0r_KfRMMAqZMqcp3N1YlNDAk4xrs4XAdQd-PKkmagMl8YgbzVr8u5tdlp47igOhnhnwywmzyA0Et-36rE9drJ1V1iwfv3svBBhYcEhjNm6ekcuGxZ8IV_5AsCztNcd4SGY3yS_SQVVE2xzPe5opL9PN5Kkak9MlfV37RatgGe7H1wCnaFh47QgJ311-rtD7QJbLpyS03FJNO5tGvMpiJ_TMqfmlOArI7FvEqOn8I6CTzApjP0M"/>
+</div>
+<h3 class="font-bold text-lg leading-tight">Paket Rahmah Umrah</h3>
+<span class="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded mt-2 uppercase font-bold tracking-wider">Reguler</span>
+</div>
+</th>
+<!-- Package 4 Header -->
+<th class="p-6 min-w-[300px] border-l border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center text-center">
+<div class="size-16 rounded-lg bg-slate-100 dark:bg-slate-800 mb-4 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Travel agency logo Sultan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRUsmIeq6ZlgKfROIPK2uFwjPjZM4TpxIOp_Fi34Zuiogl1NT1yr4d3lVh52dLkAqIr2Mv0bnc4gf04el02Z6e1n2b2gyt_qCTn3BgDGexvNIlvlgrMyVvlFuL0IoJnWnudQG_rIVIWJYsAnCibFgObN6AGUHgaihIjxG7dTUJcdY4rJfv0cp1ICvgc_3etFUp1IlpL-ENBZiPIgeQ-q5LZQ3E-R_uVLsivx5--tDEGK_qeEi3JFXHiGcZ5bW9KgKx6zS0fyCkdjc"/>
+</div>
+<h3 class="font-bold text-lg leading-tight">Paket Sultan Exclusive</h3>
+<span class="text-xs text-purple-600 bg-purple-50 px-2 py-1 rounded mt-2 uppercase font-bold tracking-wider">VVIP Services</span>
+</div>
+</th>
+</tr>
+</thead>
+<!-- Comparison Body -->
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<!-- Group: Basic Info -->
+<tr class="bg-slate-50 dark:bg-slate-800/30">
+<td class="sticky-left px-6 py-3 font-bold text-sm text-slate-500 uppercase tracking-widest" colspan="5">Informasi Dasar</td>
+</tr>
+<tr>
+<td class="sticky-left px-6 py-4 font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900">Harga Total</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="text-xl font-bold text-slate-900 dark:text-white">Rp 35.000.000</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 bg-emerald-50/50 dark:bg-primary/10">
+<div class="text-xl font-bold text-primary">Rp 28.500.000</div>
+<span class="inline-flex items-center gap-1 text-[10px] font-bold text-primary bg-primary/20 px-2 py-0.5 rounded-full mt-1 uppercase">Termurah <span class="material-symbols-outlined text-[12px]">trending_down</span></span>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="text-xl font-bold text-slate-900 dark:text-white">Rp 31.000.000</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="text-xl font-bold text-slate-900 dark:text-white">Rp 45.000.000</div>
+</td>
+</tr>
+<tr>
+<td class="sticky-left px-6 py-4 font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900">Durasi Perjalanan</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 font-semibold">12 Hari</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 font-semibold text-slate-500">9 Hari</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 font-semibold">9 Hari</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 font-semibold text-primary">15 Hari <span class="text-xs font-normal opacity-70">(Terlama)</span></td>
+</tr>
+<tr>
+<td class="sticky-left px-6 py-4 font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900">Embarkasi</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">Jakarta (CGK)</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">Surabaya (SUB)</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">Jakarta (CGK)</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">Jakarta (CGK)</td>
+</tr>
+<tr>
+<td class="sticky-left px-6 py-4 font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900">Maskapai</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="font-semibold">Saudi Arabian</span>
+<span class="text-[10px] font-bold text-primary uppercase mt-1">Direct Flight</span>
+</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="font-semibold">Lion Air</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase mt-1">1 Transit</span>
+</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="font-semibold">Garuda Indonesia</span>
+<span class="text-[10px] font-bold text-primary uppercase mt-1">Direct Flight</span>
+</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="font-semibold">Emirates</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase mt-1">1 Transit (Dubai)</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="sticky-left px-6 py-4 font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900">Jenis Visa</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">Umrah Mandiri</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">Umrah</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">Umrah</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 font-bold text-purple-600">Umrah VIP</td>
+</tr>
+<!-- Group: Accommodations -->
+<tr class="bg-slate-50 dark:bg-slate-800/30">
+<td class="sticky-left px-6 py-3 font-bold text-sm text-slate-500 uppercase tracking-widest" colspan="5">Akomodasi &amp; Hotel</td>
+</tr>
+<tr>
+<td class="sticky-left px-6 py-4 font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900">Hotel Makkah</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="flex flex-col gap-1">
+<div class="flex text-yellow-500"><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span></div>
+<span class="font-semibold">InterContinental</span>
+<span class="text-xs text-slate-500">50m dari Masjidil Haram</span>
+<span class="flex items-center gap-1 text-[10px] font-bold text-primary mt-1"><span class="material-symbols-outlined text-sm">verified</span> TERVERIFIKASI</span>
+</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 grayscale">
+<div class="flex flex-col gap-1">
+<div class="flex text-yellow-500"><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span></div>
+<span class="font-semibold">Olayan Ajyad</span>
+<span class="text-xs text-slate-500">500m dari Masjidil Haram</span>
+</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="flex flex-col gap-1">
+<div class="flex text-yellow-500"><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span></div>
+<span class="font-semibold">Elaf Ajyad</span>
+<span class="text-xs text-slate-500">200m dari Masjidil Haram</span>
+<span class="flex items-center gap-1 text-[10px] font-bold text-primary mt-1"><span class="material-symbols-outlined text-sm">verified</span> TERVERIFIKASI</span>
+</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 bg-purple-50/30">
+<div class="flex flex-col gap-1">
+<div class="flex text-yellow-500"><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span></div>
+<span class="font-semibold">Fairmont Makkah Clock Royal</span>
+<span class="text-xs font-bold text-purple-700">Pelataran Masjid (0m)</span>
+<span class="flex items-center gap-1 text-[10px] font-bold text-primary mt-1"><span class="material-symbols-outlined text-sm">verified</span> TERVERIFIKASI</span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="sticky-left px-6 py-4 font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900">Hotel Madinah</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="flex flex-col gap-1">
+<div class="flex text-yellow-500"><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span></div>
+<span class="font-semibold">Movenpick Anwar</span>
+<span class="text-xs text-slate-500">100m dari Masjid Nabawi</span>
+<span class="flex items-center gap-1 text-[10px] font-bold text-primary mt-1"><span class="material-symbols-outlined text-sm">verified</span> TERVERIFIKASI</span>
+</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 grayscale">
+<div class="flex flex-col gap-1">
+<div class="flex text-yellow-500"><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span></div>
+<span class="font-semibold">Diyar Al Madinah</span>
+<span class="text-xs text-slate-500">400m dari Masjid Nabawi</span>
+</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="flex flex-col gap-1">
+<div class="flex text-yellow-500"><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span></div>
+<span class="font-semibold">Pullman Zamzam</span>
+<span class="text-xs text-slate-500">150m dari Masjid Nabawi</span>
+<span class="flex items-center gap-1 text-[10px] font-bold text-primary mt-1"><span class="material-symbols-outlined text-sm">verified</span> TERVERIFIKASI</span>
+</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 bg-purple-50/30">
+<div class="flex flex-col gap-1">
+<div class="flex text-yellow-500"><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span><span class="material-symbols-outlined text-sm">star</span></div>
+<span class="font-semibold">The Oberoi Madinah</span>
+<span class="text-xs text-slate-500">50m dari Masjid Nabawi</span>
+<span class="flex items-center gap-1 text-[10px] font-bold text-primary mt-1"><span class="material-symbols-outlined text-sm">verified</span> TERVERIFIKASI</span>
+</div>
+</td>
+</tr>
+<!-- Group: Meals -->
+<tr class="bg-slate-50 dark:bg-slate-800/30">
+<td class="sticky-left px-6 py-3 font-bold text-sm text-slate-500 uppercase tracking-widest" colspan="5">Konsumsi &amp; Makanan</td>
+</tr>
+<tr>
+<td class="sticky-left px-6 py-4 font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900">Skema Makan</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">Full Board</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">Full Board</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">Full Board</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 font-bold text-primary">Full Board Buffet</td>
+</tr>
+<tr>
+<td class="sticky-left px-6 py-4 font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900">Menu Makanan</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 font-medium">Indonesia &amp; Internasional</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 font-medium">Indonesia</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 font-medium">Indonesia</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 font-bold">Premium Internasional</td>
+</tr>
+<!-- Group: Services -->
+<tr class="bg-slate-50 dark:bg-slate-800/30">
+<td class="sticky-left px-6 py-3 font-bold text-sm text-slate-500 uppercase tracking-widest" colspan="5">Layanan Pendamping</td>
+</tr>
+<tr>
+<td class="sticky-left px-6 py-4 font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900">Pendamping</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">Tour Leader &amp; Muthawwif</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 text-slate-500">Hanya Muthawwif</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">Tour Leader &amp; Muthawwif</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 font-bold">Private Muthawwif</td>
+</tr>
+<tr>
+<td class="sticky-left px-6 py-4 font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900">Earpiece Sholat</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-bold">Ya</span>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 text-slate-400">
+<span class="material-symbols-outlined">cancel</span>
+<span>Tidak</span>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-bold">Ya</span>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800 text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-bold">Ya</span>
+</td>
+</tr>
+<!-- Group: Reviews -->
+<tr class="bg-slate-50 dark:bg-slate-800/30">
+<td class="sticky-left px-6 py-3 font-bold text-sm text-slate-500 uppercase tracking-widest" colspan="5">Penilaian Pengguna</td>
+</tr>
+<tr>
+<td class="sticky-left px-6 py-4 font-medium text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900">Rating Keseluruhan</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<span class="text-lg font-bold">4.9</span>
+<div class="flex text-yellow-500"><span class="material-symbols-outlined text-sm fill-1">star</span></div>
+<span class="text-xs text-slate-500">(240 ulasan)</span>
+</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<span class="text-lg font-bold">4.2</span>
+<div class="flex text-yellow-500"><span class="material-symbols-outlined text-sm fill-1">star</span></div>
+<span class="text-xs text-slate-500">(156 ulasan)</span>
+</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<span class="text-lg font-bold">4.5</span>
+<div class="flex text-yellow-500"><span class="material-symbols-outlined text-sm fill-1">star</span></div>
+<span class="text-xs text-slate-500">(89 ulasan)</span>
+</div>
+</td>
+<td class="px-6 py-4 border-l border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2">
+<span class="text-lg font-bold">5.0</span>
+<div class="flex text-yellow-500"><span class="material-symbols-outlined text-sm fill-1">star</span></div>
+<span class="text-xs text-slate-500">(12 ulasan)</span>
+</div>
+</td>
+</tr>
+<!-- Footer Actions -->
+<tr class="bg-white dark:bg-slate-900">
+<td class="sticky-left px-6 py-8 bg-white dark:bg-slate-900 border-none"></td>
+<td class="px-6 py-8 border-l border-slate-100 dark:border-slate-800">
+<button class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:opacity-90 transition-all shadow-md shadow-primary/20">Pilih Paket Al-Fath</button>
+<a class="block text-center mt-3 text-sm text-primary font-semibold hover:underline" href="#">Lihat Detail</a>
+</td>
+<td class="px-6 py-8 border-l border-slate-100 dark:border-slate-800">
+<button class="w-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white py-3 rounded-lg font-bold hover:bg-slate-200 transition-all">Pilih Paket Berkah</button>
+<a class="block text-center mt-3 text-sm text-primary font-semibold hover:underline" href="#">Lihat Detail</a>
+</td>
+<td class="px-6 py-8 border-l border-slate-100 dark:border-slate-800">
+<button class="w-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white py-3 rounded-lg font-bold hover:bg-slate-200 transition-all">Pilih Paket Rahmah</button>
+<a class="block text-center mt-3 text-sm text-primary font-semibold hover:underline" href="#">Lihat Detail</a>
+</td>
+<td class="px-6 py-8 border-l border-slate-100 dark:border-slate-800">
+<button class="w-full bg-slate-900 text-white py-3 rounded-lg font-bold hover:bg-slate-800 transition-all">Pilih Paket Sultan</button>
+<a class="block text-center mt-3 text-sm text-primary font-semibold hover:underline" href="#">Lihat Detail</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Sticky Footer Summary (Mobile View optimization if needed, but this is desktop version) -->
+<div class="mt-12 flex flex-col items-center justify-center p-8 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-2xl bg-white/50 dark:bg-slate-900/50">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">help_outline</span>
+<h4 class="text-xl font-bold mb-2">Masih Bingung Memilih?</h4>
+<p class="text-slate-600 dark:text-slate-400 text-center max-w-md mb-6">Konsultasikan kebutuhan ibadah Anda dengan tim ahli kami secara gratis via WhatsApp.</p>
+<button class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition-opacity">
+<svg class="size-5 fill-current" viewbox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793 0-.852.448-1.271.607-1.445.16-.173.348-.217.462-.217.115 0 .231.001.332.005.109.004.258-.041.404.31.145.352.491 1.201.534 1.289.044.087.073.188.014.303-.058.116-.087.188-.174.289l-.261.303c-.087.087-.174.188-.073.362.101.174.449.741.964 1.201.666.594 1.23.779 1.403.867.174.088.275.073.376-.044.101-.116.434-.506.549-.679.116-.174.231-.145.39-.087.16.058 1.011.477 1.184.564.174.087.289.13.333.202.043.073.043.419-.102.825zM12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.655 1.446 5.161L2 22l4.991-1.313C8.436 21.503 10.151 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"></path></svg>
+                Chat WhatsApp
+            </button>
+</div>
+</main>
+<footer class="bg-slate-900 text-slate-400 py-12 mt-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-6 text-white">
+<span class="text-2xl font-black tracking-tight">Jemaah.id</span>
+</div>
+<p class="max-w-sm">Platform pembanding paket Umrah dan Haji terpercaya di Indonesia. Membantu jemaah menemukan perjalanan suci terbaik dengan transparansi harga dan layanan.</p>
+</div>
+<div>
+<h5 class="text-white font-bold mb-4">Layanan</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-primary transition-colors" href="#">Bandingkan Paket</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Umrah Reguler</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Umrah Plus</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Haji Furoda</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-4">Perusahaan</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-primary transition-colors" href="#">Tentang Kami</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Hubungi Kami</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-800 mt-12 pt-8 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+<p>© 2024 Jemaah.id. Semua hak dilindungi.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Instagram</a>
+<a class="hover:text-white transition-colors" href="#">Facebook</a>
+<a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

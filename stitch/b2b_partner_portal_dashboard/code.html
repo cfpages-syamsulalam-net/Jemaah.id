@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<title>Jemaah.id Partner Portal</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-primary/10 bg-white dark:bg-background-dark flex flex-col shrink-0">
+<div class="p-6 flex items-center gap-3 border-b border-primary/10">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">mosque</span>
+</div>
+<div>
+<h1 class="font-bold text-sm leading-tight">Jemaah.id</h1>
+<p class="text-xs text-primary font-medium">B2B Partner Portal</p>
+</div>
+</div>
+<nav class="flex-1 p-4 space-y-2 overflow-y-auto">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary text-white font-medium" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined">package_2</span>
+<span class="text-sm">Package Management</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-sm">Booking/Leads</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined">reviews</span>
+<span class="text-sm">Reviews</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-sm">Partner Profile</span>
+</a>
+</nav>
+<div class="p-4 border-t border-primary/10">
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-red-50 text-red-600 cursor-pointer">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium">Logout</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- Header -->
+<header class="h-16 border-b border-primary/10 bg-white dark:bg-background-dark flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary/50" placeholder="Search leads, packages, or bookings..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
+</button>
+<div class="flex items-center gap-3 ml-4 pl-4 border-l border-primary/10">
+<div class="text-right">
+<p class="text-xs font-bold">Al-Falah Travel</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider">Premium Partner</p>
+</div>
+<img class="w-10 h-10 rounded-full border-2 border-primary/20" data-alt="Travel agency partner profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbc3TbTYHB433FASSJdK-wMlVpf6dxt3OMsPBCmkfWfZwn_N-S4nxcBjeOta_Rn9jR-MU8VyB7DWpsVIw91m8pKiHLb6igSuF4QTafXutA_s5l8HuI7uKST3qgRPgUappEVov1_49KUZ_Q2Utdnxxo1Q_VVpBHu3yVaSqgMEeUfxtw-CucHQEyXcMdx7bOdfOD1yntWeH6oA0a6YvJNg0QzRmKulvMnWGw7ixIK67G2AId3o-As9OtAlv7SXA5mmu39ht2c0aVSuE"/>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="flex-1 overflow-y-auto p-8 space-y-6">
+<!-- Verification Status Section -->
+<section class="bg-white dark:bg-background-dark rounded-xl border border-primary/20 p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl font-bold">verified</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-bold text-lg">Verified by Kemenag</h2>
+<span class="bg-primary/20 text-primary text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Active</span>
+</div>
+<p class="text-sm text-slate-500">PPIU/PIHK License: <span class="font-semibold text-slate-700 dark:text-slate-300">No. 123/2023</span> • Valid until Dec 2025</p>
+</div>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 border border-primary text-primary text-sm font-bold rounded-lg hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-sm">description</span>
+                        View Certificate
+                    </button>
+</section>
+<!-- Inventory Overview Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-blue-50 dark:bg-blue-900/20 text-blue-600 rounded-lg">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<span class="text-primary text-xs font-bold">+2% this mo</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Active Packages</p>
+<h3 class="text-3xl font-bold mt-1">12</h3>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 rounded-lg">
+<span class="material-symbols-outlined">person_add</span>
+</div>
+<span class="text-primary text-xs font-bold">+15% this mo</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Total Seats Sold</p>
+<h3 class="text-3xl font-bold mt-1">840</h3>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-amber-50 dark:bg-amber-900/20 text-amber-600 rounded-lg">
+<span class="material-symbols-outlined">event_seat</span>
+</div>
+<span class="text-red-500 text-xs font-bold">-5% vacancy</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Available Seats</p>
+<h3 class="text-3xl font-bold mt-1">160</h3>
+</div>
+<div class="bg-primary flex flex-col justify-center items-center p-6 rounded-xl shadow-lg shadow-primary/20 cursor-pointer group hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-white text-4xl mb-2 group-hover:scale-110 transition-transform">add_circle</span>
+<p class="text-white font-bold">Add New Package</p>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Leads & Analytics Section -->
+<section class="lg:col-span-2 space-y-6">
+<!-- Chart Placeholder Area -->
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h3 class="font-bold text-lg">Competitive Analytics</h3>
+<p class="text-xs text-slate-500">Package views vs. Peer comparison</p>
+</div>
+<select class="bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-xs font-bold py-1 pl-3 pr-8 focus:ring-primary/30 cursor-pointer">
+<option>Last 30 Days</option>
+<option>Last 7 Days</option>
+</select>
+</div>
+<div class="h-64 flex items-end gap-2 px-2 relative">
+<!-- Mock Chart Bars -->
+<div class="flex-1 flex flex-col justify-end items-center gap-1">
+<div class="w-full bg-primary/20 h-[40%] rounded-t-sm" title="Peer Avg"></div>
+<div class="w-full bg-primary h-[65%] rounded-t-sm" title="Your Views"></div>
+<span class="text-[10px] text-slate-400 mt-2">Week 1</span>
+</div>
+<div class="flex-1 flex flex-col justify-end items-center gap-1">
+<div class="w-full bg-primary/20 h-[45%] rounded-t-sm"></div>
+<div class="w-full bg-primary h-[80%] rounded-t-sm"></div>
+<span class="text-[10px] text-slate-400 mt-2">Week 2</span>
+</div>
+<div class="flex-1 flex flex-col justify-end items-center gap-1">
+<div class="w-full bg-primary/20 h-[50%] rounded-t-sm"></div>
+<div class="w-full bg-primary h-[70%] rounded-t-sm"></div>
+<span class="text-[10px] text-slate-400 mt-2">Week 3</span>
+</div>
+<div class="flex-1 flex flex-col justify-end items-center gap-1">
+<div class="w-full bg-primary/20 h-[35%] rounded-t-sm"></div>
+<div class="w-full bg-primary h-[90%] rounded-t-sm"></div>
+<span class="text-[10px] text-slate-400 mt-2">Week 4</span>
+</div>
+<!-- Legend -->
+<div class="absolute top-0 right-0 flex gap-4">
+<div class="flex items-center gap-1">
+<div class="w-3 h-3 bg-primary rounded-full"></div>
+<span class="text-[10px] font-medium">Your Agency</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="w-3 h-3 bg-primary/20 rounded-full"></div>
+<span class="text-[10px] font-medium">Peer Average</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Leads List -->
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-lg">Recent Leads &amp; Inquiries</h3>
+<a class="text-primary text-xs font-bold hover:underline" href="#">View All Leads</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-[11px] uppercase tracking-wider text-slate-400 border-b border-primary/5">
+<th class="pb-3 font-semibold">Pilgrim Name</th>
+<th class="pb-3 font-semibold">Package Interest</th>
+<th class="pb-3 font-semibold">Status</th>
+<th class="pb-3 font-semibold">Date</th>
+<th class="pb-3 font-semibold"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center font-bold text-xs">AS</div>
+<span class="text-sm font-medium">Ahmad S.</span>
+</div>
+</td>
+<td class="py-4 text-sm">Ramadan Umrah Special</td>
+<td class="py-4">
+<span class="px-2 py-1 rounded-full bg-yellow-100 text-yellow-700 text-[10px] font-bold">New Inquiry</span>
+</td>
+<td class="py-4 text-xs text-slate-500">2 hours ago</td>
+<td class="py-4 text-right">
+<button class="text-primary hover:bg-primary/10 p-1 rounded-md transition-colors">
+<span class="material-symbols-outlined text-lg">chat</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center font-bold text-xs">FD</div>
+<span class="text-sm font-medium">Fatima D.</span>
+</div>
+</td>
+<td class="py-4 text-sm">VVIP Hajj 2024</td>
+<td class="py-4">
+<span class="px-2 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-bold">Contacted</span>
+</td>
+<td class="py-4 text-xs text-slate-500">Yesterday</td>
+<td class="py-4 text-right">
+<button class="text-primary hover:bg-primary/10 p-1 rounded-md transition-colors">
+<span class="material-symbols-outlined text-lg">chat</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Performance Highlights -->
+<section class="space-y-6">
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm h-full flex flex-col">
+<h3 class="font-bold text-lg mb-4">Performance Highlights</h3>
+<div class="space-y-4 flex-1">
+<div class="p-4 rounded-lg bg-emerald-50 dark:bg-emerald-900/10 border-l-4 border-emerald-500">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-emerald-600 mt-0.5">hotel</span>
+<div>
+<p class="text-sm font-bold text-emerald-900 dark:text-emerald-100">Top Compared Asset</p>
+<p class="text-xs text-emerald-700 dark:text-emerald-300 mt-1">Your Makkah hotel (Clock Tower) is the most compared by pilgrims this week.</p>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-primary/10 border-l-4 border-primary">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">flight_takeoff</span>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Hot Question</p>
+<p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Pilgrims are asking about your transit times more frequently than usual (up 24%).</p>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-amber-50 dark:bg-amber-900/10 border-l-4 border-amber-500">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-amber-600 mt-0.5">warning</span>
+<div>
+<p class="text-sm font-bold text-amber-900 dark:text-amber-100">Pricing Alert</p>
+<p class="text-xs text-amber-700 dark:text-amber-300 mt-1">Competitors lowered Hajj prices by an average of 3% today. Review your pricing.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-primary/5">
+<h4 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Market Outlook</h4>
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-medium">Regional Demand</span>
+<span class="text-xs font-bold text-primary">High</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+<p class="text-[10px] text-slate-400 mt-3 leading-relaxed italic">"Pro Tip: Update your early-bird Ramadan offers to capture the current surge in searches."</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</body></html>

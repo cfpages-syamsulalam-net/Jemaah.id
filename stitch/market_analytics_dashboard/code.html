@@ -1,0 +1,414 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Market Analytics | Emerald Canopy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-primary-fixed": "#002111",
+                "surface-dim": "#f6f8f7",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed": "#3b080d",
+                "on-secondary": "#ffffff",
+                "surface-container-high": "#ebedec",
+                "surface-container-highest": "#e5e7e6",
+                "on-primary": "#ffffff",
+                "on-primary-container": "#075232",
+                "on-tertiary": "#ffffff",
+                "error": "#ba1a1a",
+                "surface-variant": "#f1f3f2",
+                "on-surface-variant": "#475569",
+                "surface-bright": "#ffffff",
+                "secondary": "#4b6454",
+                "on-error": "#ffffff",
+                "secondary-fixed": "#cde9d4",
+                "inverse-surface": "#1e293b",
+                "primary-fixed-dim": "#92d5ab",
+                "on-primary-fixed-variant": "#065232",
+                "on-secondary-container": "#344c3d",
+                "outline-variant": "#0752320d",
+                "on-background": "#0f172a",
+                "primary-container": "#0752321a",
+                "tertiary-fixed": "#ffdad9",
+                "inverse-on-surface": "#f8fafc",
+                "primary": "#075232",
+                "surface-container-low": "#f6f8f7",
+                "on-error-container": "#93000a",
+                "tertiary-fixed-dim": "#ffb3b3",
+                "inverse-primary": "#92d5ab",
+                "on-secondary-fixed": "#082013",
+                "error-container": "#ffdad6",
+                "surface-tint": "#075232",
+                "tertiary": "#ba1a1a",
+                "secondary-fixed-dim": "#b2cdb9",
+                "surface-container": "#f1f3f2",
+                "outline": "#0752321a",
+                "primary-fixed": "#adf2c6",
+                "on-tertiary-fixed-variant": "#733335",
+                "background": "#f6f8f7",
+                "secondary-container": "#cde9d4",
+                "surface": "#ffffff",
+                "on-secondary-fixed-variant": "#344c3d",
+                "on-surface": "#0f172a",
+                "tertiary-container": "#ffdad6",
+                "on-tertiary-container": "#410002"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Work Sans"],
+                "label": ["Work Sans"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col h-screen w-64 border-r border-emerald-900/10 bg-white dark:bg-slate-900 font-plus-jakarta text-sm antialiased shadow-sm z-50">
+<div class="p-6 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-xl text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">mosque</span>
+</div>
+<div>
+<h2 class="text-xl font-bold text-emerald-900 dark:text-emerald-50 leading-tight" style="">Jemaah.id</h2>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 font-semibold" style="">Partner Portal</p>
+</div>
+</div>
+<nav class="flex-1 mt-4 px-3 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition-colors duration-200 rounded-xl" href="#" style="">
+<span class="material-symbols-outlined" style="">dashboard</span>
+<span class="" style="">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition-colors duration-200 rounded-xl" href="#" style="">
+<span class="material-symbols-outlined" style="">inventory_2</span>
+<span class="" style="">Packages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition-colors duration-200 rounded-xl" href="#" style="">
+<span class="material-symbols-outlined" style="">confirmation_number</span>
+<span class="" style="">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition-colors duration-200 rounded-xl" href="#" style="">
+<span class="material-symbols-outlined" style="">reviews</span>
+<span class="" style="">Reviews</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-emerald-800 dark:hover:text-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition-colors duration-200 rounded-xl" href="#" style="">
+<span class="material-symbols-outlined" style="">payments</span>
+<span class="" style="">Financials</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-emerald-900 dark:text-emerald-400 font-semibold border-r-4 border-emerald-900 dark:border-emerald-400 bg-emerald-50/50 dark:bg-emerald-900/20 transition-colors duration-200 rounded-l-xl" href="#" style="">
+<span class="material-symbols-outlined" style="">insert_chart</span>
+<span class="" style="">Analytics</span>
+</a>
+</nav>
+<div class="p-6">
+<button class="w-full bg-primary text-white py-3 rounded-xl font-semibold shadow-lg shadow-primary/20 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity" style="">
+<span class="material-symbols-outlined text-sm" style="">add</span>
+                Add New Package
+            </button>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 z-40 flex justify-between items-center h-16 px-8 ml-64 w-[calc(100%-16rem)] bg-[#f6f8f7]/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-emerald-900/5 font-plus-jakarta text-sm">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg" style="">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-white dark:bg-slate-900 border-none rounded-full focus:ring-1 focus:ring-primary text-sm shadow-sm" placeholder="Search analytics..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 border-r border-slate-200 dark:border-slate-800 pr-6">
+<button class="relative text-slate-500 hover:text-primary transition-colors" style="">
+<span class="material-symbols-outlined" style="">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="text-slate-500 hover:text-primary transition-colors" style="">
+<span class="material-symbols-outlined" style="">settings</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="font-semibold text-emerald-900 dark:text-emerald-50 leading-none" style="">Al-Hidayah Travel</p>
+<p class="text-[10px] text-slate-500" style="">Premium Partner</p>
+</div>
+<img alt="Partner Profile" class="w-10 h-10 rounded-full border-2 border-primary/20 p-0.5" data-alt="Profile avatar of a male travel agent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhoIil8HwqAbviunIf8674RyfZXTBD2cyEMT32uGzyG9bVU3BOOxzv12SO4PoNSdxdSvcYSpuAeeEqHYDBNmsM0YD7mnM-Vnfx1HW2PoNNpAYeC0S8QR6khPS0DRVdAApxHR2I99IfhSwtduR7XzZwxqBxBZ37x3zTtI_HrvcA-Ck1rCG26igtpJmbC9QGoCj-wvBr12p140ZGRNlzRypY4mTVxoRoTvx9ZVteqTObbZVFYX3ucNfxboN4l4POHOkJraWesFaWEIU" style="">
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 pt-24 px-8 pb-12">
+<!-- Header & Range Picker -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<p class="text-[11px] font-bold text-primary uppercase tracking-[0.1em] mb-1" style="">Performance Overview</p>
+<h1 class="text-3xl font-extrabold text-emerald-900 tracking-tight" style="">Market Analytics</h1>
+</div>
+<div class="flex items-center bg-white border border-primary/10 rounded-xl px-4 py-2 shadow-sm gap-4">
+<span class="material-symbols-outlined text-slate-400 text-xl" style="">calendar_month</span>
+<span class="text-sm font-medium text-slate-700" style="">Oct 1, 2023 - Oct 31, 2023</span>
+<span class="material-symbols-outlined text-slate-400 text-sm" style="">expand_more</span>
+</div>
+</div>
+<!-- Top Stats Bento -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+<div class="bg-white p-6 rounded-xl shadow-sm border border-primary/5 flex flex-col justify-between">
+<div>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2" style="">Market Rank</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold text-emerald-900" style="">#3</span>
+<span class="text-sm font-medium text-slate-400" style="">in Makkah</span>
+</div>
+</div>
+<div class="mt-4 flex items-center text-xs text-emerald-600 font-medium" style="">
+<span class="material-symbols-outlined text-sm mr-1" style="">trending_up</span>
+                    Up 2 spots from last month
+                </div>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-sm border border-primary/5 flex flex-col justify-between">
+<div>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2" style="">Total Views</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold text-emerald-900" style="">12.4K</span>
+</div>
+</div>
+<div class="mt-4 flex items-center text-xs text-emerald-600 font-medium" style="">
+<span class="material-symbols-outlined text-sm mr-1" style="">trending_up</span>
+                    +14.2% vs last period
+                </div>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-sm border border-primary/5 flex flex-col justify-between">
+<div>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2" style="">Comparison Rate</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold text-emerald-900" style="">68%</span>
+</div>
+</div>
+<div class="mt-4 flex items-center text-xs text-error font-medium" style="">
+<span class="material-symbols-outlined text-sm mr-1" style="">trending_down</span>
+                    -2.4% vs market avg
+                </div>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-sm border border-primary/5 flex flex-col justify-between">
+<div>
+<p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2" style="">Conversion Rate</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold text-emerald-900" style="">4.2%</span>
+</div>
+</div>
+<div class="mt-4 flex items-center text-xs text-emerald-600 font-medium" style="">
+<span class="material-symbols-outlined text-sm mr-1" style="">trending_up</span>
+                    Above industry standard
+                </div>
+</div>
+</div>
+<!-- Middle Section: Main Chart & Insights Sidebar -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+<!-- Main Chart Card -->
+<div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-primary/5 p-8">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="text-lg font-bold text-emerald-900 mb-1" style="">Package Performance Comparison</h3>
+<p class="text-sm text-slate-500" style="">Your total views vs. the top 10% market average</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-xs text-slate-600 font-medium" style="">Your Agency</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-slate-200"></span>
+<span class="text-xs text-slate-600 font-medium" style="">Competitor Avg</span>
+</div>
+</div>
+</div>
+<!-- Chart Visualization (Simulated) -->
+<div class="relative h-64 w-full flex items-end gap-2">
+<div class="absolute inset-0 flex flex-col justify-between">
+<div class="w-full border-t border-slate-100 h-px"></div>
+<div class="w-full border-t border-slate-100 h-px"></div>
+<div class="w-full border-t border-slate-100 h-px"></div>
+<div class="w-full border-t border-slate-100 h-px"></div>
+<div class="w-full border-t border-slate-100 h-px"></div>
+</div>
+<!-- Chart Lines/Path SVG would go here -->
+<svg class="absolute inset-0 w-full h-full overflow-visible" preserveAspectRatio="none">
+<!-- Competitor Line -->
+<path d="M0 160 Q 100 140, 200 180 T 400 150 T 600 170 T 800 140" fill="none" stroke="#E2E8F0" stroke-linecap="round" stroke-width="3"></path>
+<!-- Agency Line -->
+<path d="M0 180 Q 100 150, 200 100 T 400 120 T 600 60 T 800 40" fill="none" stroke="#075232" stroke-linecap="round" stroke-width="4"></path>
+<!-- Point Highlighting -->
+<circle cx="600" cy="60" fill="#075232" r="6" stroke="white" stroke-width="2"></circle>
+</svg>
+<!-- X-Axis Labels -->
+<div class="absolute -bottom-8 w-full flex justify-between text-[10px] text-slate-400 font-bold uppercase tracking-wider">
+<span class="" style="">Oct 01</span>
+<span class="" style="">Oct 08</span>
+<span class="" style="">Oct 15</span>
+<span class="" style="">Oct 22</span>
+<span class="" style="">Oct 31</span>
+</div>
+</div>
+<div class="mt-12 p-4 bg-primary-container rounded-xl flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" style="">lightbulb</span>
+<p class="text-xs text-emerald-900 leading-relaxed" style="">
+<span class="font-bold" style="">Insight:</span> Your traffic peaked during Oct 22-25, likely due to the "Early Bird" campaign. Competitor activity remained flat during this period.
+                    </p>
+</div>
+</div>
+<!-- Insights Sidebar -->
+<div class="bg-white rounded-xl shadow-sm border border-primary/5 overflow-hidden flex flex-col">
+<div class="p-6 border-b border-slate-50">
+<h3 class="text-md font-bold text-emerald-900" style="">Top Compared Competitor</h3>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-center items-center text-center">
+<div class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mb-4 border-4 border-white shadow-sm overflow-hidden">
+<img alt="Competitor Logo" class="w-full h-full object-cover" data-alt="Abstract logo for a competing travel agency" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpk6wePs7uYl9ibkhn3EKR9cltWYddkryouXRQxhZ9OZTj9VSxsENwRr-c8S2MBRuRw5r68NaLaezjw8VFKhVwNb8ObEvwHDefjRi3YSh-LGzmkuThG92Ef8znd1DmHJjnXZrCMykWZNfCgp3iNNGi8jtEnL6JhnITSvFbY2chLyX-sKfYMMuhVmRHmJ49OUBfzpYjDGnGz49KZGhztu40it_8W0q8KDsr8JdVnl3Ig47WucgVWEFb4d53rpPcaLFqOcGaWuID3lI" style="">
+</div>
+<h4 class="font-bold text-slate-900" style="">Barakah Tours &amp; Travel</h4>
+<p class="text-sm text-slate-500 mb-6" style="">Users compare you with them 42% of the time.</p>
+<div class="w-full space-y-4 text-left">
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span class="font-bold text-slate-400 uppercase" style="">Comparison Win Rate</span>
+<span class="text-emerald-600 font-bold" style="">58%</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 58%"></div>
+</div>
+</div>
+<div class="pt-2 border-t border-slate-50">
+<p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2" style="">Key Differentiator</p>
+<div class="flex items-center gap-2 text-xs font-medium text-emerald-900" style="">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">hotel</span>
+                                Closer Hotel Proximity (+250m avg)
+                            </div>
+</div>
+</div>
+</div>
+<a class="p-4 bg-slate-50 text-center text-xs font-bold text-primary hover:bg-slate-100 transition-colors uppercase tracking-widest" href="#" style="">
+                    View Full Battle-card
+                </a>
+</div>
+</div>
+<!-- Bottom Section: Analysis & Regional Demand -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Win/Loss Analysis -->
+<div class="bg-white rounded-xl shadow-sm border border-primary/5 p-8">
+<h3 class="text-lg font-bold text-emerald-900 mb-6" style="">Comparison Win/Loss Analysis</h3>
+<div class="space-y-6">
+<div class="flex items-center gap-6">
+<div class="w-24 text-right shrink-0">
+<span class="text-xs font-bold text-slate-500 uppercase" style="">Price Point</span>
+</div>
+<div class="flex-1 flex gap-1 h-3">
+<div class="h-full bg-emerald-500 rounded-l-full" style="width: 70%"></div>
+<div class="h-full bg-error/30 rounded-r-full" style="width: 30%"></div>
+</div>
+<div class="w-12 text-sm font-bold text-emerald-600" style="">Strong</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-24 text-right shrink-0">
+<span class="text-xs font-bold text-slate-500 uppercase" style="">Hotel Distance</span>
+</div>
+<div class="flex-1 flex gap-1 h-3">
+<div class="h-full bg-emerald-500 rounded-l-full" style="width: 85%"></div>
+<div class="h-full bg-error/30 rounded-r-full" style="width: 15%"></div>
+</div>
+<div class="w-12 text-sm font-bold text-emerald-600" style="">Elite</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-24 text-right shrink-0">
+<span class="text-xs font-bold text-slate-500 uppercase" style="">Airline Partner</span>
+</div>
+<div class="flex-1 flex gap-1 h-3">
+<div class="h-full bg-emerald-500 rounded-l-full" style="width: 40%"></div>
+<div class="h-full bg-error/60 rounded-r-full" style="width: 60%"></div>
+</div>
+<div class="w-12 text-sm font-bold text-error" style="">Weak</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-24 text-right shrink-0">
+<span class="text-xs font-bold text-slate-500 uppercase" style="">Visa Support</span>
+</div>
+<div class="flex-1 flex gap-1 h-3">
+<div class="h-full bg-emerald-500 rounded-l-full" style="width: 60%"></div>
+<div class="h-full bg-error/30 rounded-r-full" style="width: 40%"></div>
+</div>
+<div class="w-12 text-sm font-bold text-emerald-600" style="">Stable</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-100">
+<p class="text-[11px] text-slate-400 font-bold uppercase tracking-wider mb-2" style="">Recommendation</p>
+<p class="text-xs text-slate-600" style="">Consider upgrading flight partners or offering direct flights to improve 'Airline' score, which is currently your main reason for conversion loss.</p>
+</div>
+</div>
+<!-- Regional Demand -->
+<div class="bg-white rounded-xl shadow-sm border border-primary/5 p-8 flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold text-emerald-900" style="">Regional Demand</h3>
+<div class="flex items-center gap-1 text-[10px] text-slate-400 font-bold uppercase" style="">
+<span class="material-symbols-outlined text-sm" style="">map</span>
+                        Indonesia
+                    </div>
+</div>
+<div class="flex-1 grid grid-cols-2 gap-8">
+<div class="relative rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center">
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at center, #075232 0%, transparent 70%);"></div>
+<img alt="Map of Indonesia" class="w-full h-full object-cover" data-alt="Simplified map visualization of Indonesia regions" data-location="Indonesia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqCexK1GY9vTw68YPrzPwOzPWn0Jsc373aaN9eAGjkFPHDJtBv4AFoGTgIAArsIU80kKCMcKIIZZgZtIh-xnzpsI1FH1MpFZJJ52tThnjz6Rc9AbTa95mHqXjZXqBrVHAsCs43eYI3XIG3FACjEcyD5-taVKA3yB9IsbIhCFZeTR2WH70nHddrUosmLqi8hEEMQY5aN_xnUtuReD6fyrjRqNgrbfLzk2MrL6g2_MNfd3U3X9880DWP5d3Dzd28zLdmlxl536a3INc" style="">
+<div class="absolute top-1/4 left-1/3 w-4 h-4 bg-primary rounded-full animate-pulse shadow-lg"></div>
+<div class="absolute bottom-1/2 right-1/4 w-3 h-3 bg-primary/60 rounded-full shadow-lg"></div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center group cursor-pointer">
+<div>
+<h4 class="text-sm font-bold text-slate-900" style="">Jakarta (Jabodetabek)</h4>
+<p class="text-[10px] text-slate-500 font-medium" style="">4,821 Searches</p>
+</div>
+<span class="text-emerald-600 font-bold text-sm" style="">42%</span>
+</div>
+<div class="flex justify-between items-center group cursor-pointer">
+<div>
+<h4 class="text-sm font-bold text-slate-900" style="">Surabaya</h4>
+<p class="text-[10px] text-slate-500 font-medium" style="">2,110 Searches</p>
+</div>
+<span class="text-emerald-600 font-bold text-sm" style="">18%</span>
+</div>
+<div class="flex justify-between items-center group cursor-pointer">
+<div>
+<h4 class="text-sm font-bold text-slate-900" style="">Bandung</h4>
+<p class="text-[10px] text-slate-500 font-medium" style="">1,450 Searches</p>
+</div>
+<span class="text-emerald-600 font-bold text-sm" style="">12%</span>
+</div>
+<div class="flex justify-between items-center group cursor-pointer">
+<div>
+<h4 class="text-sm font-bold text-slate-900" style="">Medan</h4>
+<p class="text-[10px] text-slate-500 font-medium" style="">920 Searches</p>
+</div>
+<span class="text-emerald-600 font-bold text-sm" style="">8%</span>
+</div>
+<button class="w-full mt-4 text-[10px] font-bold text-slate-400 border-t border-slate-50 pt-4 uppercase tracking-widest flex items-center justify-center gap-1 hover:text-primary transition-colors" style="">
+                            Explore Heatmap
+                            <span class="material-symbols-outlined text-sm" style="">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

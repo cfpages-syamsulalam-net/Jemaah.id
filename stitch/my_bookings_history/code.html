@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,FILL@0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#075232", "background-light": "#f6f8f7", "background-dark": "#10221a"}, fontFamily: {display: "Work Sans"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<title>My Bookings - Jemaah.id</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto w-full">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">My Bookings</h1>
+<div class="size-10"></div> <!-- Spacer for symmetry -->
+</div>
+</header>
+<main class="flex-1 max-w-md mx-auto w-full pb-24">
+<!-- Segmented Control -->
+<div class="px-4 py-4">
+<div class="flex h-11 items-center justify-center rounded-xl bg-primary/10 p-1">
+<button class="flex h-full grow items-center justify-center rounded-lg bg-white dark:bg-slate-800 shadow-sm text-slate-900 dark:text-slate-100 text-sm font-semibold transition-all">
+                    Active
+                </button>
+<button class="flex h-full grow items-center justify-center rounded-lg text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-primary transition-all">
+                    Past
+                </button>
+</div>
+</div>
+<!-- Next Upcoming Trip Section -->
+<section class="px-4 pb-6">
+<div class="flex items-center justify-between mb-3">
+<h2 class="text-base font-bold tracking-tight">Next Upcoming Trip</h2>
+<span class="text-xs font-semibold text-primary px-2 py-1 bg-primary/10 rounded-full uppercase tracking-wider">Closest</span>
+</div>
+<div class="relative overflow-hidden rounded-xl border border-primary/20 bg-white dark:bg-slate-900 shadow-sm">
+<div class="h-40 w-full bg-cover bg-center" data-alt="The Great Mosque of Mecca during daytime" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACRYZfYbDfJmQ3nDdH5rNbeCUupBXvhzifg--i-XzspyUDK8b_lzFpTbNFqWukACKrff89yhOrESV7v0ITDXt8fCOY-n9yXQmZe4DDDivCcvbnmTDdaECauYAYblXkTqsyUkQBHQ6MJiL_PemP9rF8tG4kHMSmIpAONJSHiAj1tzwrzyS97ZSU45m-qeZe8HaZtyxHvc4luepepNbQuk2HTZ1HEXgPDv17kJHlQ3PpI_OjNbA2gdAqCD6m8RhxFzofm1MXyhNWE1s')">
+<div class="absolute top-3 right-3 bg-primary text-slate-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                        Confirmed
+                    </div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold leading-tight mb-2">Umrah Ramadhan Ekonomi 2024</h3>
+<div class="space-y-2 mb-4">
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-sm text-primary">calendar_today</span>
+<span>Departure: 12 Mar 2024 • 12 Days</span>
+</div>
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-sm text-primary">group</span>
+<span>4 Passengers (Family)</span>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold py-3 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-md">
+<span class="material-symbols-outlined text-lg">settings</span>
+                        Manage Booking
+                    </button>
+</div>
+</div>
+</section>
+<!-- Other Active Bookings -->
+<section class="px-4 space-y-4">
+<h2 class="text-base font-bold tracking-tight">Other Bookings</h2>
+<!-- Booking Card 2 -->
+<div class="flex flex-col rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 p-4">
+<div class="flex justify-between items-start mb-3">
+<div class="space-y-1">
+<span class="text-[10px] font-bold uppercase tracking-widest text-amber-600 bg-amber-100 dark:bg-amber-900/30 dark:text-amber-400 px-2 py-0.5 rounded-md">Pending Payment</span>
+<h3 class="text-md font-bold leading-snug">Haji Furoda VIP 2025</h3>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-medium">Departure</span>
+<span class="text-sm font-semibold">15 Jun 2025</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-medium">Travelers</span>
+<span class="text-sm font-semibold">2 Adults</span>
+</div>
+</div>
+<button class="w-full border-2 border-primary text-primary hover:bg-primary/5 font-bold py-2 rounded-lg transition-colors text-sm">
+                    Complete Payment
+                </button>
+</div>
+<!-- Booking Card 3 -->
+<div class="flex flex-col rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 p-4">
+<div class="flex justify-between items-start mb-3">
+<div class="space-y-1">
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">Review Required</span>
+<h3 class="text-md font-bold leading-snug">Badal Umrah Al-Marhum</h3>
+</div>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 uppercase font-medium">Status</span>
+<span class="text-sm font-semibold">In Progress</span>
+</div>
+</div>
+<button class="w-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold py-2 rounded-lg transition-colors text-sm">
+                    View Progress
+                </button>
+</div>
+</section>
+<!-- Empty State (Optional visual reference, usually hidden if content exists) -->
+<!-- 
+        <div class="flex flex-col items-center justify-center py-20 px-10 text-center">
+            <div class="bg-primary/10 size-20 rounded-full flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-4xl text-primary">event_busy</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2">No Bookings Yet</h3>
+            <p class="text-slate-500 text-sm mb-6">Start your spiritual journey by exploring our curated Umrah and Hajj packages.</p>
+            <button class="bg-primary text-slate-900 px-6 py-2 rounded-full font-bold">Discover Packages</button>
+        </div>
+        -->
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-20 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 safe-area-inset-bottom">
+<div class="max-w-md mx-auto flex h-16 items-center">
+<a class="flex flex-1 flex-col items-center justify-center gap-0.5 text-slate-400 dark:text-slate-500 transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-0.5 text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">receipt_long</span>
+<span class="text-[10px] font-bold">My Bookings</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-0.5 text-slate-400 dark:text-slate-500 transition-colors" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-medium">Inbox</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-0.5 text-slate-400 dark:text-slate-500 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>
