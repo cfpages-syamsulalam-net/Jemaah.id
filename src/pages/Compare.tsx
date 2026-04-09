@@ -1,8 +1,7 @@
 import { ShieldCheck, X, Check, Info } from "lucide-react"
 import { Button } from "../components/ui/Button"
-import { Card } from "../components/ui/Card"
 import { Badge } from "../components/ui/Badge"
-import { Package } from "../components/shared/PackageCard"
+import type { Package } from "../components/shared/PackageCard"
 
 const MOCK_PACKAGES: Package[] = [
   {

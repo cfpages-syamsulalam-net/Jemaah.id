@@ -1,11 +1,10 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { Search as SearchIcon, SlidersHorizontal, ArrowUpDown, X } from "lucide-react"
+import { SlidersHorizontal, ArrowUpDown, X } from "lucide-react"
 import { Button } from "../components/ui/Button"
 import { Card } from "../components/ui/Card"
 import { Input } from "../components/ui/Input"
-import { Badge } from "../components/ui/Badge"
-import { PackageCard, Package } from "../components/shared/PackageCard"
+import { PackageCard, type Package } from "../components/shared/PackageCard"
 
 const MOCK_RESULTS: Package[] = [
   {

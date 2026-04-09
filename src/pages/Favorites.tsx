@@ -2,7 +2,6 @@ import { Star, Heart, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Button } from '../components/ui/Button'
 import { Card, CardContent } from '../components/ui/Card'
-import { Badge } from '../components/ui/Badge'
 import { DUMMY_PACKAGES } from '../data/dummyData'
 
 export default function Favorites() {

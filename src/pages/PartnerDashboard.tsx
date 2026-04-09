@@ -1,4 +1,4 @@
-import { DollarSign, Users, Package, TrendingUp, ArrowUpRight, ArrowDownRight, Eye } from 'lucide-react'
+import { DollarSign, Users, Package, TrendingUp, ArrowUpRight, Eye } from 'lucide-react'
 import { Button } from '../components/ui/Button'
 import { Card, CardContent } from '../components/ui/Card'
 import { Badge } from '../components/ui/Badge'
@@ -100,7 +100,7 @@ export default function PartnerDashboard() {
                     <div className="text-xs text-slate-500">{booking.package}</div>
                   </div>
                   <div className="text-right">
-                    <Badge variant={booking.status === 'confirmed' ? 'success' : 'warning'} className="mb-1">
+                    <Badge variant={booking.status === 'confirmed' ? 'success' : 'secondary'} className="mb-1">
                       {booking.status === 'confirmed' ? 'Dikonfirmasi' : 'Menunggu'}
                     </Badge>
                     <div className="text-xs text-slate-500">{booking.date}</div>

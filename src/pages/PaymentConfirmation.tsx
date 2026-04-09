@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { CheckCircle, Calendar, DollarSign, Mail, Phone } from 'lucide-react'
+import { CheckCircle, Calendar, Mail, Phone } from 'lucide-react'
 import { Button } from '../components/ui/Button'
 import { Card, CardContent } from '../components/ui/Card'
 import { Badge } from '../components/ui/Badge'
@@ -22,7 +22,7 @@ export default function PaymentConfirmation() {
       <Card className="mb-6">
         <CardContent className="p-6">
           <div className="text-center mb-6">
-            <Badge variant="warning" className="mb-3">Menunggu Konfirmasi</Badge>
+            <Badge variant="secondary" className="mb-3">Menunggu Konfirmasi</Badge>
             <div className="text-sm text-slate-500 mb-1">ID Booking</div>
             <div className="text-2xl font-bold text-slate-900">BK-2026-002</div>
           </div>

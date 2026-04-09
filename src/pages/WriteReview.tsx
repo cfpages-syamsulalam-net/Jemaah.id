@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import { Star, Upload, X } from 'lucide-react'
+import { Star, Upload } from 'lucide-react'
 import { Button } from '../components/ui/Button'
 import { Card, CardContent } from '../components/ui/Card'
-import { Input } from '../components/ui/Input'
 
 export default function WriteReview() {
   const [rating, setRating] = useState(0)

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Plus, Edit, Trash2, Eye, Search, Filter } from 'lucide-react'
 import { Button } from '../components/ui/Button'
 import { Card, CardContent } from '../components/ui/Card'
@@ -67,7 +66,7 @@ export default function PackageManagement() {
                     <td className="py-4 px-6 font-bold text-primary">{pkg.price}</td>
                     <td className="py-4 px-6 text-slate-600">{pkg.bookings}</td>
                     <td className="py-4 px-6">
-                      <Badge variant={pkg.status === 'active' ? 'success' : 'warning'}>
+                      <Badge variant={pkg.status === 'active' ? 'success' : 'secondary'}>
                         {pkg.status === 'active' ? 'Aktif' : 'Draft'}
                       </Badge>
                     </td>

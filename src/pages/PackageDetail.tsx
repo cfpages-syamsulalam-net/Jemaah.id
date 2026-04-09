@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, Star, MapPin, Plane, ShieldCheck, Calendar, Clock, CheckCircle } from 'lucide-react'
+import { ArrowLeft, Star, MapPin, Plane, ShieldCheck, Calendar, CheckCircle } from 'lucide-react'
 import { Button } from '../components/ui/Button'
 import { Badge } from '../components/ui/Badge'
 import { Card, CardContent } from '../components/ui/Card'

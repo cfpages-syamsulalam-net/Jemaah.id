@@ -2,7 +2,6 @@ import { Clock, Search, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Button } from '../components/ui/Button'
 import { Card, CardContent } from '../components/ui/Card'
-import { Badge } from '../components/ui/Badge'
 import { DUMMY_SEARCH_HISTORY } from '../data/dummyData'
 
 export default function SearchHistory() {

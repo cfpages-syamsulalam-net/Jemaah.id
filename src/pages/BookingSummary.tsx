@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
-import { CheckCircle, DollarSign, Calendar, Users, Home, AlertCircle } from 'lucide-react'
+import { Users, Home, AlertCircle } from 'lucide-react'
 import { Button } from '../components/ui/Button'
 import { Card, CardContent } from '../components/ui/Card'
-import { Badge } from '../components/ui/Badge'
 
 export default function BookingSummary() {
   const bookingDetails = {

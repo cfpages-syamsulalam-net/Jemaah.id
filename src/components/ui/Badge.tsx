@@ -2,13 +2,15 @@ import * as React from "react"
 import { cn } from "../../lib/utils"
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'primary' | 'success' | 'outline' | 'secondary'
+  variant?: 'primary' | 'success' | 'outline' | 'secondary' | 'warning' | 'error'
 }
 
 function Badge({ className, variant = 'primary', ...props }: BadgeProps) {
   const variants = {
     primary: "border-transparent bg-primary/10 text-primary",
-    success: "border-transparent bg-primary text-primary-foreground",
+    success: "border-transparent bg-green-500/10 text-green-600",
+    warning: "border-transparent bg-amber-500/10 text-amber-600",
+    error: "border-transparent bg-red-500/10 text-red-600",
     secondary: "border-transparent bg-slate-500/10 text-slate-500",
     outline: "border border-primary/10 text-primary bg-transparent",
   }
