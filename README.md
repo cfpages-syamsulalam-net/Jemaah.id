@@ -1,49 +1,73 @@
-# Jemaah.id
+# React + TypeScript + Vite
 
-**Jemaah.id** is the #1 independent platform in Indonesia empowering Hajj and Umrah pilgrims to make safe, transparent, and budget-friendly decisions through hyper-detailed package comparisons.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🌟 Vision
-To become the ultimate "Trusted Curator" for pilgrimage travel, protecting pilgrims from fraud and ensuring every journey to the Holy Land is well-informed and verified.
+Currently, two official plugins are available:
 
-## 🚀 Key Features
-- **The "Apple-to-Apple" Comparison Engine:** Compare up to 4 packages side-by-side with automated Plus/Minus highlights.
-- **"Anti-Ngawur" Data Integrity:**
-  - **Hotel Verification:** Automated distance and star-rating validation via Google Maps API.
-  - **Flight Verification:** Real-time airline and route data via Flight APIs.
-  - **Legal Verification:** Integration with Kemenag RI (SISKOPATUH) for travel agency status.
-- **Verified Pilgrim Reviews:** Rating system based on actual travel history and photo evidence.
-- **AI Brochure Scanner:** Instant package data extraction from travel brochures.
-- **Partner Portal:** Comprehensive dashboard for travel agencies to manage leads, reputation, and inventory.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🛠 Tech Stack
-- **Frontend:** React + Vite + Tailwind CSS (Emerald Canopy Design System).
-- **Mobile:** Capacitor (Unified Web/iOS/Android codebase).
-- **Backend:** Hono on Cloudflare Workers (Fullstack).
-- **Database:** PostgreSQL (Supabase/Neon).
-- **Hosting:** Cloudflare Pages + GitHub.
+## React Compiler
 
-See [TECH_STACK.md](./TECH_STACK.md) for full architectural details.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 📐 Design Philosophy
-Guided by the **Emerald Canopy** design system, focusing on:
-- Quiet Authority & Editorial Whitespace.
-- Floating Modules & The "No-Line" Rule.
-- High-contrast Typography for data clarity.
+## Expanding the ESLint configuration
 
-See [DESIGNS.md](./DESIGNS.md) for visual guidelines.
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## 📂 Project Structure & Roadmap
-- [**PAGES.md**](./PAGES.md): Complete sitemap and UI documentation for the 50+ modules.
-- [**stitch/jemaah.id.md**](./stitch/jemaah.id.md): Original Product Requirements Document (PRD).
-- [**stitch/**](./stitch/): Repository of UI designs, HTML snippets, and screen captures.
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-## 🛠 Development
-To get started with development:
-1. Clone the repository.
-2. Install dependencies: `npm install`.
-3. Run dev server: `npm run dev`.
-4. Build for web: `npm run build`.
-5. Sync with mobile: `npx cap sync`.
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
----
-*Safe Pilgrimage, Trusted Information. Jemaah.id*
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
