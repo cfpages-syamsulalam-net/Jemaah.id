@@ -19,6 +19,9 @@ import PackageManagement from './pages/PackageManagement'
 import AgencyProfile from './pages/AgencyProfile'
 import AddPackageWizard from './pages/AddPackageWizard'
 import SavedComparisons from './pages/SavedComparisons'
+import BookingLeads from './pages/BookingLeads'
+import AIBrochureScanner from './pages/AIBrochureScanner'
+import VerifiedPartnerDirectory from './pages/VerifiedPartnerDirectory'
 
 function App() {
   return (
@@ -48,7 +51,12 @@ function App() {
           <Route path="/partner/dashboard" element={<PartnerDashboard />} />
           <Route path="/partner/packages" element={<PackageManagement />} />
           <Route path="/partner/add-package" element={<AddPackageWizard />} />
+          <Route path="/partner/leads" element={<BookingLeads />} />
+          <Route path="/partner/scanner" element={<AIBrochureScanner />} />
           <Route path="/agency/:id" element={<AgencyProfile />} />
+          
+          {/* Operational */}
+          <Route path="/verified-partners" element={<VerifiedPartnerDirectory />} />
           
           {/* Other */}
           <Route path="/verification" element={<div className="container mx-auto py-20 text-center text-slate-500">Travel Verification (Coming Soon)</div>} />

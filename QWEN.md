@@ -1,6 +1,6 @@
 # Jemaah.id Project Mandates & Operational Rules
 
-This document serves as the foundational guide for all AI operations within the Jemaah.id project. These instructions take absolute precedence over general defaults.
+This document serves as the foundational guide for all Qwen Code operations within the Jemaah.id project. These instructions take absolute precedence over general defaults.
 
 ## 🧠 Project Context
 Jemaah.id is an independent Hajj/Umrah package comparison platform focusing on transparency and verification.

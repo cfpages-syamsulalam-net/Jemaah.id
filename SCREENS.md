@@ -2,12 +2,12 @@
 
 **Last Updated:** 10 April 2026
 **Total Screens:** 42
-**Completed:** 23 screens
-**Progress:** 55%
+**Completed:** 26 screens
+**Progress:** 62%
 
 ---
 
-## ✅ Completed Screens (23)
+## ✅ Completed Screens (26)
 
 ### Consumer App (10/13)
 1. ✅ **Home** - `Home.tsx` - Featured packages, hero search, trust badges
@@ -30,23 +30,23 @@
 16. ✅ **Payment Confirmation** - `PaymentConfirmation.tsx` - Success state with next steps
 17. ⬜ **Booking Details (Post-booking)** - (Can reuse MyBookings detail view)
 
-### Partner Portal (5/10)
+### Partner Portal (7/10)
 18. ✅ **Partner Dashboard** - `PartnerDashboard.tsx` - Metrics, recent bookings, quick actions
 19. ✅ **Package Management** - `PackageManagement.tsx` - CRUD table with search/filter
 20. ✅ **Agency Profile View** - `AgencyProfile.tsx` - Public agency profile with packages & reviews
 21. ✅ **Add Package Wizard** - `AddPackageWizard.tsx` - 4-step package creation flow
-22. ⬜ Booking Leads Dashboard
-23. ⬜ Agency Financials Dashboard
-24. ⬜ Market Analytics Dashboard
-25. ⬜ Reputation Management
-26. ⬜ Reviews Dashboard
-27. ⬜ Agency Verification Claim Flow
+22. ✅ **Booking Leads Dashboard** - `BookingLeads.tsx` - Lead management with status tracking
+23. ✅ **AI Brochure Scanner** - `AIBrochureScanner.tsx` - Upload & AI extraction interface
+24. ✅ **Verified Partner Directory** - `VerifiedPartnerDirectory.tsx` - Master list of verified agencies
+25. ⬜ Agency Financials Dashboard
+26. ⬜ Market Analytics Dashboard
+27. ⬜ Reputation Management
+28. ⬜ Reviews Dashboard
+29. ⬜ Agency Verification Claim Flow
 
-### Operational & Verification (0/5)
-28. ⬜ Claims Queue Dashboard
-29. ⬜ AI Brochure Scanner Upload
-30. ⬜ AI Scan Results Review
-31. ⬜ Verified Partner Directory
+### Operational & Verification (1/5)
+30. ⬜ Claims Queue Dashboard
+31. ⬜ AI Scan Results Review
 32. ⬜ View Certificate Dashboard
 33. ⬜ Document Verified Success
 
@@ -65,8 +65,8 @@ All completed screens are fully routed in `App.tsx` and use dummy data from `src
 
 ## 🎯 Next Priority Screens
 
-1. **Booking Leads Dashboard** - Partner lead management
-2. **Agency Financials** - Revenue tracking for partners
-3. **AI Brochure Scanner** - Upload and scan interface
-4. **Verified Partner Directory** - Master list
+1. **Agency Financials** - Revenue tracking for partners
+2. **Market Analytics** - Competitor pricing insights
+3. **AI Scan Results Review** - Post-upload data review
+4. **Reputation Management** - Review analytics
 5. **Passport Upload Interaction** - Specialized UX
