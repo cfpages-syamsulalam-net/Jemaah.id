@@ -53,10 +53,36 @@ Jemaah.id/
 5.  **Document:** Update `PROGRESS.md`, `SCREENS.md`, and `CHANGELOG.md` after every significant change.
 
 ## 📝 Changelog Mandate
-Every iteration MUST end with an update to `CHANGELOG.md`.
-- Date format: `YYYY-MM-DD`.
-- Categories: `Added`, `Changed`, `Fixed`, `Removed`.
-- Be specific about file changes and logic updates.
+Every iteration MUST end with updates to documentation files:
+1. **CHANGELOG.md** - Track what was Added/Changed/Fixed/Removed (Date: YYYY-MM-DD)
+2. **SCREENS.md** - Update completed screen count and status
+3. **PROGRESS.md** - Update phase completion if milestone reached
+4. **FEATURES.md** - Mark implemented features with ✅
+
+**Categories for CHANGELOG.md:**
+- `Added` - New screens, features, files
+- `Changed` - Modified existing functionality
+- `Fixed` - Bug fixes, TypeScript errors, build issues
+- `Removed` - Deleted code or files
+
+**Be specific about:**
+- File paths changed
+- Logic updates
+- New routes added
+- Screens completed
+
+## 📂 Documentation-First Approach
+Every development iteration MUST be documented immediately:
+- **New Screen Created** → Update SCREENS.md, CHANGELOG.md, FEATURES.md
+- **Feature Implemented** → Mark ✅ in FEATURES.md
+- **Bug Fixed** → Log in CHANGELOG.md
+- **Milestone Reached** → Update PROGRESS.md
+
+**Documentation files updated each session:**
+- `CHANGELOG.md` (Every change logged)
+- `SCREENS.md` (Screen count updated)
+- `PROGRESS.md` (Phase tracking)
+- `FEATURES.md` (Features marked as implemented)
 
 ## 📂 UI Reference Rules
 Always refer to the corresponding folder in `stitch/` when building new pages.

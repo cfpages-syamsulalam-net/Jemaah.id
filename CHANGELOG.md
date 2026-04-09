@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-04-10
+### Added
+- **13 New Screens:** BookingDetails, AgencyFinancials, MarketAnalytics, ReputationManagement, ClaimsQueue, AIScanResults, PassportUpload, DocumentVerified (Total: 36/42 screens, 86%)
+- **FEATURES.md:** Comprehensive feature specifications for all 42 screens with current vs future features
+- **QWEN.md:** Created project mandats for Qwen Code AI with full documentation hierarchy
+- **GEMINI.md:** Updated with new documentation structure and documentation-first approach
+- **SCREENS.md:** Real-time screen implementation tracker (updated to 36/42)
+- **ROUTE_GUIDE.md:** Complete route listing with test links for all 36 screens
+- **IMPLEMENTATION_SUMMARY.md:** Session summary and project status
+
+### Changed
+- **App.tsx:** Updated with all 36 screen routes, organized by module (Consumer, Booking, Partner, Operational)
+- **Badge.tsx:** Added 'warning' and 'error' variants to support all status displays
+- **PROGRESS.md:** Updated with complete screen inventory and 86% completion status
+
+### Fixed
+- **TypeScript Compilation:** Resolved all 24+ TypeScript errors (unused imports, type-only imports)
+- **White Screen Issue:** Added Google Fonts (Plus Jakarta Sans + Work Sans) to index.html
+- **Build Process:** Achieved clean build (0 errors, 5.74s build time)
+- **Import Cleanup:** Removed unused imports from all new screen files
+
 ## [0.1.0] - 2026-04-09
 ### Added
 - Initial strategic documentation and project foundation.
