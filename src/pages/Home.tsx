@@ -1,10 +1,11 @@
-import { Search, Plane, ShieldCheck, MapPin, Star, ArrowRight } from "lucide-react"
+import { Search, Plane, ShieldCheck, MapPin, ArrowRight } from "lucide-react"
 import { Button } from "../components/ui/Button"
-import { Card, CardContent } from "../components/ui/Card"
+import { Card } from "../components/ui/Card"
 import { Badge } from "../components/ui/Badge"
 import { Input } from "../components/ui/Input"
+import { PackageCard, Package } from "../components/shared/PackageCard"
 
-const FEATURED_PACKAGES = [
+const FEATURED_PACKAGES: Package[] = [
   {
     id: 1,
     agency: "Patuhi Travel",
@@ -138,54 +139,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {FEATURED_PACKAGES.map((pkg) => (
-            <Card key={pkg.id} className="p-0 overflow-hidden hover:shadow-lg transition-shadow border-primary/5 group cursor-pointer">
-              <div className="h-48 bg-slate-100 relative overflow-hidden">
-                 <div className="absolute inset-0 bg-primary/10 flex items-center justify-center text-primary/30 font-bold uppercase tracking-widest text-xl">
-                   {pkg.airline}
-                 </div>
-                 <div className="absolute top-4 left-4">
-                   <Badge variant="success" className="bg-white/90 backdrop-blur-sm text-primary border-none">
-                     {pkg.duration}
-                   </Badge>
-                 </div>
-                 {pkg.verified && (
-                   <div className="absolute top-4 right-4 h-8 w-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm">
-                     <ShieldCheck className="h-5 w-5 text-primary" />
-                   </div>
-                 )}
-              </div>
-              <CardContent className="p-6">
-                <div className="flex justify-between items-start mb-2">
-                  <span className="text-xs font-bold text-primary uppercase tracking-wider">{pkg.agency}</span>
-                  <div className="flex items-center gap-1">
-                    <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
-                    <span className="text-xs font-bold text-slate-900">4.9</span>
-                  </div>
-                </div>
-                <h3 className="font-display font-bold text-slate-900 text-xl mb-4 group-hover:text-primary transition-colors">
-                  {pkg.name}
-                </h3>
-                
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-3 text-sm text-slate-500">
-                    <Plane className="h-4 w-4 text-slate-400" />
-                    <span>{pkg.airline} • {pkg.departure}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-slate-500">
-                    <MapPin className="h-4 w-4 text-slate-400" />
-                    <span>{pkg.hotelMakkah} ({pkg.distance} ke Masjid)</span>
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-primary/5 flex justify-between items-center">
-                  <div>
-                    <span className="text-xs text-slate-400 block uppercase font-bold tracking-widest">Mulai Dari</span>
-                    <span className="text-2xl font-display font-bold text-primary">Rp {pkg.price}</span>
-                  </div>
-                  <Button size="sm" variant="secondary">Detail</Button>
-                </div>
-              </CardContent>
-            </Card>
+            <PackageCard key={pkg.id} pkg={pkg} />
           ))}
         </div>
       </section>

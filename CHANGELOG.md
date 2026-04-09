@@ -30,3 +30,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Implemented `Home` page with hero section, trust badges, and featured package cards.
   - Configured global routing in `App.tsx` and `main.tsx`.
   - Added mock data for Hajj/Umrah packages to simulate real UI behavior.
+- **Tailwind v4 Migration:**
+  - Upgraded to Tailwind CSS v4 and `@tailwindcss/postcss`.
+  - Migrated theme configuration from `tailwind.config.js` to CSS `@theme` variables in `src/index.css`.
+  - Resolved PostCSS configuration errors.
+- **Phase 3 Development:**
+  - Implemented `Search` page with filter sidebar and results grid.
+  - Created `PackageCard` shared component with verification badges and "Compare" functionality.
+  - Built a floating `Comparison Drawer` to manage multi-package selection for side-by-side analysis.
+  - Developed the **"Apple-to-Apple" Comparison Engine** (`Compare` page) with a detailed side-by-side feature table.
+  - Integrated automated "Plus/Minus" highlights and "Smart Insight" analysis in the comparison view.
+- **Operational Updates:**
+  - Unified AI Agent instructions and project mandates into `GEMINI.md`.
+  - Deprecated and removed `AGENT.md`.
+  - Hardened Tailwind v4 / PostCSS configuration to resolve build errors.

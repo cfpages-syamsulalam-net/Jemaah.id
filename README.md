@@ -1,3 +1,19 @@
+# Jemaah.id
+
+A React + TypeScript + Vite application.
+
+## Development Server
+
+The development server runs on **localhost:5555** (not the default 5173).
+
+```bash
+npm run dev
+```
+
+Then open [http://localhost:5555](http://localhost:5555) in your browser.
+
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
