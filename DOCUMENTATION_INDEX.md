@@ -58,6 +58,12 @@ Master index of all documentation files for Jemaah.id project.
 |------|---------|--------------|
 | [`WHY_THESE_LAYERS.md`](WHY_THESE_LAYERS.md) | Why SaaS needs full architecture | Understanding the stack |
 
+### **🚨 Operational Protocols (CRITICAL!)**
+
+| File | Purpose | When to Read |
+|------|---------|--------------|
+| [`DEV_OPS_PROTOCOL.md`](DEV_OPS_PROTOCOL.md) | Prevent white screen issues | **BEFORE every session** |
+
 ---
 
 ### **🤖 AI Instructions**

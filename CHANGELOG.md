@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.1] - 2026-04-10 (Session 3)
+### Added
+- **DEV_OPS_PROTOCOL.md:** Critical operational rules to prevent white screen issues
+- **White Screen Troubleshooting:** Added to QWEN.md and GEMINI.md as mandatory protocol
+- **Documentation Index:** Added DEV_OPS_PROTOCOL.md reference
+
+### Changed
+- **QWEN.md:** Added CRITICAL Development Operations Protocol section
+- **GEMINI.md:** Added CRITICAL Development Operations Protocol section  
+- **DOCUMENTATION_INDEX.md:** Added operational protocols section
+
+### Fixed
+- **Dev Server:** Restarted fresh to ensure clean state
+- **Build Verification:** Confirmed 0 errors, successful build
+
 ## [0.3.0] - 2026-04-10 (Session 2)
 ### Added
 - **3 Final Screens:** SearchEmptyState, ReviewsDashboard, CertificateView (Total: 39/42 screens, 93%)

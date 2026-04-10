@@ -49,8 +49,31 @@ Jemaah.id/
     - Identify specific blocks to change.
     - Preserve existing functions, logic, and state unless refactoring is requested.
     - Always "improve and maintain" rather than "destroy and rebuild."
-4.  **Validate:** Ensure consistency with "Emerald Canopy" styles and TypeScript type safety.
+4.  **Validate:** 
+    - **MANDATORY:** Run `npm run build` and ensure 0 TypeScript errors
+    - **MANDATORY:** Restart dev server (`taskkill /F /PID <pid>` then `npm run dev`)
+    - **MANDATORY:** Verify no white screen at http://localhost:5555
+    - **MANDATORY:** Check browser console (F12) for 0 red errors
+    - Ensure consistency with "Emerald Canopy" styles and TypeScript type safety.
 5.  **Document:** Update `PROGRESS.md`, `SCREENS.md`, and `CHANGELOG.md` after every significant change.
+
+## 🚨 CRITICAL: Development Operations Protocol
+**BEFORE declaring ANY task complete, the agent MUST:**
+
+1. ✅ Run `npm run build` → Must pass with 0 errors
+2. ✅ Restart dev server → Must start successfully  
+3. ✅ Verify http://localhost:5555 → Must NOT be white screen
+4. ✅ Check browser console (F12) → Must have 0 red errors
+5. ✅ Update CHANGELOG.md → Log all changes
+
+**NEVER:**
+- ❌ Skip build verification
+- ❌ Leave unused imports
+- ❌ Forget type-only imports when required
+- ❌ Skip dev server restart after changes
+- ❌ Declare complete with any TypeScript errors
+
+**FULL PROTOCOL:** See `DEV_OPS_PROTOCOL.md` for complete operational rules.
 
 ## 📝 Changelog Mandate
 Every iteration MUST end with updates to documentation files:
