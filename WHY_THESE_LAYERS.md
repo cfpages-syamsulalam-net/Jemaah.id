@@ -16,9 +16,10 @@ A beginner-friendly explanation of why modern web applications need multiple lay
 5. [State Management Explained](#state-management-explained)
 6. [Cloudflare Workers/Edge Computing](#cloudflare-workersedge-computing)
 7. [Third-Party Integrations](#third-party-integrations)
-8. [Real Examples from Jemaah.id](#real-examples-from-jemaahid)
-9. [What Happens Without These?](#what-happens-without-these)
-10. [Summary](#summary)
+8. ["But Cloudflare Can Store Secrets!"](#but-cloudflare-pages-can-store-secrets-too)
+9. [Real Examples from Jemaah.id](#real-examples-from-jemaahid)
+10. [What Happens Without These?](#what-happens-without-these)
+11. [Summary](#summary)
 
 ---
 
@@ -644,6 +645,315 @@ const { roomType } = useBookingStore()
 
 // No prop drilling!
 ```
+
+---
+
+## "But Cloudflare Pages Can Store Secrets Too!"
+
+### The Common Counter-Argument
+
+You might notice that Cloudflare Pages (and similar platforms like Vercel, Netlify) offer environment variables and secret storage. So you might wonder:
+
+> "If I can store API keys in Cloudflare Pages, why can't I just call payment gateways and databases directly from the frontend? Why do I need a separate backend API?"
+
+This is a GREAT question! Let me explain why **storing secrets ≠ being able to skip the backend layer.**
+
+---
+
+### What Cloudflare Pages Secrets Actually Do
+
+Cloudflare Pages secrets (environment variables) are available:
+
+1. ✅ **During build time** (when your site is being built)
+2. ✅ **In Cloudflare Workers** (if you're running serverless functions)
+3. ❌ **NOT in the browser** (frontend React code)
+
+**The key point:** Your React frontend runs in the user's browser, NOT on Cloudflare's servers.
+
+```
+┌─────────────────────────────────────────────┐
+│  Cloudflare Pages (Server-Side)             │
+│  ✅ Has access to secrets                   │
+│  ✅ Can call APIs safely                    │
+│  ┌───────────────────────────────────┐     │
+│  │  Build Process (npm run build)    │     │
+│  │  • Has env vars during build      │     │
+│  │  • Produces static HTML/JS/CSS    │     │
+│  └───────────────────────────────────┘     │
+└─────────────────────────────────────────────┘
+              ↓
+    Static files sent to browser
+              ↓
+┌─────────────────────────────────────────────┐
+│  User's Browser (Client-Side)               │
+│  ❌ NO access to secrets                    │
+│  ❌ Can't safely call APIs with secrets     │
+│  ┌───────────────────────────────────┐     │
+│  │  React App (your 39 screens)      │     │
+│  │  • Runs in browser                │     │
+│  │  • Anyone can inspect source code │     │
+│  │  • Anyone can see network calls   │     │
+│  │  • Anyone can intercept requests  │     │
+│  └───────────────────────────────────┘     │
+└─────────────────────────────────────────────┘
+```
+
+---
+
+### The Misconception Explained
+
+**What people think happens:**
+```
+Frontend (in browser)
+  ↓ "I have secret from Cloudflare Pages!"
+  ↓ Uses secret to call Xendit API
+  ↓ Payment processed safely ✅
+```
+
+**What ACTUALLY happens:**
+```
+Cloudflare Pages (during build)
+  ↓ Has secret in environment
+  ↓ Builds React app
+  ↓ Sends built files to browser
+  ↓ Secret STAYS on server (not sent to browser!)
+
+Frontend (in browser)
+  ↓ NO secret available!
+  ↓ Cannot safely call APIs that need secrets
+  ❌ If you hardcode secret in frontend, EVERYONE sees it!
+```
+
+---
+
+### Proof: Why Secrets Don't Reach the Browser
+
+Open any website and press `F12` (DevTools):
+
+1. Go to "Sources" tab
+2. Look at the JavaScript files
+3. **Everything sent to browser is visible**
+
+If you put a secret in your frontend code:
+```typescript
+// ❌ This is in your React component
+const XENDIT_SECRET = import.meta.env.VITE_XENDIT_SECRET
+
+// When built, this becomes plain JavaScript
+// User opens DevTools → Sources → finds this file
+// User reads: XENDIT_SECRET = "xnd_production_abc123..."
+// User now has your secret key!
+```
+
+**The only way to keep secrets secret:**
+```
+✅ Keep them on the SERVER (Backend API)
+✅ Never send them to the browser
+✅ Use them ONLY in server-side code
+```
+
+---
+
+### "But What About Cloudflare Workers with Secrets?"
+
+Ah! This is where it gets interesting. Cloudflare Workers CAN use secrets safely because they run **server-side**, not in the browser.
+
+**This is EXACTLY why we use Hono on Cloudflare Workers!**
+
+```typescript
+// ✅ SAFE: This code runs on Cloudflare's servers (Workers)
+// NOT in the user's browser
+
+export default {
+  async fetch(request, env) {
+    // env.XENDIT_SECRET is available here
+    // But user CAN'T see it because this code never reaches browser!
+    
+    const xendit = new Xendit({
+      secretKey: env.XENDIT_SECRET // ✅ Safe!
+    })
+    
+    // Process payment...
+    return new Response("Success")
+  }
+}
+```
+
+**This IS the backend API layer!** We're just using Cloudflare Workers instead of a traditional server.
+
+---
+
+### The Real Architecture with Cloudflare
+
+```
+┌───────────────────────────────────────────────────────┐
+│  Cloudflare Ecosystem                                 │
+│                                                       │
+│  ┌─────────────────────────┐  ┌────────────────────┐ │
+│  │  Cloudflare Pages       │  │  Cloudflare Workers│ │
+│  │  (Frontend Hosting)     │  │  (Backend API)     │ │
+│  │                         │  │                    │ │
+│  │  ❌ NO secrets in       │  │  ✅ Secrets HERE   │ │
+│  │     browser code        │  │  ✅ Safe API calls │ │
+│  │                         │  │  ✅ Business logic │ │
+│  │  React App runs here    │  │  Hono runs here    │ │
+│  │  (user's browser)       │  │  (Cloudflare edge) │ │
+│  └─────────────────────────┘  └────────────────────┘ │
+│           ↑ Calls API              ↑ Has secrets      │
+│           │                        │                  │
+│           └────────────────────────┘                  │
+│                   HTTP Requests                       │
+└───────────────────────────────────────────────────────┘
+```
+
+**So yes, we DO use Cloudflare's secret storage—but in Workers (backend), NOT in Pages (frontend)!**
+
+---
+
+### What If I Try to Call APIs Directly from Frontend?
+
+Let's see what happens with different APIs:
+
+#### **Supabase (Database)**
+```typescript
+// ⚠️ PARTIALLY OKAY (with limitations)
+// Supabase is DESIGNED to be called from frontend
+// BUT relies on Row Level Security (RLS) for protection
+
+const { data } = await supabase
+  .from('packages')
+  .select('*')
+  .eq('is_active', true)
+// ✅ Works, but RLS MUST be configured correctly
+// ❌ Complex business logic still needs backend
+```
+
+**Why Supabase works from frontend:**
+- Uses public anon key (limited permissions)
+- RLS enforces security in database
+- Still needs backend for complex operations
+
+#### **Xendit (Payment)**
+```typescript
+// ❌ IMPOSSIBLE/UNSAFE from frontend
+const xendit = new Xendit({
+  secretKey: 'xnd_production_...' // MUST stay on server!
+})
+
+// User opens DevTools → Steals secret → Creates fake payments
+// → Drains your account → You lose money
+```
+
+**Why payment gateways NEED backend:**
+- Secret key must never reach browser
+- Payment verification must be server-to-server
+- Webhooks need stable server endpoint
+
+#### **Google Maps**
+```typescript
+// ⚠️ PARTIALLY OKAY (with restrictions)
+// Google Maps keys can be exposed but limited by:
+// 1. HTTP referrer restrictions (only your domain)
+// 2. API restrictions (only Maps APIs)
+// 3. Quota limits (max requests per day)
+
+// But sophisticated users can still:
+// - Spoof referrer headers
+// - Use your key on their sites
+// - Rack up your bill
+```
+
+**Why even Google Maps is better through backend:**
+- Backend can cache responses (save money)
+- Backend can enforce custom rate limits
+- Backend can add business logic (only premium users get maps)
+
+---
+
+### The Real-World Test
+
+Let's say you try to build a "frontend-only" payment flow:
+
+```typescript
+// ❌ YOUR FRONTEND CODE (visible to everyone)
+function BookingPayment() {
+  const handlePayment = async () => {
+    // User can see this in DevTools:
+    const response = await fetch('https://api.xendit.co/v2/invoices', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Basic ' + btoa('xnd_production_SECRET123:')
+        // ↑ User sees: "Authorization: Basic eG5kX3Byb2R1Y3Rpb25fU0VDUkVUMTIzOg=="
+        // ↑ User decodes: "xnd_production_SECRET123:"
+        // ↑ User now has your secret key!
+      },
+      body: JSON.stringify({ amount: 1 }) // User changes to 1!
+    })
+  }
+}
+```
+
+**What a malicious user does:**
+1. Opens DevTools (`F12`)
+2. Goes to Network tab
+3. Makes a test booking
+4. Sees the API call with your secret key
+5. Copies the secret key
+6. Uses it to:
+   - Create fake refunds
+   - Access your transaction history
+   - Manipulate other users' payments
+
+**This isn't theoretical—it happens DAILY to apps that expose secrets.**
+
+---
+
+### "What About API Routes in Next.js/Vercel?"
+
+You might have heard that Next.js has "API Routes" that can use secrets safely.
+
+**That's STILL a backend API layer!** It's just bundled with your frontend framework.
+
+```
+Next.js App
+├── Frontend (Pages) → Runs in browser
+└── Backend (API Routes) → Runs on server ✅ Has secrets
+
+Same architecture, different packaging!
+```
+
+Our setup (React + Hono) achieves the same thing:
+```
+Our App
+├── Frontend (React) → Runs in browser
+└── Backend (Hono on Workers) → Runs on server ✅ Has secrets
+
+Same architecture, more flexibility!
+```
+
+---
+
+### Summary: Why Secrets Don't Eliminate Backend Need
+
+| Platform | Can Store Secrets? | Can Frontend Access Them? | Need Backend API? |
+|----------|-------------------|--------------------------|-------------------|
+| Cloudflare Pages | ✅ Yes (build time) | ❌ No | ✅ **Yes** |
+| Vercel | ✅ Yes (serverless) | ❌ No | ✅ **Yes** |
+| Netlify | ✅ Yes (functions) | ❌ No | ✅ **Yes** |
+| Cloudflare Workers | ✅ Yes (runtime) | ❌ No | ✅ **This IS the backend** |
+| Traditional Server | ✅ Yes | ❌ No | ✅ **This IS the backend** |
+
+**The pattern:** Secrets stay on server. Frontend never gets them. You ALWAYS need a server-side layer (backend API) to use secrets safely.
+
+---
+
+### The Bottom Line
+
+> "If Cloudflare Pages can store secrets, why do I need a backend?"
+
+**Answer:** Cloudflare Pages secrets are for the BUILD process, not for the browser. To use secrets at RUNTIME (when users interact with your app), you need code that runs on the SERVER—and that's your backend API.
+
+**We DO use Cloudflare's secret storage—in Cloudflare Workers, which IS our backend!**
 
 ---
 

@@ -52,6 +52,14 @@ Master index of all documentation files for Jemaah.id project.
 
 ---
 
+### **📖 Educational Guides**
+
+| File | Purpose | When to Read |
+|------|---------|--------------|
+| [`WHY_THESE_LAYERS.md`](WHY_THESE_LAYERS.md) | Why SaaS needs full architecture | Understanding the stack |
+
+---
+
 ### **🤖 AI Instructions**
 
 | File | Purpose | When to Read |
