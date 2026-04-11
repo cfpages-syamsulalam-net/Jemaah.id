@@ -1,4 +1,5 @@
 import { Search, Plane, ShieldCheck, MapPin, ArrowRight } from "lucide-react"
+import { Link } from "react-router-dom"
 import { Button } from "../components/ui/Button"
 import { Card } from "../components/ui/Card"
 import { Badge } from "../components/ui/Badge"
@@ -132,9 +133,11 @@ export default function Home() {
             <h2 className="text-3xl font-display font-bold text-slate-900 mb-2">Paket Populer Bulan Ini</h2>
             <p className="text-slate-500">Pilihan terbaik untuk keberangkatan terdekat.</p>
           </div>
-          <Button variant="ghost" className="gap-2 text-primary font-bold">
-            Lihat Semua <ArrowRight className="h-4 w-4" />
-          </Button>
+          <Link to="/popular">
+            <Button variant="ghost" className="gap-2 text-primary font-bold">
+              Lihat Semua <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

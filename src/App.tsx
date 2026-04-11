@@ -33,6 +33,17 @@ import CertificateView from './pages/CertificateView'
 import PassportUpload from './pages/PassportUpload'
 import DocumentVerified from './pages/DocumentVerified'
 import SavedComparisons from './pages/SavedComparisons'
+import FAQ from './pages/FAQ'
+import About from './pages/About'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsAndConditions from './pages/TermsAndConditions'
+import Contact from './pages/Contact'
+import PartnerRegistration from './pages/PartnerRegistration'
+import Login from './pages/Login'
+import TravelVerification from './pages/TravelVerification'
+import PopularPackages from './pages/PopularPackages'
+import HotelDetail from './pages/HotelDetail'
+import AirlineDetail from './pages/AirlineDetail'
 
 function App() {
   return (
@@ -80,8 +91,27 @@ function App() {
           <Route path="/admin/claims" element={<ClaimsQueue />} />
           <Route path="/admin/certificates" element={<CertificateView />} />
           
+          {/* Public Pages */}
+          <Route path="/verification" element={<TravelVerification />} />
+          <Route path="/popular" element={<PopularPackages />} />
+          <Route path="/hotel/:id" element={<HotelDetail />} />
+          <Route path="/airline/:id" element={<AirlineDetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/partner" element={<PartnerRegistration />} />
+          <Route path="/login" element={<Login />} />
+          
           {/* Other */}
-          <Route path="/verification" element={<div className="container mx-auto py-20 text-center text-slate-500">Travel Verification (Coming Soon)</div>} />
+          <Route path="*" element={
+            <div className="container mx-auto py-20 text-center">
+              <h1 className="text-6xl font-bold text-slate-300 mb-4">404</h1>
+              <p className="text-xl text-slate-500 mb-6">Halaman tidak ditemukan</p>
+              <a href="/" className="text-primary hover:underline">Kembali ke Beranda</a>
+            </div>
+          } />
         </Routes>
       </main>
       <Footer />

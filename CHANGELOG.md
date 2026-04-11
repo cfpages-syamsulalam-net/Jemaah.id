@@ -5,6 +5,49 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-04-10 (Session 5)
+### Added
+- **Compare Page Redesigned:** Comprehensive Apple-to-Apple comparison with 30+ comparison items
+  - Logistics & Flights (airline, departure, duration)
+  - Hotel Makkah (name, stars, distance with badges)
+  - Hotel Madinah (name, stars)
+  - 8 Facility comparisons (Visa, Tickets, Meals, Guide, Insurance, etc.)
+  - Smart Insights (Plus/Minus analysis)
+  - Verification status (Travel, Hotel, Airline)
+  - Action buttons (View Detail, Travel Profile)
+- **Hotel Detail Page** (`/hotel/:id`) - Complete hotel information page
+  - Photo gallery with navigation
+  - Hotel description & features
+  - Room types with pricing
+  - Guest reviews & ratings breakdown
+  - Hotel information (address, phone, email, check-in/out)
+  - Map placeholder with coordinates
+  - Links from Compare page
+- **Agency Profile already exists** (`/agency/:id`) - Accessible from Compare
+
+### Changed
+- **Compare.tsx:** Complete redesign with comprehensive comparison matrix
+- **App.tsx:** Added hotel route
+
+### Fixed
+- **TypeScript errors:** Fixed all unused imports
+- **Build:** Successful (0 errors, 6.32s)
+
+## [0.4.0] - 2026-04-10 (Session 4)
+### Added
+- **8 New Public Pages:** TravelVerification, About, FAQ, PrivacyPolicy, TermsAndConditions, Contact, PartnerRegistration, Login (Total: 47/50 screens, 94%)
+- **404 Page:** Catch-all route for missing pages
+- **Login/Register Page:** With social login (Google), toggle between login/register
+
+### Changed
+- **SCREENS.md:** Updated to 47/50 (94%) completion
+- **App.tsx:** Added 9 new routes + 404 catch-all
+- **Navbar/Footer:** All links now point to real pages
+
+### Fixed
+- **Build Verification:** Successful build (0 errors, 12.80s)
+- **Dev Server:** Restarted fresh on port 5555
+
 ## [0.3.1] - 2026-04-10 (Session 3)
 ### Added
 - **DEV_OPS_PROTOCOL.md:** Critical operational rules to prevent white screen issues

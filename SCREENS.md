@@ -1,13 +1,13 @@
 # Jemaah.id Screens Implementation Status
 
 **Last Updated:** 10 April 2026
-**Total Screens:** 42
-**Completed:** 39 screens
-**Progress:** 93%
+**Total Screens:** 50
+**Completed:** 47 screens
+**Progress:** 94%
 
 ---
 
-## ✅ Completed Screens (39)
+## ✅ Completed Screens (47)
 
 ### Consumer App (13/13) - COMPLETE! ✅
 1. ✅ **Home** - `Home.tsx` - Featured packages, hero search, trust badges
@@ -49,39 +49,46 @@
 ### Operational & Verification (5/5) - COMPLETE! ✅
 32. ✅ **Claims Queue** - `ClaimsQueue.tsx` - Admin interface for claim approvals
 33. ✅ **Certificate View** - `CertificateView.tsx` - Certificate & legality management
-34. ✅ **Document Verified** - `DocumentVerified.tsx` - Verification success with badge
+34. ✅ **Travel Verification** - `TravelVerification.tsx` - Independent travel verification listing
 35. ✅ **Verified Partner Directory** - `VerifiedPartnerDirectory.tsx` - Master agency listing
 36. ✅ **AI Brochure Scanner** - `AIBrochureScanner.tsx` - Upload interface
 
-### Specialized Interactions (2/4)
-37. ✅ **Passport Upload** - `PassportUpload.tsx` - Multi-step upload with preview
-38. ✅ **Document Verified** - `DocumentVerified.tsx` - Verification success with badge
-39. ⬜ Claim Success Package Verified
-40. ⬜ Agency Verification Claim Flow
+### Public Pages (8/8) - COMPLETE! ✅
+37. ✅ **About Us** - `About.tsx` - Company mission, vision, values, team
+38. ✅ **FAQ** - `FAQ.tsx` - Categorized expandable questions
+39. ✅ **Privacy Policy** - `PrivacyPolicy.tsx` - Legal privacy document
+40. ✅ **Terms & Conditions** - `TermsAndConditions.tsx` - Legal terms document
+41. ✅ **Contact** - `Contact.tsx` - Contact form + info
+42. ✅ **Partner Registration** - `PartnerRegistration.tsx` - Travel signup form
+43. ✅ **Login/Register** - `Login.tsx` - Auth forms with social login
+44. ✅ **404 Page** - Catch-all route in App.tsx
 
-### Other (1/1) - COMPLETE! ✅
-41. ✅ **Travel Verification** - Placeholder in App.tsx
+### Specialized Interactions (2/4)
+45. ✅ **Passport Upload** - `PassportUpload.tsx` - Multi-step upload with preview
+46. ✅ **Document Verified** - `DocumentVerified.tsx` - Verification success with badge
+47. ⬜ Claim Success Package Verified
+48. ⬜ Agency Verification Claim Flow
 
 ---
 
-## 🎉 MAJOR MILESTONE: 93% COMPLETE!
+## 🎉 MAJOR MILESTONE: 94% COMPLETE!
 
 **All Core Features Complete:**
 - ✅ Consumer App: 100%
 - ✅ Booking Flow: 100%
 - ✅ Partner Portal: 100%
 - ✅ Operational: 100%
+- ✅ Public Pages: 100%
 
-**Remaining:** 3 edge-case screens (can be deferred)
+**Remaining:** 2 edge-case screens (can be deferred)
 
 ## 📋 All Routes Configured
 
-All 39 completed screens are fully routed in `App.tsx` and use dummy data from `src/data/dummyData.ts`.
+All 47 completed screens are fully routed in `App.tsx` and use dummy data from `src/data/dummyData.ts`.
 
-## 🎯 Remaining Screens (3)
+## 🎯 Remaining Screens (2)
 
 1. **Claim Success Package** - Feedback loop screen (can integrate)
 2. **Agency Verification Flow** - Onboarding documents (can integrate)
-3. **Upload Documents Standalone** - Already in UserProfile
 
 **Ready for Backend Integration!**

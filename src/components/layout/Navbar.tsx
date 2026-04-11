@@ -24,17 +24,23 @@ export function Navbar() {
 
           {/* Icons/Auth */}
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" className="md:flex hidden">
-              <Search className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="md:flex hidden">
-              <Heart className="h-5 w-5" />
-            </Button>
+            <Link to="/search" className="md:flex hidden">
+              <Button variant="ghost" size="icon">
+                <Search className="h-5 w-5" />
+              </Button>
+            </Link>
+            <Link to="/favorites" className="md:flex hidden">
+              <Button variant="ghost" size="icon">
+                <Heart className="h-5 w-5" />
+              </Button>
+            </Link>
             <div className="h-8 w-[1px] bg-primary/10 mx-2 md:block hidden" />
-            <Button variant="primary" size="sm" className="hidden md:flex gap-2">
-              <User className="h-4 w-4" />
-              <span>Login / Daftar</span>
-            </Button>
+            <Link to="/login" className="hidden md:flex">
+              <Button variant="primary" size="sm" className="gap-2">
+                <User className="h-4 w-4" />
+                <span>Login / Daftar</span>
+              </Button>
+            </Link>
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="h-6 w-6" />
             </Button>
